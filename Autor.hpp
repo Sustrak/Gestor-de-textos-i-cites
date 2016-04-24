@@ -2,6 +2,9 @@
 #ifndef Autor_hpp
 #define Autor_hpp
 
+#include <string>
+#include <vector>
+
 class Autor {
 private:
     string nom;
