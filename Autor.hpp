@@ -92,13 +92,25 @@ public:
   */       
     void mostra_contingut(int j);
     
-    /** @brief Eostra les frases contingudes en un interval d'un text que es troba a una posicio concreta.
+    /** @brief Escriu les frases contingudes en un interval d'un text que es troba a una posicio concreta.
 
       \pre El p.i. conté un text a la posicio j.
       \post S'escriu pel canal estàndar les frases entre la x-èsima i la y-èsima del text a la posicio j.
   */           
     void frases_text(int j, int x, int y);
+    
+    /** @brief Escriu el nombre de frases d'un text que es troba a una posicio concreta.
+
+      \pre El p.i. conté un text a la posicio j.
+      \post S'escriu pel canal estàndar el nombre de frases del text a la posicio j.
+  */      
     void nombre_frases_text(int j);
+    
+    /** @brief Escriu el nombre de paraules d'un text que es troba a una posicio concreta.
+
+      \pre El p.i. conté un text a la posicio j.
+      \post S'escriu pel canal estàndar el nombre de paraules del text a la posicio j.
+  */       
     void nombre_paraules_text(int j);
     
 };
