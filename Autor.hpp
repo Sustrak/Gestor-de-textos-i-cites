@@ -13,7 +13,6 @@
 class Autor {
 private:
     string nom;
-    string cognom;
     vector<Text> textos;
     int n_textos;
     int n_frases;
@@ -69,11 +68,35 @@ public:
       \pre <em>cert</em>
       \post S'escriuen pel canal estàndard el títol de tots els textos del p.i. ordenats alfabèticament per tí́tol.
   */      
-    void escriure_textos();
+    void escriure_textos(); //Quina diferencia hi ha entre aquestes instruccions?
     void mostrat_titols();
-    void consultar_autor();
+    
+    /** @brief Retorna el nom de l'autor.
+
+      \pre <em>cert</em>
+      \post Es retorna el nom del p.i.
+  */     
+    string consultar_autor();
+    
+    /** @brief Escriu la informacío d'un text que es troba a una posicio concreta.
+
+      \pre El p.i. conté un text a la posicio j.
+      \post S'escriuen pel canal estàndard l'autor, el tí́tol,el nombre de frases, el nombre de paraules  iles  cites associades del text a la posicio j.
+  */      
     void info_text(int j);
+    
+    /** @brief Escriu el contingut d'un text que es troba a una posicio concreta.
+
+      \pre El p.i. conté un text a la posicio j.
+      \post S'escriu pel canal estàndar el contingut del text a la posicio j amb les seves frases numerades.
+  */       
     void mostra_contingut(int j);
+    
+    /** @brief Eostra les frases contingudes en un interval d'un text que es troba a una posicio concreta.
+
+      \pre El p.i. conté un text a la posicio j.
+      \post S'escriu pel canal estàndar les frases entre la x-èsima i la y-èsima del text a la posicio j.
+  */           
     void frases_text(int j, int x, int y);
     void nombre_frases_text(int j);
     void nombre_paraules_text(int j);
