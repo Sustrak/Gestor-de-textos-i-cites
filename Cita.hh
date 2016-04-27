@@ -34,8 +34,9 @@ public:
   */ 
     Cita (const Text& text, int x, int y, string ref);
     
-  //Destructores 
-    ~Autor();
+  //Destructores
+  
+    ~Cita ();
     
   //Consultores
 
