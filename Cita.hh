@@ -15,7 +15,8 @@ private:
     string ref;
     string autor;
     string titol;
-    vector<Frase> frases;
+    vector<string> frases;
+    int num_primera;
     
 public:
   //Constructores 
