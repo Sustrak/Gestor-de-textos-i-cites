@@ -1,7 +1,19 @@
+/**
+ * @mainpage Pràctica PRO2:  Gestió de textos i cites.
+ 
+Aplicació per a gestionar informació de textos i cites associades a aquest textos.
+*/
+
+/** @file main.cc
+    @brief Programa principal per la pràctica <em>Gestió de textos i cites</em>.
+*/
+#ifndef NO_DIAGRAM
 #include <sstream>
 #include <iostream>
 #include <string>
 #include <vector>
+#endif
+
 #include "Biblioteca.hh"
 #include "Autor.hh"
 #include "Text.hh"
@@ -119,7 +131,8 @@ void operar (Biblioteca& b, string linia) {
 	}
 }
 	
-
+/** @brief Programa principal per la pràctica <em>Gestió de textos i cites</em>.
+*/
 int main() {
 	string linia;	
 	getline(cin,linia);
