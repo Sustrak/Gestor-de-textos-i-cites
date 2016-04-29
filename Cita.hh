@@ -10,7 +10,7 @@
 #include <vector>
 #endif
 
-#include "Text.hpp"
+#include "Text.hh"
 
 using namespace std;
 
