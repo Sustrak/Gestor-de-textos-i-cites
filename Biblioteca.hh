@@ -54,7 +54,7 @@ public:
         /pre
         /post Es guarda a pos_autor i pos_text on està el text triat dins els vectors d'Autors i Text (vector dins la classe Autor), el boolea triat es posa a cert
     */
-    void triar_text(vector<string> paraules);
+    void triar_text(string paraules);
     
     /** @brief Elimina el text triat
         /pre Hi ha un text triat (<b>triat</b> == true)
@@ -131,6 +131,12 @@ public:
         /post Escriu el nombre de frases de l'ultim text triat
     */
     void nombre_frases();
+    
+    /** @brief Nombre de paraules
+     /pre Hi ha un text triat
+     /post Escriu el nombre de paraules de l'ultim text triat
+    */
+    void nombre_paraules();
     
     /** @brief Taula de freqüències
         /pre Hi ha un text triat
