@@ -1,9 +1,9 @@
-/** @file Text.hpp
+/** @file Text.hh
     @brief Especificació de la classe Text
  */
 
-#ifndef Text_hpp
-#define Text_hpp
+#ifndef Text_hh
+#define Text_hh
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -38,6 +38,8 @@ private:
     
 public:
     
+    //Constructores
+
     /** @brief Creadora per defecte.
      
      \pre <em>cert</em>
@@ -52,10 +54,14 @@ public:
     */
     Text(string titol, string contingut);
     
+    //Destructora
+
     /** @brief destructora per defecte.
     */
     ~Text();
     
+    //Consultores
+
     /** @brief Consultar titol.
      
      \pre El p.i no és buit.
@@ -77,6 +83,23 @@ public:
     */
     int consultar_nparaules();
     
+
+    /** @brief Buscador de textos.
+
+     \pre tipus indica si busquem per una expressió o si busquem per un seguit de paraules, les paraules a buscar estan en el vector paraules.
+     \post Retorna cert si el text conté les paraules de la forma que indica tipus, altrament retorna fals.
+    */
+    bool buscar(bool tipus, vector<string> paraules);
+
+    /** @brief Frases de la x a la y.
+
+     \pre X i Y son nombres naturals amb x <= y i y < _frases.size()
+     \post Retorna un vector amb les frases de la x a la y
+    */
+    vector<string> frases(int x, int y);
+
+    //Escriptura
+
     /** @brief Escriure contingut.
      
      \pre El p.i no és buit
@@ -90,22 +113,9 @@ public:
      \post Escriu pel canal de sortida estàndar la taula de freqüències del text.
     */
     void escriure_taula_freq();
-    
-    /** @brief Buscador de textos.
-     
-     \pre tipus indica si busquem per una expressió o si busquem per un seguit de paraules, les paraules a buscar estan en el vector paraules.
-     \post Retorna cert si el text conté les paraules de la forma que indica tipus, altrament retorna fals.
-    */
-    bool buscar(bool tipus, vector<string> paraules);
-    
-    /** @brief Frases de la x a la y.
-     
-     \pre X i Y son nombres naturals amb x <= y i y < _frases.size()
-     \post Retorna un vector amb les frases de la x a la y
-    */
-    vector<string> frases(int x, int y);
+
 };
-#endif /* Text_hpp */
+#endif /* Text_hh */
 
 
 

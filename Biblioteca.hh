@@ -1,9 +1,9 @@
-/** @file Biblioteca.hpp
+/** @file Biblioteca.hh
     @brief Especificació de la classe Biblioteca
 */
 
-#ifndef Biblioteca_hpp
-#define Biblioteca_hpp
+#ifndef Biblioteca_hh
+#define Biblioteca_hh
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -23,36 +23,36 @@ class Biblioteca {
     */
     
 private:
-    bool triat;
-    int pos_autor;
-    int pos_text;
-    map<string, Cita> cites;
-    vector<Autor> autors;
+    bool _triat;
+    int _pos_autor;
+    int _pos_text;
+    map<string, Cita> _cites;
+    vector<Autor> _autors;
     
 public:
-    //CONSTRUCTORA
+    //Constructora
     
     /** @brief Creadora per defecte.
         S'executa automaticament al declarar Biblioteca b;
-        /pre cert
-        /post el resultat és una biblioteca buida
+        \pre cert
+        \post el resultat és una biblioteca buida
     */
     Biblioteca();
     
-    //DESTRUCTORA
+    //Destructora
     ~Biblioteca();
     
-    //MODIFICADORES TEXT
+    //Modificadores text
     
     /** @brief Afegeix un text a un autor
-        /pre No existeix un text amb el mateix títol, el canal estandar d'entrada hi ha preparat el nom de l'autor i el contingut
-        /post L'autor té un nou text associat amb títol <b>títol</b>
+        \pre No existeix un text amb el mateix títol, el canal estandar d'entrada hi ha preparat el nom de l'autor i el contingut
+        \post L'autor té un nou text associat amb títol <b>títol</b>
     */
     void afegir_text(string titol);
     
     /** @brief Tria el text que conté certes paraules
-        /pre
-        /post Es guarda a pos_autor i pos_text on està el text triat dins els vectors d'Autors i Text (vector dins la classe Autor), el boolea triat es posa a cert
+        \pre
+        \post Es guarda a pos_autor i pos_text on està el text triat dins els vectors d'Autors i Text (vector dins la classe Autor), el boolea triat es posa a cert
     */
     void triar_text(string paraules);
     
@@ -68,7 +68,7 @@ public:
     */
     void substitueix (string par1, string par2);
     
-    //MODIFICADORES CITES
+    //Modificadores cites
     
     /** @brief Afegex una cita
         /pre x <= y, no existeix una cita igual,
@@ -82,7 +82,7 @@ public:
     */
     void eliminar_cita(string referencia);
     
-    //CONSULTORES
+    //Escriptura text
     
     /** @brief Textos d'un autor
         /pre Cert
@@ -110,13 +110,13 @@ public:
     
     /** @brief Autor
         /pre Hi ha un text triat
-        /post escriu l'autor del text triat
+        /post Escriu l'autor del text triat
     */
     void autor();
     
     /** @brief Informació
         /pre Hi ha un text triat
-        /post escriu el contingut del text triat
+        /post Escriu el contingut del text triat
     */
     void contingut();
     
@@ -156,7 +156,7 @@ public:
     */
     void frases_paraules(string paraules);
     
-    //CONSULTORES CITES
+    //Escriptura cites
     
     /** @brief Informació cita
         /pre Existeix la <b>referencia</b>
@@ -184,4 +184,4 @@ public:
     
 };
 
-#endif /* Biblioteca_hpp */
+#endif /* Biblioteca_hh */

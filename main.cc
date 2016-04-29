@@ -15,12 +15,10 @@ Aplicació per a gestionar informació de textos i cites associades a aquest tex
 #endif
 
 #include "Biblioteca.hh"
-#include "Autor.hh"
-#include "Text.hh"
-#include "Cita.hh"
 using namespace std;
 
-void operar (Biblioteca& b, string linia) {
+void operar (Biblioteca& b, string linia)
+{
 	istringstream iss(linia);
 	string op;
 	iss >> op;
@@ -133,7 +131,8 @@ void operar (Biblioteca& b, string linia) {
 	
 /** @brief Programa principal per la pràctica <em>Gestió de textos i cites</em>.
 */
-int main() {
+int main()
+{
 	string linia;	
 	getline(cin,linia);
     Biblioteca b;

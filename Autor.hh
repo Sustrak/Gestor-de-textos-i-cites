@@ -1,9 +1,9 @@
-/** @file Autor.hpp
+/** @file Autor.hh
     @brief Especificació de la classe Autor 
 */
 
-#ifndef Autor_hpp
-#define Autor_hpp
+#ifndef Autor_hh
+#define Autor_hh
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -17,11 +17,11 @@ using namespace std;
     @brief Representa un autor i el conjunt dels seus textos */
 class Autor {
 private:
-    string nom;
-    vector<Text> textos;
-    int n_textos;
-    int n_frases;
-    int n_paraules;
+    string _nom;
+    vector<Text> _textos;
+    int _n_textos;
+    int _n_frases;
+    int _n_paraules;
     
 public:
   //Constructores 
@@ -130,4 +130,4 @@ public:
     
 };
 
-#endif /* Autor_hpp */
+#endif /* Autor_hh */

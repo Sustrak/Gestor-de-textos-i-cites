@@ -2,8 +2,8 @@
     @brief Especificació de la classe Cita 
 */
 
-#ifndef _CITA_HH_
-#define _CITA_HH_
+#ifndef Cita_hh
+#define Cita_hh
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -18,10 +18,10 @@ using namespace std;
     @brief Representa un conjunt de frases d'un text amb el títol i autor del text */
 class Cita {
 private:
-    string autor;
-    string titol;
-    vector<string> frases;
-    int num_primera;
+    string _autor;
+    string _titol;
+    vector<string> _frases;
+    int _num_primera;
     
 public:
   //Constructores 
@@ -36,9 +36,9 @@ public:
   /** @brief Creadora amb valors concrets. 
 
       \pre x <= y, text conté almenys y+1 cites
-      \post El resultat es una cita amb les frases que van de la x-èsima a la y-èsima de text i la referencia ref.
+      \post El resultat es una cita amb les frases que van de la x-èsima a la y-èsima de text.
   */ 
-    Cita (const Text& text, int x, int y, string ref);
+    Cita (const Text& text, int x, int y);
     
   //Destructores
   
@@ -66,7 +66,7 @@ public:
     /** @brief Escriu la cita.
 
       \pre <em>cert</em>
-      \post S'escriuen pel canal estàndard la referència, les frases, l'autor i el títol del p.i.
+      \post S'escriuen pel canal estàndard les frases, l'autor i el títol del p.i.
   */      
     void escriure();
     
@@ -79,4 +79,4 @@ public:
     
 };
 
-#endif /* _CITA_HH_ */
+#endif /* Cita_hh */
