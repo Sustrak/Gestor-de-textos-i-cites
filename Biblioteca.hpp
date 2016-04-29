@@ -128,6 +128,12 @@ public:
      /post Retorna el nombre de frases de l'ultim text triat
     */
     void nombre_frases();
+ 
+     /** @brief Nombre de paraules
+     /pre Hi ha un text triat
+     /post Retorna el nombre de paraules de l'ultim text triat
+    */
+    void nombre_paraules();
     
     /** @brief Taula de freqüències
      /pre Hi ha un text triat
