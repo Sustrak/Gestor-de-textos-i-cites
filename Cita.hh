@@ -5,14 +5,19 @@
 #ifndef _CITA_HH_
 #define _CITA_HH_
 
+#ifndef NO_DIAGRAM
 #include <string>
 #include <vector>
+#endif
+
+#include "Text.hpp"
+
+using namespace std;
 
 /** @class Cita
     @brief Representa un conjunt de frases d'un text amb el títol i autor del text */
 class Cita {
 private:
-    string ref;
     string autor;
     string titol;
     vector<string> frases;
@@ -48,19 +53,12 @@ public:
   */     
     string consultar_autor();
     
-    /** @brief Retorna la referència de la cita.
-
-      \pre <em>cert</em>
-      \post Es retorna la referència del p.i.
-  */     
-    string consultar_referencia();
-    
     /** @brief Retorna el títol del text que es cita.
 
       \pre <em>cert</em>
       \post Es retorna el títol del p.i.
   */     
-    string consultar_referencia();
+    string consultar_titol();
  
 
   //Escriptura
