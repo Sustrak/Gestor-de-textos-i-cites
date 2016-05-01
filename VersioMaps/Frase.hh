@@ -1,5 +1,5 @@
 /** @file Frase.hh
-    @brief Especificació de la classe Frase 
+    @brief Especificació de la classe Frase
 */
 
 #ifndef Frase_hh
@@ -17,15 +17,15 @@ class Frase {
     /** @class Frase
         @brief Representa una frase.
     */
-    
+
 private:
     vector<string> _frase;
-    int n_paraules;
-    
+    int _n_paraules;
+
 public:
 
-  //Constructora 
-  
+  //Constructora
+
     /** @brief Creadora per defecte.
         S'executa automaticament al declarar una frase.
         \pre <em>Cert</em>.
@@ -36,17 +36,17 @@ public:
   //Destructora
 
     /** @brief Destructora per defecte.
-    */   
+    */
     ~Frase ();
 
   //Modificadora
-  
+
     /** @brief El paràmetre implícit conté la primera frase de <em>linia</em>.
         \pre <em>Cert</em>.
         \post El p.i. conté la primera frase de <em>linia</em>.
     */
-    void llegir(string& linia);  
-      
+    void llegir(string& linia);
+
   //Consultora
 
     /** @brief Retorna el nombre de paraules del paràmetre implícit.
@@ -54,15 +54,15 @@ public:
         \post Retorna el nombre de paraules del p.i.
     */
     int n_paraules();
- 
+
   //Escriptura
 
     /** @brief S'escriu el paràmetre implícit.
         \pre <em>Cert</em>.
         \post S'escriu el contingut del p.i.
-    */   
+    */
     void escriure();
-    
+
 };
 
 #endif /* Cita_hh */

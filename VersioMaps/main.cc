@@ -1,6 +1,6 @@
 /**
  * @mainpage Pràctica PRO2:  Gestió de textos i cites.
- 
+
 Aplicació per a gestionar informació de textos i cites associades a aquest textos.
 */
 
@@ -12,10 +12,12 @@ Aplicació per a gestionar informació de textos i cites associades a aquest tex
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 #endif
 
 #include "Biblioteca.hh"
 #include "Cjt_cites.hh"
+#include "Text.hh"
 using namespace std;
 
 void operar (Biblioteca& b, Cjt_cites& c, string& linia)
@@ -23,7 +25,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	istringstream iss(linia);
 	string op;
 	iss >> op;
-	
+
 	if (op == "afegir") {
 		iss >> op;
 		if (op == "text") {
@@ -82,7 +84,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		if (op == "?") b.info();
 		else if (op == "cita") {
 			iss >> op;
-			b.info_cita(op);
+			c.info_cita(op);
 		}
 	}
 	else if (op == "autor") {
@@ -122,19 +124,19 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			c.cites_autor(op);
 		}
 		else if (op == "?") {
-			c.cites_text(b.text_triat);
+			c.cites_text(b.text_triat());
 		}
 	}
 	else if (linia == "totes cites ?") {
 		c.totes_cites();
 	}
 }
-	
+
 /** @brief Programa principal per la pràctica <em>Gestió de textos i cites</em>.
 */
 int main()
 {
-	string linia;	
+	string linia;
 	getline(cin,linia);
     Biblioteca b;
     Cjt_cites c;
@@ -144,4 +146,3 @@ int main()
 		getline(cin,linia);
 	}
 }
-
