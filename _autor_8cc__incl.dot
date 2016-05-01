@@ -1,0 +1,10 @@
+digraph "Autor.cc"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Autor.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Autor.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_autor_8hh.html",tooltip="Especificació de la classe Autor. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Text.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_text_8hh.html",tooltip="Especificació de la classe Text. "];
+}

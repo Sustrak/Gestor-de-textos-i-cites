@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Fitxer de Codi Biblioteca.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5d5ff01e585378b80dafb53c48ce5158.html">hh</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Biblioteca.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_biblioteca_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef Biblioteca_hh</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define Biblioteca_hh</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_autor_8hh.html">Autor.hh</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cita_8hh.html">Cita.hh</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_biblioteca.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_biblioteca.html">Biblioteca</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//Tipus de modul: dades</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_biblioteca.html#a1beffaec4c8a0343d892232dac9056c4">   26</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_biblioteca.html#a1beffaec4c8a0343d892232dac9056c4">_triat</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_biblioteca.html#adde40268cd7d3b781891dd8c154873bb">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_biblioteca.html#adde40268cd7d3b781891dd8c154873bb">_pos_autor</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_biblioteca.html#a04aafe3cc45f8e3e162c719ca2efc009">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_biblioteca.html#a04aafe3cc45f8e3e162c719ca2efc009">_pos_text</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_biblioteca.html#ab57cf64f1ae981ed489559319e162dd5">   29</a></span>&#160;    map&lt;string, Cita&gt; <a class="code" href="class_biblioteca.html#ab57cf64f1ae981ed489559319e162dd5">_cites</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_biblioteca.html#a97004533ec6416e2615b853f6f5e0141">   30</a></span>&#160;    vector&lt;Autor&gt; <a class="code" href="class_biblioteca.html#a97004533ec6416e2615b853f6f5e0141">_autors</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Constructora</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_biblioteca.html#a5e12ea4e7a4edb14d210a41708fc1c10">Biblioteca</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_biblioteca.html#ae3f55e8952ed4bdddb82ece48c52f6c0">~Biblioteca</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//Modificadores text</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#ab8377b52d8cb1185ecede43fd4c66547">afegir_text</a>(<span class="keywordtype">string</span> titol);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#ae33eec00b2e6ff64559bed84666735fd">triar_text</a>(<span class="keywordtype">string</span> paraules);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#ab57695e19dc38ea1a4eb31951ce925d2">eliminar_text</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a3fd279e9d0e36d121774a2ee28f1d006">substitueix</a> (<span class="keywordtype">string</span> par1, <span class="keywordtype">string</span> par2);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//Modificadores cites</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a5cfe3162f6275e38dd4ac1727a5b74ed">afegir_cita</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a7d11857bb15f3870d27604154ce9d3de">eliminar_cita</a>(<span class="keywordtype">string</span> referencia);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//Escriptura text</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a42623b44f73cdc217e2226271fa23784">textos_autor</a>(<span class="keywordtype">string</span> <a class="code" href="class_biblioteca.html#aaad59355b009b00dfea42c853c17f7d2">autor</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a12ea860c0a97b5e91271cec29a8d57c3">tots_textos</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a0a23eb63c052f3e05c091210e16245d8">tots_autors</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a87408818e0025f8c97f1e5af1c3db4ad">info</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#aaad59355b009b00dfea42c853c17f7d2">autor</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#ab3d96bec0fc25472bed0ed7fcb55e43e">contingut</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a3f93c4d18c74cf9a94e22c2c64980d33">frasesxy</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#af969b4cc99450260bae6b228ceb5d5be">nombre_frases</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a041f20475662276502bc244e6565d43f">nombre_paraules</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a24984d460799c065b15657e717301fea">taula_freq</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#ae2ef00c7dd0717bbf20abfa61aad52e4">frases_expressio</a>(<span class="keywordtype">string</span> expressio);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#aa3b01fa6ed6a3faa53f8f0f379f24f18">frases_paraules</a>(<span class="keywordtype">string</span> paraules);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">//Escriptura cites</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a73078f79ef9446bc060085e1ff8b89c2">info_cita</a>(<span class="keywordtype">string</span> referencia);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a8cf8d7ba1b6c217e39ed42e28db94519">cites_text</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a0ae6335cfb110b13bd25abad679fb7e7">cites_autor</a>(<span class="keywordtype">string</span> <a class="code" href="class_biblioteca.html#aaad59355b009b00dfea42c853c17f7d2">autor</a>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_biblioteca.html#a0c3effd841d97a8525ea735ad3dc1897">totes_cites</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;};</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Biblioteca_hh */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_biblioteca_html_a0ae6335cfb110b13bd25abad679fb7e7"><div class="ttname"><a href="class_biblioteca.html#a0ae6335cfb110b13bd25abad679fb7e7">Biblioteca::cites_autor</a></div><div class="ttdeci">void cites_autor(string autor)</div><div class="ttdoc">Cites d&#39;un autor. </div></div>
+<div class="ttc" id="class_biblioteca_html_a041f20475662276502bc244e6565d43f"><div class="ttname"><a href="class_biblioteca.html#a041f20475662276502bc244e6565d43f">Biblioteca::nombre_paraules</a></div><div class="ttdeci">void nombre_paraules()</div><div class="ttdoc">Nombre de paraules. </div></div>
+<div class="ttc" id="class_biblioteca_html_ae3f55e8952ed4bdddb82ece48c52f6c0"><div class="ttname"><a href="class_biblioteca.html#ae3f55e8952ed4bdddb82ece48c52f6c0">Biblioteca::~Biblioteca</a></div><div class="ttdeci">~Biblioteca()</div></div>
+<div class="ttc" id="class_biblioteca_html_a42623b44f73cdc217e2226271fa23784"><div class="ttname"><a href="class_biblioteca.html#a42623b44f73cdc217e2226271fa23784">Biblioteca::textos_autor</a></div><div class="ttdeci">void textos_autor(string autor)</div><div class="ttdoc">Textos d&#39;un autor /pre Cert /post Escriu tots els textos de l&#39;autor autor </div></div>
+<div class="ttc" id="class_biblioteca_html_ab8377b52d8cb1185ecede43fd4c66547"><div class="ttname"><a href="class_biblioteca.html#ab8377b52d8cb1185ecede43fd4c66547">Biblioteca::afegir_text</a></div><div class="ttdeci">void afegir_text(string titol)</div><div class="ttdoc">Afegeix un text a un autor. </div></div>
+<div class="ttc" id="class_biblioteca_html_a97004533ec6416e2615b853f6f5e0141"><div class="ttname"><a href="class_biblioteca.html#a97004533ec6416e2615b853f6f5e0141">Biblioteca::_autors</a></div><div class="ttdeci">vector&lt; Autor &gt; _autors</div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00030">Biblioteca.hh:30</a></div></div>
+<div class="ttc" id="class_biblioteca_html_a3f93c4d18c74cf9a94e22c2c64980d33"><div class="ttname"><a href="class_biblioteca.html#a3f93c4d18c74cf9a94e22c2c64980d33">Biblioteca::frasesxy</a></div><div class="ttdeci">void frasesxy(int x, int y)</div><div class="ttdoc">Frases {x, y}. </div></div>
+<div class="ttc" id="_cita_8hh_html"><div class="ttname"><a href="_cita_8hh.html">Cita.hh</a></div><div class="ttdoc">Especificació de la classe Cita. </div></div>
+<div class="ttc" id="class_biblioteca_html_ab57695e19dc38ea1a4eb31951ce925d2"><div class="ttname"><a href="class_biblioteca.html#ab57695e19dc38ea1a4eb31951ce925d2">Biblioteca::eliminar_text</a></div><div class="ttdeci">void eliminar_text()</div><div class="ttdoc">Elimina el text triat. </div></div>
+<div class="ttc" id="class_biblioteca_html_aa3b01fa6ed6a3faa53f8f0f379f24f18"><div class="ttname"><a href="class_biblioteca.html#aa3b01fa6ed6a3faa53f8f0f379f24f18">Biblioteca::frases_paraules</a></div><div class="ttdeci">void frases_paraules(string paraules)</div><div class="ttdoc">Frases paraules. </div></div>
+<div class="ttc" id="class_biblioteca_html_a8cf8d7ba1b6c217e39ed42e28db94519"><div class="ttname"><a href="class_biblioteca.html#a8cf8d7ba1b6c217e39ed42e28db94519">Biblioteca::cites_text</a></div><div class="ttdeci">void cites_text()</div><div class="ttdoc">Cites. </div></div>
+<div class="ttc" id="class_biblioteca_html_a87408818e0025f8c97f1e5af1c3db4ad"><div class="ttname"><a href="class_biblioteca.html#a87408818e0025f8c97f1e5af1c3db4ad">Biblioteca::info</a></div><div class="ttdeci">void info()</div><div class="ttdoc">Informació </div></div>
+<div class="ttc" id="class_biblioteca_html_a0a23eb63c052f3e05c091210e16245d8"><div class="ttname"><a href="class_biblioteca.html#a0a23eb63c052f3e05c091210e16245d8">Biblioteca::tots_autors</a></div><div class="ttdeci">void tots_autors()</div><div class="ttdoc">Tots els autors. </div></div>
+<div class="ttc" id="class_biblioteca_html_a5e12ea4e7a4edb14d210a41708fc1c10"><div class="ttname"><a href="class_biblioteca.html#a5e12ea4e7a4edb14d210a41708fc1c10">Biblioteca::Biblioteca</a></div><div class="ttdeci">Biblioteca()</div><div class="ttdoc">Creadora per defecte. S&#39;executa automaticament al declarar Biblioteca b;. </div></div>
+<div class="ttc" id="class_biblioteca_html_ae2ef00c7dd0717bbf20abfa61aad52e4"><div class="ttname"><a href="class_biblioteca.html#ae2ef00c7dd0717bbf20abfa61aad52e4">Biblioteca::frases_expressio</a></div><div class="ttdeci">void frases_expressio(string expressio)</div><div class="ttdoc">Frases que compleixen l&#39;expressió </div></div>
+<div class="ttc" id="class_biblioteca_html_af969b4cc99450260bae6b228ceb5d5be"><div class="ttname"><a href="class_biblioteca.html#af969b4cc99450260bae6b228ceb5d5be">Biblioteca::nombre_frases</a></div><div class="ttdeci">void nombre_frases()</div><div class="ttdoc">Nombre de frases. </div></div>
+<div class="ttc" id="class_biblioteca_html_a1beffaec4c8a0343d892232dac9056c4"><div class="ttname"><a href="class_biblioteca.html#a1beffaec4c8a0343d892232dac9056c4">Biblioteca::_triat</a></div><div class="ttdeci">bool _triat</div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00026">Biblioteca.hh:26</a></div></div>
+<div class="ttc" id="class_biblioteca_html_a0c3effd841d97a8525ea735ad3dc1897"><div class="ttname"><a href="class_biblioteca.html#a0c3effd841d97a8525ea735ad3dc1897">Biblioteca::totes_cites</a></div><div class="ttdeci">void totes_cites()</div><div class="ttdoc">Totes les cites. </div></div>
+<div class="ttc" id="class_biblioteca_html"><div class="ttname"><a href="class_biblioteca.html">Biblioteca</a></div><div class="ttdoc">Guarda i ordena els autors i cites. </div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00017">Biblioteca.hh:17</a></div></div>
+<div class="ttc" id="class_biblioteca_html_a3fd279e9d0e36d121774a2ee28f1d006"><div class="ttname"><a href="class_biblioteca.html#a3fd279e9d0e36d121774a2ee28f1d006">Biblioteca::substitueix</a></div><div class="ttdeci">void substitueix(string par1, string par2)</div><div class="ttdoc">Substitueix una paraula en el text triat. </div></div>
+<div class="ttc" id="class_biblioteca_html_a7d11857bb15f3870d27604154ce9d3de"><div class="ttname"><a href="class_biblioteca.html#a7d11857bb15f3870d27604154ce9d3de">Biblioteca::eliminar_cita</a></div><div class="ttdeci">void eliminar_cita(string referencia)</div><div class="ttdoc">Elimiar una cita. </div></div>
+<div class="ttc" id="class_biblioteca_html_a24984d460799c065b15657e717301fea"><div class="ttname"><a href="class_biblioteca.html#a24984d460799c065b15657e717301fea">Biblioteca::taula_freq</a></div><div class="ttdeci">void taula_freq()</div><div class="ttdoc">Taula de freqüències. </div></div>
+<div class="ttc" id="class_biblioteca_html_ab3d96bec0fc25472bed0ed7fcb55e43e"><div class="ttname"><a href="class_biblioteca.html#ab3d96bec0fc25472bed0ed7fcb55e43e">Biblioteca::contingut</a></div><div class="ttdeci">void contingut()</div><div class="ttdoc">Informació </div></div>
+<div class="ttc" id="class_biblioteca_html_ab57cf64f1ae981ed489559319e162dd5"><div class="ttname"><a href="class_biblioteca.html#ab57cf64f1ae981ed489559319e162dd5">Biblioteca::_cites</a></div><div class="ttdeci">map&lt; string, Cita &gt; _cites</div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00029">Biblioteca.hh:29</a></div></div>
+<div class="ttc" id="class_biblioteca_html_a12ea860c0a97b5e91271cec29a8d57c3"><div class="ttname"><a href="class_biblioteca.html#a12ea860c0a97b5e91271cec29a8d57c3">Biblioteca::tots_textos</a></div><div class="ttdeci">void tots_textos()</div><div class="ttdoc">Tots els textos /pre Cert /post Escriu tots els textos introduïts. </div></div>
+<div class="ttc" id="class_biblioteca_html_a04aafe3cc45f8e3e162c719ca2efc009"><div class="ttname"><a href="class_biblioteca.html#a04aafe3cc45f8e3e162c719ca2efc009">Biblioteca::_pos_text</a></div><div class="ttdeci">int _pos_text</div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00028">Biblioteca.hh:28</a></div></div>
+<div class="ttc" id="class_biblioteca_html_a5cfe3162f6275e38dd4ac1727a5b74ed"><div class="ttname"><a href="class_biblioteca.html#a5cfe3162f6275e38dd4ac1727a5b74ed">Biblioteca::afegir_cita</a></div><div class="ttdeci">void afegir_cita(int x, int y)</div><div class="ttdoc">Afegex una cita. </div></div>
+<div class="ttc" id="class_biblioteca_html_ae33eec00b2e6ff64559bed84666735fd"><div class="ttname"><a href="class_biblioteca.html#ae33eec00b2e6ff64559bed84666735fd">Biblioteca::triar_text</a></div><div class="ttdeci">void triar_text(string paraules)</div><div class="ttdoc">Tria el text que conté certes paraules. </div></div>
+<div class="ttc" id="class_biblioteca_html_aaad59355b009b00dfea42c853c17f7d2"><div class="ttname"><a href="class_biblioteca.html#aaad59355b009b00dfea42c853c17f7d2">Biblioteca::autor</a></div><div class="ttdeci">void autor()</div><div class="ttdoc">Autor. </div></div>
+<div class="ttc" id="_autor_8hh_html"><div class="ttname"><a href="_autor_8hh.html">Autor.hh</a></div><div class="ttdoc">Especificació de la classe Autor. </div></div>
+<div class="ttc" id="class_biblioteca_html_adde40268cd7d3b781891dd8c154873bb"><div class="ttname"><a href="class_biblioteca.html#adde40268cd7d3b781891dd8c154873bb">Biblioteca::_pos_autor</a></div><div class="ttdeci">int _pos_autor</div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00027">Biblioteca.hh:27</a></div></div>
+<div class="ttc" id="class_biblioteca_html_a73078f79ef9446bc060085e1ff8b89c2"><div class="ttname"><a href="class_biblioteca.html#a73078f79ef9446bc060085e1ff8b89c2">Biblioteca::info_cita</a></div><div class="ttdeci">void info_cita(string referencia)</div><div class="ttdoc">Informació cita. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat a Dg Mai 1 2016 13:35:55 per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

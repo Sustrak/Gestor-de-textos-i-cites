@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Fitxer de Codi Text.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5d5ff01e585378b80dafb53c48ce5158.html">hh</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Text.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_text_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef Text_hh</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define Text_hh</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_taula.html">   16</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_taula.html">Taula</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_taula.html#a4f1f5f423440872e1e51ceb2060fdabf">   17</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="struct_taula.html#a4f1f5f423440872e1e51ceb2060fdabf">paraula</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_taula.html#a91884002981a8050c00ba99631d343eb">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_taula.html#a91884002981a8050c00ba99631d343eb">freq</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_text.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_text.html">Text</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_text.html#a308c5315168c09ab77d8880341a378cf">   25</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_text.html#a308c5315168c09ab77d8880341a378cf">_titol</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_text.html#afeb0ed215dddfacf0557528eda859151">   26</a></span>&#160;    vector&lt;string&gt; <a class="code" href="class_text.html#afeb0ed215dddfacf0557528eda859151">_frases</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_text.html#ad9bdde8f3cd8812b1d9f86f24eeb051c">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_text.html#ad9bdde8f3cd8812b1d9f86f24eeb051c">_nparaules</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_text.html#ac114e176f7b5510db13a02a7c2357726">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_text.html#ac114e176f7b5510db13a02a7c2357726">_nfrases</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_text.html#aec81f992e430988fd583a94c2f28ce39">   29</a></span>&#160;    vector&lt;Taula&gt; <a class="code" href="class_text.html#aec81f992e430988fd583a94c2f28ce39">_tfreq</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> split_contingut(<span class="keywordtype">string</span> contingut, vector&lt;string&gt; frases);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> ordenar_tfreq(vector&lt;Taula&gt; tfreq);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//Constructores</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_text.html">Text</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_text.html">Text</a>(<span class="keywordtype">string</span> titol, <span class="keywordtype">string</span> contingut);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ~<a class="code" href="class_text.html">Text</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//Consultores</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">string</span> consultar_titol();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> consultar_nfrases();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> consultar_nparaules();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> buscar(<span class="keywordtype">bool</span> tipus, vector&lt;string&gt; paraules);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    vector&lt;string&gt; frases(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//Escriptura</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span> escriure_contingut();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> escriure_taula_freq();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Text_hh */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="ttc" id="class_text_html"><div class="ttname"><a href="class_text.html">Text</a></div><div class="ttdoc">Representa un Text. </div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00023">Text.hh:23</a></div></div>
+<div class="ttc" id="struct_taula_html_a4f1f5f423440872e1e51ceb2060fdabf"><div class="ttname"><a href="struct_taula.html#a4f1f5f423440872e1e51ceb2060fdabf">Taula::paraula</a></div><div class="ttdeci">string paraula</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00017">Text.hh:17</a></div></div>
+<div class="ttc" id="class_text_html_a308c5315168c09ab77d8880341a378cf"><div class="ttname"><a href="class_text.html#a308c5315168c09ab77d8880341a378cf">Text::_titol</a></div><div class="ttdeci">string _titol</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00025">Text.hh:25</a></div></div>
+<div class="ttc" id="struct_taula_html"><div class="ttname"><a href="struct_taula.html">Taula</a></div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00016">Text.hh:16</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_text_html_aec81f992e430988fd583a94c2f28ce39"><div class="ttname"><a href="class_text.html#aec81f992e430988fd583a94c2f28ce39">Text::_tfreq</a></div><div class="ttdeci">vector&lt; Taula &gt; _tfreq</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00029">Text.hh:29</a></div></div>
+<div class="ttc" id="class_text_html_ad9bdde8f3cd8812b1d9f86f24eeb051c"><div class="ttname"><a href="class_text.html#ad9bdde8f3cd8812b1d9f86f24eeb051c">Text::_nparaules</a></div><div class="ttdeci">int _nparaules</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00027">Text.hh:27</a></div></div>
+<div class="ttc" id="class_text_html_afeb0ed215dddfacf0557528eda859151"><div class="ttname"><a href="class_text.html#afeb0ed215dddfacf0557528eda859151">Text::_frases</a></div><div class="ttdeci">vector&lt; string &gt; _frases</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00026">Text.hh:26</a></div></div>
+<div class="ttc" id="struct_taula_html_a91884002981a8050c00ba99631d343eb"><div class="ttname"><a href="struct_taula.html#a91884002981a8050c00ba99631d343eb">Taula::freq</a></div><div class="ttdeci">int freq</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00018">Text.hh:18</a></div></div>
+<div class="ttc" id="class_text_html_ac114e176f7b5510db13a02a7c2357726"><div class="ttname"><a href="class_text.html#ac114e176f7b5510db13a02a7c2357726">Text::_nfrases</a></div><div class="ttdeci">int _nfrases</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat a Dg Mai 1 2016 13:35:55 per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
