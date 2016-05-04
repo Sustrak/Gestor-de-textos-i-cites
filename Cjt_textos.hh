@@ -75,6 +75,12 @@ public:
     */
     void buscar_text(bool& trobat, const vector<string>& paraules);
     
+    /** @brief Substitueix una paraula per una altre en el text triat.
+        \pre Hi ha un text triat.
+        \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el text triat.
+    */
+    void substitueix (string par1, string par2);
+    
   //Consultores
     
     /** @brief <em>títol</em> conté el títol del text triat al paràmetre implícit.
