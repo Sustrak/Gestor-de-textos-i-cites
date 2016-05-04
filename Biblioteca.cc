@@ -70,22 +70,49 @@ void Biblioteca::eliminar_text()
     
 void Biblioteca::substitueix (string par1, string par2)
 {
+    (*_autor_triat).second.substitueix(par1, par2);
 }
     
 bool Biblioteca::triat()
 {
-    return true;
+    return _triat;
 }
     
 void Biblioteca::modificar_cita(Cita& c, int x, int y){}
     
-void Biblioteca::info_triat(string& autor, string& títol){}
+void Biblioteca::info_triat(string& autor, string& titol)
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        autor = (*_autor_triat).first;
+        (*_autor_triat).second.titol_triat(titol);
+    }
+}
+
+void Biblioteca::textos_autor(string autor)
+{
+    map<string, Cjt_textos>::iterator it = _autors.find(autor);
+    (*it).second.escriure_titols();
+}
     
-void Biblioteca::textos_autor(string autor){}
+void Biblioteca::tots_textos()
+{
+    map<string, Cjt_textos>::iterator it = _autors.begin();
     
-void Biblioteca::tots_textos(){}
+    while (it != _autors.end()){
+        cout << (*it).first << " ";
+        (*it).second.escriure_titols();
+    }
+}
     
-void Biblioteca::tots_autors(){}
+void Biblioteca::tots_autors()
+{
+    map<string, Cjt_textos>::iterator it = _autors.begin();
+    while (it != _autors.end()) {
+        cout << (*it).first << endl;
+        //Falten funcions a Cjt_textos
+    }
+}
     
 void Biblioteca::info(){}
     

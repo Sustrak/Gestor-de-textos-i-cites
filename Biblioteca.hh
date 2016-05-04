@@ -101,7 +101,7 @@ public:
     
     //Escriptura
     
-    /** @brief S'escriuen tots els textos d'un autor.
+    /** @brief S'escriu el títol de tots els textos d'un autor.
         \pre <em>Cert</em>.
         \post S'escriu el títol de tots els textos de l'autor <b>autor</b>, si existeix, pel canal estàndard de sortida.
     */
