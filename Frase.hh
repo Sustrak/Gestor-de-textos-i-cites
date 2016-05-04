@@ -46,6 +46,12 @@ public:
         \post El p.i. conté la primera frase de <em>linia</em>.
     */
     void llegir(string& linia);
+    
+    /** @brief Substitueix una paraula per una altre en el paràmetre implícit.
+        \pre <em>Cert</em>.
+        \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el p.i.
+    */
+    void substitueix (string par1, string par2);
 
   //Consultora
 
