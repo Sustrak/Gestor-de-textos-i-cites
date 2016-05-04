@@ -15,5 +15,7 @@ void Cjt_textos::eliminar_text();
 void Cjt_textos::triar_text(bool& trobat, const vector<string>& paraules);
 
 void Cjt_textos::buscar_text(bool& trobat, const vector<string>& paraules);
+
+void Cjt_textos::substitueix (string par1, string par2);
     
 void Cjt_textos::escriure_titols();
