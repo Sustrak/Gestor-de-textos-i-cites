@@ -9,13 +9,15 @@
 
 using namespace std;
 
-Biblioteca::Biblioteca(){
+Biblioteca::Biblioteca()
+{
     _triat = false;
 }
 
 Biblioteca::~Biblioteca(){}
 
-void Biblioteca::afegir_text(string titol){
+void Biblioteca::afegir_text(string titol)
+{
     normalitzar(titol);
     string autor;
     cin >> autor >> autor;
@@ -24,7 +26,8 @@ void Biblioteca::afegir_text(string titol){
     _autors[autor].afegir_text(titol);
 }
 
-void Biblioteca::triar_text(string paraules){
+void Biblioteca::triar_text(string paraules)
+{
     normalitzar(paraules);
     
     istringstream iss(paraules);
@@ -59,36 +62,45 @@ void Biblioteca::triar_text(string paraules){
     }
 }
 
-void Biblioteca::eliminar_text();
+void Biblioteca::eliminar_text()
+{
+    if (not _triat) cout << "error" << endl;
+    else (*_autor_triat).second.eliminar_text();
+}
     
-void Biblioteca::substitueix (string par1, string par2);
+void Biblioteca::substitueix (string par1, string par2)
+{
+}
     
-bool Biblioteca::triat(); 
+bool Biblioteca::triat()
+{
+    return true;
+}
     
-void Biblioteca::modificar_cita(Cita& c, int x, int y);
+void Biblioteca::modificar_cita(Cita& c, int x, int y){}
     
-void Biblioteca::info_triat(string& autor, string& títol);
+void Biblioteca::info_triat(string& autor, string& títol){}
     
-void Biblioteca::textos_autor(string autor);
+void Biblioteca::textos_autor(string autor){}
     
-void Biblioteca::tots_textos();
+void Biblioteca::tots_textos(){}
     
-void Biblioteca::tots_autors();
+void Biblioteca::tots_autors(){}
     
-void Biblioteca::info();
+void Biblioteca::info(){}
     
-void Biblioteca::autor();
+void Biblioteca::autor(){}
     
-void Biblioteca::contingut();
+void Biblioteca::contingut(){}
     
-void Biblioteca::frasesxy (int x, int y);
+void Biblioteca::frasesxy (int x, int y){}
     
-void Biblioteca::nombre_frases();
+void Biblioteca::nombre_frases(){}
     
-void Biblioteca::nombre_paraules();
+void Biblioteca::nombre_paraules(){}
     
-void Biblioteca::taula_freq();
+void Biblioteca::taula_freq(){}
     
-void Biblioteca::frases_expressio(string expressio);
+void Biblioteca::frases_expressio(string expressio){}
     
-void Biblioteca::frases_paraules(string paraules);
+void Biblioteca::frases_paraules(string paraules){}
