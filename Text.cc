@@ -19,3 +19,5 @@ bool Text::conte_paraules(const string& paraules);
 void Text::afegir_contingut(int x, int y, Cita& cita);
 
 void Text::escriure_contingut();
+
+void Text::substitueix (string par1, string par2);
