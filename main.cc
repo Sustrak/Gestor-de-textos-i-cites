@@ -17,7 +17,6 @@ Aplicació per a gestionar informació de textos i cites associades a aquest tex
 
 #include "Biblioteca.hh"
 #include "Cjt_cites.hh"
-#include "Text.hh"
 using namespace std;
 
 void operar (Biblioteca& b, Cjt_cites& c, string& linia)
@@ -37,7 +36,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			x = op[0] -'0';
 			iss >> op;
 			y = op[0] -'0';
-			c.afegir_cita(b.text_triat(), x, y);
+			c.afegir_cita(b, x, y);
 		}
 	}
 	else if (op == "triar") {
@@ -124,7 +123,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			c.cites_autor(op);
 		}
 		else if (op == "?") {
-			c.cites_text(b.text_triat());
+			c.cites_text(b);
 		}
 	}
 	else if (linia == "totes cites ?") {

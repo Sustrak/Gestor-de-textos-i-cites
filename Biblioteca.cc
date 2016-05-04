@@ -58,3 +58,37 @@ void Biblioteca::triar_text(string paraules){
         cout << "error" << endl;
     }
 }
+
+void Biblioteca::eliminar_text();
+    
+void Biblioteca::substitueix (string par1, string par2);
+    
+bool Biblioteca::triat(); 
+    
+void Biblioteca::modificar_cita(Cita& c, int x, int y);
+    
+void Biblioteca::info_triat(string& autor, string& títol);
+    
+void Biblioteca::textos_autor(string autor);
+    
+void Biblioteca::tots_textos();
+    
+void Biblioteca::tots_autors();
+    
+void Biblioteca::info();
+    
+void Biblioteca::autor();
+    
+void Biblioteca::contingut();
+    
+void Biblioteca::frasesxy (int x, int y);
+    
+void Biblioteca::nombre_frases();
+    
+void Biblioteca::nombre_paraules();
+    
+void Biblioteca::taula_freq();
+    
+void Biblioteca::frases_expressio(string expressio);
+    
+void Biblioteca::frases_paraules(string paraules);

@@ -15,10 +15,12 @@
 #include "Text.hh"
 using namespace std;
 
+#ifndef NO_DIAGRAM
 struct Taula {
     string paraula;
     int freq;
 };
+#endif
 
 class Biblioteca {
 
@@ -28,8 +30,8 @@ class Biblioteca {
     
 private:
     bool _triat;
-    map<string, Text>::iterator _text_triat;
-    map<string, Cjt_textos> _autors;			//L'string es el nom de l'autor.
+    map<string, Cjt_textos>::iterator _autor_triat;
+    map<string, Cjt_textos> _autors;                //L'string es el nom de l'autor.
     vector<Taula> _t_freq;
     
     static void fer_tfreq(const Text& text);
@@ -71,25 +73,31 @@ public:
     */
     void eliminar_text();
     
-    /** @brief Substitueix una paraula per una altre en el text triat.
+    /** @brief Substitueix una paraula per una altra en el text triat.
         \pre Hi ha un text triat.
         \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el text triat.
     */
     void substitueix (string par1, string par2);
     
     //Consultores
-
-    /** @brief Retorna la posició del text triat.
-        \pre Hi ha un text triat.
-        \post Retorna la posició del text triat.
-    */
-    map<string, Text>::iterator text_triat();
     
     /** @brief Retorna si hi ha un text triat.
         \pre <em>Cert</em>.
         \post Retorna si hi ha un text triat.
     */
-    bool triat();    
+    bool triat(); 
+    
+    /** @brief <em>c</em> té l'autor, el títol i les frases de la x-éssima a la y-essima del text triat al paràmetre implícit.
+        \pre Hi ha un text triat, x<=y.
+        \post <em>c</em> té l'autor, el títol i les frases de la x-éssima a la y-essima del text triat al p.i.
+    */
+    void modificar_cita(Cita& c, int x, int y);
+    
+    /** @brief <em>autor</em> conté l'autor i <em>títol</em> el títol del text triat al paràmetre implícit.
+        \pre Hi ha un text triat.
+        \post <em>autor</em> conté l'autor i <em>títol</em> el títol del text triat al p.i.
+    */
+    void info_triat(string& autor, string& titol);
     
     //Escriptura
     

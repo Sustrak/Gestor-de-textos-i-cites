@@ -29,7 +29,7 @@ private:
 
 public:
 
-  //Constructores
+  //Constructora
 
     /** @brief Creadora per defecte.
         S'executa automaticament al declarar una cita.
@@ -37,12 +37,6 @@ public:
         \post El resultat és una cita buida.
     */
     Cita ();
-
-    /** @brief Creadora amb valors concrets.
-        \pre x <= y.
-        \post El resultat és una cita amb l'autor, el títol i les frases de la x-éssima a la y-éssima del text que apunta <em>it<em/>.
-    */
-    Cita (map<string, Text>::iterator it, int x, int y);
 
   //Destructora
 

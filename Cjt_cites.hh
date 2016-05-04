@@ -11,7 +11,7 @@
 #endif
 
 #include "Cita.hh"
-#include "Text.hh"
+#include "Biblioteca.hh"
 using namespace std;
 
 class Cjt_cites {
@@ -42,11 +42,11 @@ public:
     
     //Modificadores
  
-    /** @brief Afegeix al paràmetre implícit una cita del text que apunta <em>it<em/>.
-        \pre No existeix la mateixa cita al p.i., x <= y.
-        \post S'ha afegit al p.i. una cita amb l'autor, el títol i les frases de la x-éssima a la y-éssima del text que apunta <em>it<em/>.
+    /** @brief Afegeix al paràmetre implícit una cita del text triat a <em>b<em/>.
+        \pre No existeix la mateixa cita al p.i., x <= y i <em>b</em> té un text triat.
+        \post S'ha afegit al p.i. una cita amb l'autor, el títol i les frases de la x-éssima a la y-éssima del text triat a <em>b<em/>.
     */
-    void afegir_cita(map<string, Text>::iterator it, int x, int y);
+    void afegir_cita(const Biblioteca& b, int x, int y);
  
     /** @brief Elimina del paràmetre implícit la cita de referència <em>ref<em/>.
         \pre El p.i. conté una cita amb la referència <em>ref<em/>.
@@ -76,11 +76,11 @@ public:
     */
     void cites_autor(string autor);
     
-    /** @brief S'escriu informació de totes les cites al paràmetre implícit provinents del text que apunta <em>it<em/>.
-        \pre <em>Cert</em>.
-        \post S'escriu la referència, el contingut i l'autor i el títol del text d’on provenen cada cita del p.i. provinent del text que apunta <em>it<em/>.
+    /** @brief S'escriu informació de totes les cites al paràmetre implícit provinents del text triat a <em>b<em/>.
+        \pre <em>b</em> té un text triat.
+        \post S'escriu la referència, el contingut i l'autor i el títol del text d’on provenen cada cita del p.i. provinent del text triat a <em>b<em/>.
     */
-    void cites_text(map<string, Text>::iterator it);
+    void cites_text(const Biblioteca& b);
     
     /** @brief S'escriu informació de totes les cites del paràmetre implícit.
         \pre <em>Cert</em>.
