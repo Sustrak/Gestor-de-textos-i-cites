@@ -10,6 +10,8 @@ Frase::~Frase ();
 
 void Frase::llegir(string& linia);
 
+void Frase::substitueix (string par1, string par2);
+
 int Frase::n_paraules();
 
 void Frase::escriure();
