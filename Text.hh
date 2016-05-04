@@ -68,6 +68,12 @@ public:
      */
     void llegir_text();
     
+    /** @brief Substitueix una paraula per una altre en el paràmetre implícit.
+        \pre <em>Cert</em>.
+        \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el p.i.
+    */
+    void substitueix (string par1, string par2);
+    
     /** @brief Afegeix a una cita el contingut amb les frases de la x-éssima a la y-éssima del paràmetre implicit.
         \pre <em>cita</em> ja té títol i és el matéix que el del p.i., x <= y.
         \post <em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i.
