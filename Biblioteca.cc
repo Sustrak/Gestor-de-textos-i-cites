@@ -110,24 +110,70 @@ void Biblioteca::tots_autors()
     map<string, Cjt_textos>::iterator it = _autors.begin();
     while (it != _autors.end()) {
         cout << (*it).first << endl;
-        //Falten funcions a Cjt_textos
+        (*it).second.escriure_info();
     }
 }
     
-void Biblioteca::info(){}
+void Biblioteca::info()
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        cout << (*_autor_triat).first << " ";
+        (*_autor_triat).second.escriure_info_triat();
+        //Falta escriure les cites associades
+    }
+}
+
+void Biblioteca::autor()
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        cout << (*_autor_triat).first;
+    }
+}
+
+void Biblioteca::contingut()
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        bool tot = true;
+        int x, y;
+        (*_autor_triat).second.escriure_contringut(tot, x, y);
+    }
+}
+
+void Biblioteca::frasesxy (int x, int y)
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        bool tot = false;
+        (*_autor_triat).second.escriure_contringut(tot, x, y);
+    }
+}
     
-void Biblioteca::autor(){}
-    
-void Biblioteca::contingut(){}
-    
-void Biblioteca::frasesxy (int x, int y){}
-    
-void Biblioteca::nombre_frases(){}
-    
-void Biblioteca::nombre_paraules(){}
-    
-void Biblioteca::taula_freq(){}
-    
+void Biblioteca::nombre_frases()
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        (*_autor_triat).second.escriure_nombre_frases();
+    }
+}
+
+void Biblioteca::nombre_paraules()
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        (*_autor_triat).second.escriure_nombre_paraules();
+    }
+}
+
+void Biblioteca::taula_freq()
+{
+    for (int i = 0; i < _tfreq.size(); ++i) {
+        cout << _tfreq[i].paraula << " " << _tfreq[i].freq << endl;
+    }
+}
+
 void Biblioteca::frases_expressio(string expressio){}
     
 void Biblioteca::frases_paraules(string paraules){}

@@ -32,7 +32,7 @@ private:
     bool _triat;
     map<string, Cjt_textos>::iterator _autor_triat;
     map<string, Cjt_textos> _autors;                //L'string es el nom de l'autor.
-    vector<Taula> _t_freq;
+    vector<Taula> _tfreq;
     
     static void fer_tfreq(const Text& text);
     

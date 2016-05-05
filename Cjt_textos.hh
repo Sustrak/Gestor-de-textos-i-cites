@@ -95,7 +95,38 @@ public:
         \pre <em>Cert</em>.
         \post S'escriuen pel canal estàndard de sortida el títol de tots els textos del p.i. ordenats alfabèticament.
     */   
-    void escriure_titols();   
+    void escriure_titols();
+    
+    /** @brief S'secriuen el nombre de títols del paràmetre implicit, el nombre de frases i paraules
+        \pre <em>Cert</em>
+        \post S'ecriuen pel canal estàndard de sortida el nombre de titols, frases i paraules del p.i
+     */
+    
+    void escriure_info();
+    
+    /** @brief Escriu el títol, nombre de frases i paraules del text triat
+        \pre Hi ha un text triat
+        \post S'esciuen pel canal estàndard de sortida el títol i el nombre de frases i paraules del text triat
+     */
+    void escriure_info_triat();
+    
+    /** @brief Escriu el contingut del text triat si tot es cert altrament escriurà només les frases de la x a la y
+        \pre Hi ha un text triat
+        \post S'escriu pel canal estàndard de sortida el contingut del text triat si tot es cert altrament s'escriu de la frase x al la frase y
+     */
+    void escriure_contringut(bool tot, int x, int y);
+    
+    /** @brief Escriu el nombre de frases de l'ultim text triat
+        \pre Hi ha un text triat
+        \post S'escriu pel canal estàndard de sortida el nobre de frases del text triat
+     */
+    void escriure_nombre_frases();
+    
+    /** @brief Escriu el nombre de paraules de l'ultim text triat
+     \pre Hi ha un text triat
+     \post S'escriu pel canal estàndard de sortida el nobre de paraules del text triat
+     */
+    void escriure_nombre_paraules();
 };
 
 #endif /* Cjt_textos_hh */
