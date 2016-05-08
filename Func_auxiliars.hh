@@ -6,6 +6,7 @@
 
 #include <sstream>
 #include <iostream>
+#include <vector>
 #include <string>
 
 using namespace std;
@@ -16,5 +17,6 @@ using namespace std;
 */
 
 string normalitzar(string linia);
+vector<string> par_buscar(string paraules);
 
 #endif

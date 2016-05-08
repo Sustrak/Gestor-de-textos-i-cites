@@ -88,6 +88,12 @@ public:
         \post <em>títol</em> conté el títol del text triat al p.i.
     */
     void titol_triat(string& titol);
+    
+    /** @brief Retorna per referencia el text triat
+     \pre Hi ha un text triat
+     \post Retorna per referencia el text triat
+     */
+    void text_triat(Text& text);
 
   //Escriptura
     
@@ -127,6 +133,12 @@ public:
      \post S'escriu pel canal estàndard de sortida el nobre de paraules del text triat
      */
     void escriure_nombre_paraules();
+    
+    /** @brief S'escriuen les frases del contingut del text triat que contenen la seqüència de paraules.
+     \pre <em>Cert</em>
+     \post S'escriuen les frases del contingut del text triat que contenen la seqüència de paraules pel canal estàndard de sortida.
+     */
+    void frases_paraules(vector<string> paraules);
 };
 
 #endif /* Cjt_textos_hh */

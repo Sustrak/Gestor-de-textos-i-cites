@@ -30,10 +30,7 @@ void Biblioteca::triar_text(string paraules)
 {
     normalitzar(paraules);
     
-    istringstream iss(paraules);
-    vector<string> paraules_buscar;
-    string aux;
-    while (iss >> aux) paraules_buscar.push_back(aux);
+    vector<string> paraules_buscar = par_buscar(paraules);
     
     map<string, Cjt_textos>::iterator it_autor = _autors.begin();
     bool trobat = false;
@@ -176,4 +173,19 @@ void Biblioteca::taula_freq()
 
 void Biblioteca::frases_expressio(string expressio){}
     
-void Biblioteca::frases_paraules(string paraules){}
+void Biblioteca::frases_paraules(string paraules)
+{
+    if (not _triat) cout << "error" << endl;
+    else {
+        normalitzar(paraules);
+        vector<string> vec_par = par_buscar(paraules);
+        
+        (*_autor_triat).second.frases_paraules(vec_par);
+    }
+    
+}
+
+static void fer_tfreq(const Text& text)
+{
+    
+}
