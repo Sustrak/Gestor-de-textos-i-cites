@@ -75,7 +75,13 @@ bool Biblioteca::triat()
     return _triat;
 }
     
-void Biblioteca::modificar_cita(Cita& c, int x, int y){}
+void Biblioteca::modificar_cita(Cita& c, int x, int y)
+{
+	if (_triat) {
+		c.afegir_autor((*_autor_triat).first);
+		(*_autor_triat).second.modificar_cita(c, x, y);
+	}
+}
     
 void Biblioteca::info_triat(string& autor, string& titol)
 {
