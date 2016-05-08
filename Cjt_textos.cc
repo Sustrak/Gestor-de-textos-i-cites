@@ -22,6 +22,12 @@ void Cjt_textos::eliminar_text()
     _textos.erase(_text_triat);
 }
 
+void Cjt_textos::modificar_cita(Cita& c, int x, int y)
+{
+	c.afegir_titol((*_text_triat).first);
+	(*_text_triat).second.afegir_contingut(x, y, c);
+}
+
 void Cjt_textos::triar_text(bool& trobat, const vector<string>& paraules)
 {
     map<string, Text>::iterator it_text = _textos.begin();
