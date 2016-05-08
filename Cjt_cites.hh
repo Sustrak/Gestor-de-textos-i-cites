@@ -43,8 +43,8 @@ public:
     //Modificadores
  
     /** @brief Afegeix al paràmetre implícit una cita del text triat a <em>b<em/>.
-        \pre x <= y i <em>b</em> té un text triat.
-        \post S'ha afegit al p.i. una cita amb l'autor, el títol i les frases de la x-éssima a la y-éssima del text triat a <em>b<em/>.
+        \pre x <= y.
+        \post Si <em>b</em> té un text triat i no existeix una cita igual, s'ha afegit al p.i. una cita amb l'autor, el títol i les frases de la x-éssima a la y-éssima del text triat a <em>b<em/>. Altrament, s'escriu un missatge d'error.
     */
     void afegir_cita(const Biblioteca& b, int x, int y);
  
