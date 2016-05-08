@@ -8,6 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <vector>
+#include <iostream>
 #endif
 
 #include "Cita.hh"

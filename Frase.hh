@@ -60,6 +60,12 @@ public:
         \post Retorna el nombre de paraules del p.i.
     */
     int n_paraules();
+    
+    /** @brief Mira si al p.i hi ha les paraules del vector
+        \pre <em>Cert</em>
+        \post Retorna true si les paraules del vector estan en el p.i, altrament retorna false
+     */
+    bool buscar_paraules(const vector<string>& paraules);
 
   //Escriptura
 

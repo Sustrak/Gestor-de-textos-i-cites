@@ -8,6 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <map>
+#include <iostream>
 #endif
 
 #include "Text.hh"
