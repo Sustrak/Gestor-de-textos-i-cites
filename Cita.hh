@@ -22,6 +22,7 @@ class Cita {
     */
 
 private:
+	bool _eliminada;
     string _autor;
     string _titol;
     vector<Frase> _frases;
@@ -44,7 +45,39 @@ public:
     */
     ~Cita ();
 
+  //Modificadores
+
+    /** @brief El contingut del paràmetre implícit passa a ser les frases de la x-éssima a la y-éssima de <em>contingut</em>.
+        \pre <em>Cert</em>.
+        \post El contingut del p.i. passa a ser les frases de la x-éssima a la y-éssima de <em>contingut</em>.
+    */
+    void afegir_contingut(const vector<Frase>& contingut, int x, int y);
+
+    /** @brief L'autor del paràmetre implícit passa a ser <em>autor</em>.
+        \pre <em>Cert</em>.
+        \post L'autor del p.i. passa a ser <em>autor</em>.
+    */
+    void afegir_autor(const string& autor);
+
+    /** @brief El contingut del paràmetre implícit passa a ser <em>titol</em>.
+        \pre <em>Cert</em>.
+        \post El contingut del p.i. passa a ser <em>titol</em>.
+    */
+    void afegir_titol(const string& titol);
+
+    /** @brief S'elimina el paràmetre implícit.
+        \pre <em>Cert</em>.
+        \post El p.i. passa a estar eliminat.
+    */
+    void eliminar();
+
   //Consultores
+
+    /** @brief Retorna si el paràmetre implícit ha estat eliminat.
+        \pre <em>Cert</em>.
+        \post Retorna si el p.i. ha estat eliminat.
+    */
+    bool es_cita();
 
     /** @brief Retorna l'autor del paràmetre implícit.
         \pre <em>Cert</em>.
@@ -76,7 +109,7 @@ public:
         \pre <em>Cert</em>.
         \post S'escriu el contingut del p.i. amb les frases numerades.
     */
-    void escriure();
+    void escriure_contingut();
 
 };
 
