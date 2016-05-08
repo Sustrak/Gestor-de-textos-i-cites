@@ -4,16 +4,59 @@
 
 #include "Cita.hh"
 
-Cita::Cita ();
+Cita::Cita ()
+{
+	_eliminada = false;
+}
 
 Cita::~Cita ();
 
-string Cita::autor();
+void Cita::afegir_contingut(const vector<Frase>& contingut, int x, int y)
+{
+	_n_primera = x;
+	while (x <= y) {
+		_contingut.push_back(contingut[x]);
+		++x;
+	}
+}
 
-string Cita::titol();
+void Cita::afegir_autor(const string& autor)
+{
+	_autor = autor;
+}
 
-int Cita::n_primera();
+void Cita::afegir_titol(const string& titol)
+{
+	_titol = titol;
+}
 
-int Cita::n_ultima();
+void Cita::eliminar() {
+	_eliminada = true;
+}
 
-void Cita::escriure();
+string Cita::autor()
+{
+	return _autor;
+}
+
+string Cita::titol()
+{
+	return _titol;
+}
+
+int Cita::n_primera()
+{
+	return _n_primera;
+
+int Cita::n_ultima()
+{
+	return _n_primera + _contingut.size();
+}
+
+void Cita::escriure_contingut()
+{
+	for (int i = 0; i < _contingut.size(); ++i) {
+		cout << _n_primera+i << " ";
+		_contingut[i].escriure();
+	}
+}
