@@ -4,6 +4,16 @@
 
 #include "Cjt_cites.hh"
 
+static void fer_referencia(string& ref, const string& autor)
+{
+	istringstream iss(autor);
+	string m;
+	while (iss >> m) ref.push_back(m.front());
+	ref.push_back('1');
+}
+
+static void incrementa_ref(string& ref);
+
 Cjt_cites::Cjt_cites();
     
 Cjt_cites::~Cjt_cites();
@@ -35,7 +45,7 @@ void Cjt_cites::afegir_cita(const Biblioteca& b, int x, int y)
 void Cjt_cites::eliminar_cita(string ref)
 {
 	map<string, Cita>::const_iterator it = _cites.find(ref);
-	if (it != _cites.end()) it->second.eliminar();
+	if (it != _cites.end() and it->second.es_cita()) it->second.eliminar();
 	else cout << "error" << endl;  //No existeix cap cita amb la referencia ref.
 }
     
