@@ -23,6 +23,9 @@ class Cjt_cites {
 private:
     map<string, Cita> _cites;			//L'string es la referència.
     
+    static void fer_referencia(string& ref, const string& autor);
+    static void incrementa_ref(string& ref);
+    
 public:
 
     //Constructora
