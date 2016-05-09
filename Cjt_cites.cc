@@ -72,7 +72,34 @@ void Cjt_cites::cites_autor(string autor)
 	}
 }
     
-void Cjt_cites::cites_text(const Biblioteca& b);
+void Cjt_cites::cites_text(const Biblioteca& b)
+{
+	if (b.triat()) {
+		string autor, titol, ref;
+		b.info_triat(autor, titol);
+		fer_referencia(ref, autor);
+		map<string, Cita>::const_iterator it = _cites.find(ref);
+		while (it != _cites.end() and ref == it->first) {
+			if (it->second.es_cita() and it->second.autor() == autor and it->second.titol() == titol) {
+				cout << ref << endl;
+				it->second.escriure_contingut();
+			}
+			incrementa_ref(ref);
+			++it;
+		}
+	}
+	else cout << "error" << endl; //No hi ha un text triat.
     
-void Cjt_cites::totes_cites();
+void Cjt_cites::totes_cites()
+{
+	map<string, Cita>::const_iterator it = _cites.begin();
+	while (it != _cites.end()) {
+		if (it->second.es_cita()) {
+			cout << it->first << endl;
+			it->second.escriure_contingut();
+			cout << endl << it->second.autor << " " << it.second.titol() << endl;
+		}
+		++it;
+	}
+}
     
