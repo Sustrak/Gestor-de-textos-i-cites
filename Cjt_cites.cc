@@ -18,12 +18,12 @@ void Cjt_cites::afegir_cita(const Biblioteca& b, int x, int y)
 		bool error = false;
 		fer_referencia(ref, c.autor());
 		map<string, Cita>::const_iterator it = _cites.find(ref);
-		while (it != _cites.end() and not error) {
+		while (it != _cites.end() and it->first == ref and not error) {
 			if (it->second.es_cita()) error = it->second.autor() == c.autor() and it->second.titol() == c.titol() and it->second.n_primera() == x and it->second.autor() == y;
 			if (error) cout << "error" << endl; //Existeix una cita igual
 			else {
 				incrementa_ref(ref);
-				it = _cites.find(ref);  // ES POT FER MES EFICIENT?? ++it??
+				++it;
 			}
 		}
 		if (not error) _cites.insert(make_pair(ref, c));
