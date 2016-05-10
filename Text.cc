@@ -30,6 +30,20 @@ bool Text::conte_paraules(const vector<string>& paraules)
     return trobat;
 }
 
+void Text::llegir_text()
+{
+    string linia;
+    getline(cin, linia);
+    Frase frase;
+    while (linia != "****") {
+        while (linia.length()>0){
+            frase.llegir(linia);
+            _contingut.push_back(frase);
+        }
+        getline(cin, linia);
+    }
+}
+
 void Text::afegir_contingut(Cita& cita, int x, int y)
 {
 	cita.afegir_contingut(_contingut, x, y);

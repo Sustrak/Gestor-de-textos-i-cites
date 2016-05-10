@@ -191,7 +191,6 @@ void Biblioteca::frases_paraules(string paraules)
     
 }
 
-static void fer_tfreq(const Text& text)
+void fer_tfreq(const Text& text)
 {
-    
 }

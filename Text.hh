@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <sstream>
 #endif
 
 #include "Cita.hh"
@@ -88,5 +89,6 @@ public:
         \post S'escriu el contingut del p.i. amb les frases numerades.
     */
     void escriure_contingut();
+    
 };
 #endif /* Text_hh */

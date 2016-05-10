@@ -34,7 +34,7 @@ private:
     map<string, Cjt_textos> _autors;                //L'string es el nom de l'autor.
     vector<Taula> _tfreq;
     
-    static void fer_tfreq(const Text& text);
+    void fer_tfreq(const Text& text);
     
 public:
 
