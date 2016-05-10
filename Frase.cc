@@ -28,6 +28,8 @@ void Frase::llegir(string& linia)
 		else _frase.push_back(m);
 		++_n_paraules;		
 	} while (m.back() != '.' or m.back() != '?' or m.back() != '!');
+	ws(iss);
+	getline(iss, linia);
 }
 
 void Frase::substitueix (string par1, string par2)
