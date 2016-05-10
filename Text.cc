@@ -32,16 +32,19 @@ bool Text::conte_paraules(const vector<string>& paraules)
 
 void Text::llegir_text()
 {
-    string linia;
-    getline(cin, linia);
+	string linia, l;
+	getline(cin, linia);
+	getline(cin, l);
+	while (l != "****") {  //Es posa tot el text en un únic string
+		linia += l;
+		getline(cin, l);
+	}
+
     Frase frase;
-    while (linia != "****") {
-        while (linia.length()>0){
-            frase.llegir(linia);
-            _contingut.push_back(frase);
-        }
-        getline(cin, linia);
-    }
+	while (linia.length()>0){
+		frase.llegir(linia);
+		_contingut.push_back(frase);
+	}
 }
 
 void Text::afegir_contingut(Cita& cita, int x, int y)
