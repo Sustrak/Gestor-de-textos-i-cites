@@ -29,8 +29,6 @@ void Frase::llegir(string& linia)
 		++_n_paraules;		
 	} while (m.back() != '.' or m.back() != '?' or m.back() != '!');
 }
-	
-
 
 void Frase::substitueix (string par1, string par2)
 {
