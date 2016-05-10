@@ -30,7 +30,7 @@ bool Text::conte_paraules(const vector<string>& paraules)
     return trobat;
 }
 
-void Text::afegir_contingut(int x, int y, Cita& cita)
+void Text::afegir_contingut(Cita& cita, int x, int y)
 {
 	cita.afegir_contingut(_contingut, x, y);
 }

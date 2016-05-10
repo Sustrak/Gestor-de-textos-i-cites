@@ -14,3 +14,9 @@ vector<string> par_buscar(string paraules)
     while (iss >> aux) paraules_buscar.push_back(aux);
     return paraules_buscar;
 }
+
+bool es_lletra(char c)
+{
+    if ((c >= 'A' and c <= 'Z') or (c >= 'a' and c <= 'z')) return true;
+    else return false;
+}

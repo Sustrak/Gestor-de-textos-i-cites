@@ -25,7 +25,7 @@ void Cjt_textos::eliminar_text()
 void Cjt_textos::modificar_cita(Cita& c, int x, int y)
 {
 	c.afegir_titol((*_text_triat).first);
-	(*_text_triat).second.afegir_contingut(x, y, c);
+	(*_text_triat).second.afegir_contingut(c, x, y);
 }
 
 void Cjt_textos::triar_text(bool& trobat, const vector<string>& paraules)

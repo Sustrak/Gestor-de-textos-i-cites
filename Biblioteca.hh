@@ -85,7 +85,7 @@ public:
         \pre <em>Cert</em>.
         \post Retorna si hi ha un text triat.
     */
-    bool triat(); 
+    bool triat();
     
     /** @brief <em>c</em> té l'autor, el títol i les frases de la x-éssima a la y-essima del text triat al paràmetre implícit.
         \pre Hi ha un text triat, x<=y.

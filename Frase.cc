@@ -9,7 +9,7 @@ Frase::Frase ()
 	_n_paraules = 0;
 }
 
-Frase::~Frase ();
+Frase::~Frase(){}
 
 void Frase::llegir(string& linia)
 {
@@ -30,7 +30,7 @@ void Frase::llegir(string& linia)
 	} while (m.back() != '.' or m.back() != '?' or m.back() != '!');
 }
 	
-	
+
 
 void Frase::substitueix (string par1, string par2)
 {

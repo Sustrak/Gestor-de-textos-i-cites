@@ -8,6 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <map>
+#include <sstream>
 #endif
 
 #include "Cita.hh"
@@ -49,7 +50,7 @@ public:
         \pre x <= y.
         \post Si <em>b</em> té un text triat i no existeix una cita igual, s'ha afegit al p.i. una cita amb l'autor, el títol i les frases de la x-éssima a la y-éssima del text triat a <em>b<em/>. Altrament, s'escriu un missatge d'error.
     */
-    void afegir_cita(const Biblioteca& b, int x, int y);
+    void afegir_cita(Biblioteca& b, int x, int y);
  
     /** @brief Elimina del paràmetre implícit la cita de referència <em>ref<em/>.
         \pre El p.i. conté una cita amb la referència <em>ref<em/>.
@@ -83,7 +84,7 @@ public:
         \pre <em>b</em> té un text triat.
         \post S'escriu la referència, el contingut i l'autor i el títol del text d’on provenen cada cita del p.i. provinent del text triat a <em>b<em/>.
     */
-    void cites_text(const Biblioteca& b);
+    void cites_text(Biblioteca& b);
     
     /** @brief S'escriu informació de totes les cites del paràmetre implícit.
         \pre <em>Cert</em>.

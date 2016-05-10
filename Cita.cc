@@ -9,13 +9,13 @@ Cita::Cita ()
 	_eliminada = false;
 }
 
-Cita::~Cita ();
+Cita::~Cita (){}
 
 void Cita::afegir_contingut(const vector<Frase>& contingut, int x, int y)
 {
 	_n_primera = x;
 	while (x <= y) {
-		_contingut.push_back(contingut[x]);
+		_frases.push_back(contingut[x]);
 		++x;
 	}
 }
@@ -47,16 +47,16 @@ string Cita::titol()
 int Cita::n_primera()
 {
 	return _n_primera;
-
+}
 int Cita::n_ultima()
 {
-	return _n_primera + _contingut.size();
+	return _n_primera + _frases.size();
 }
 
 void Cita::escriure_contingut()
 {
-	for (int i = 0; i < _contingut.size(); ++i) {
+	for (int i = 0; i < _frases.size(); ++i) {
 		cout << _n_primera+i << " ";
-		_contingut[i].escriure();
+		_frases[i].escriure();
 	}
 }

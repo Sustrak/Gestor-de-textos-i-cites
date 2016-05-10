@@ -8,6 +8,9 @@
 #ifndef NO_DIAGRAM
 #include <string>
 #include <vector>
+#include <sstream>
+#include <iostream>
+#include "Func_auxiliars.hh"
 #endif
 
 using namespace std;
@@ -31,13 +34,13 @@ public:
         \pre <em>Cert</em>.
         \post El resultat és una frase buida.
     */
-    Frase ();
+    Frase();
 
   //Destructora
 
     /** @brief Destructora per defecte.
     */
-    ~Frase ();
+    ~Frase();
 
   //Modificadora
 

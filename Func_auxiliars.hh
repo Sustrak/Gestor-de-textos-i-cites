@@ -18,5 +18,6 @@ using namespace std;
 
 string normalitzar(string linia);
 vector<string> par_buscar(string paraules);
+bool es_lletra(char c);
 
 #endif
