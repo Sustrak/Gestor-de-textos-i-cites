@@ -7,9 +7,9 @@
 
 #ifndef NO_DIAGRAM
 #include <string>
-#include <map>
 #include <set>
 #include <iostream>
+#include <map>
 #endif
 
 using namespace std;
@@ -21,7 +21,7 @@ class Taula_freq {
     */
 
 private:
-	map<int, set<string>> _taula;
+	map<int, set <string>> _taula;
 
 public:
 
