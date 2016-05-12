@@ -15,13 +15,6 @@
 #include "Text.hh"
 using namespace std;
 
-#ifndef NO_DIAGRAM
-struct Taula {
-    string paraula;
-    int freq;
-};
-#endif
-
 class Biblioteca {
 
     /** @class Biblioteca
@@ -32,10 +25,7 @@ private:
     bool _triat;
     map<string, Cjt_textos>::iterator _autor_triat;
     map<string, Cjt_textos> _autors;                //L'string es el nom de l'autor.
-    vector<Taula> _tfreq;
-    
-    void fer_tfreq(const Text& text);
-    
+        
 public:
 
     //Constructora

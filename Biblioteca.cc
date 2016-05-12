@@ -170,12 +170,6 @@ void Biblioteca::nombre_paraules()
     }
 }
 
-void Biblioteca::taula_freq()
-{
-    for (int i = 0; i < _tfreq.size(); ++i) {
-        cout << _tfreq[i].paraula << " " << _tfreq[i].freq << endl;
-    }
-}
 
 void Biblioteca::frases_expressio(string expressio){}
     
@@ -189,8 +183,4 @@ void Biblioteca::frases_paraules(string paraules)
         (*_autor_triat).second.frases_paraules(vec_par);
     }
     
-}
-
-void fer_tfreq(const Text& text)
-{
 }
