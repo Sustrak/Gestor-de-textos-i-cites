@@ -77,11 +77,11 @@ public:
     void substitueix (string par1, string par2);
     
     /** @brief Afegeix a una cita el contingut amb les frases de la x-éssima a la y-éssima del paràmetre implicit.
-        \pre <em>cita</em> ja té títol i és el matéix que el del p.i., x <= y.
-        \post <em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i.
+     \pre <em>cita</em> ja té títol i és el matéix que el del p.i., x <= y.
+     \post <em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i.
     */
     void afegir_contingut(Cita& cita, int x, int y);
-
+    
     //Escriptura
 
     /** @brief S'escriu el contingut del paràmetre implícit.

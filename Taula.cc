@@ -12,8 +12,8 @@ void Taula_freq::substitueix(string par1, string par2)
 {
 	bool trobat = false;		//trobat indica si hem trobat par1.
 	map<int, set<string>>::iterator it1 = _taula.begin();
-	set<string::iterator it2;
-	int f1;
+	set<string>::iterator it2;
+	int f1 = 0;
 	while (not trobat and it1 != _taula.end()) {
 		it2 = it1->second.find(par1);
 		trobat = it2 != it1->second.end();
@@ -26,10 +26,10 @@ void Taula_freq::substitueix(string par1, string par2)
 		
 		trobat	= false;		//Ara trobat indica si hem trobat par2.
 		map<int, set<string>>::iterator it3 = _taula.begin();
-		int f2;
+		int f2 = 0;
 		
 		while (not trobat and it3 != _taula.end()) {
-			it2 = it3->second.find(s);
+			it2 = it3->second.find(par2);
 			trobat = it2 != it3->second.end();
 			if (trobat) f2 = it3->first;
 			++it3;
@@ -44,7 +44,7 @@ void Taula_freq::substitueix(string par1, string par2)
 			if (it1 == _taula.end()) {						//No existeix a maps el conjunt de paraules de freq. f2.
 				set<string> t;
 				t.insert(par2);
-				_taula.insert(make_pair(f2, t);
+				_taula.insert(make_pair(f2, t));
 			}
 			else it1->second.insert(par2);
 		}
@@ -56,7 +56,7 @@ void Taula_freq::incrementa_freq (string s)
 {
 	bool trobat = false;
 	map<int, set<string>>::iterator it1 = _taula.begin();
-	set<string::iterator it2;
+	set<string>::iterator it2;
 	int f = 1;
 	while (not trobat and it1 != _taula.end()) {
 		it2 = it1->second.find(s);
@@ -67,7 +67,7 @@ void Taula_freq::incrementa_freq (string s)
 	if (it1 == _taula.end() or it1->first != f) {	//No existeix a maps el conjunt de paraules de freq. f.
 		set<string> t;
 		t.insert(s);
-		_taula.insert(make_pair(f, t);
+		_taula.insert(make_pair(f, t));
 	}
 	else it1->second.insert(s);						//Ja existeix a maps el conjunt de paraules de freq. f.
 	
@@ -82,7 +82,7 @@ int Taula_freq::freq(string& s)
 {
 	bool trobat = false;
 	map<int, set<string>>::iterator it1 = _taula.begin();
-	set<string::iterator it2;
+	set<string>::iterator it2;
 	int f = 0;
 	while (not trobat and it1 != _taula.end()) {
 		it2 = it1->second.find(s);
@@ -96,9 +96,9 @@ int Taula_freq::freq(string& s)
 void Taula_freq::escriure()
 {
 	map<int, set<string>>::iterator it1 = _taula.end();
-	set<string::iterator it2;
+	set<string>::iterator it2;
 	while (it1 != _taula.begin()) {
-		for (it2 = it1->second.begin(); it2 != it1->second; ++it2) cout << *it2 << " " << it1->first << endl;
+		for (it2 = it1->second.begin(); it2 != it1->second.end(); ++it2) cout << *it2 << " " << it1->first << endl;
 		--it1;
 	}
 }
