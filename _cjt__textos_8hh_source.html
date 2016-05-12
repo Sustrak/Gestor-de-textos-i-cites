@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Laboratori de PRO2. Gestor de textos i cites: Fitxer de Codi Cjt_textos.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Laboratori de PRO2. Gestor de textos i cites
+   &#160;<span id="projectnumber">v5.0 13-11-2014</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pàgina&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fitxers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Llista&#160;dels&#160;Fitxers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;Fitxers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tot</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fitxers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funcions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pàgines</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cjt_textos.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt__textos_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef Cjt_textos_hh</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define Cjt_textos_hh</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_text_8hh.html">Text.hh</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cita_8hh.html">Cita.hh</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt__textos.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__textos.html">Cjt_textos</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_cjt__textos.html#a41f2e84ed7fd3d07e0003c8020087e21">   25</a></span>&#160;    map&lt;string, Text&gt;::iterator <a class="code" href="class_cjt__textos.html#a41f2e84ed7fd3d07e0003c8020087e21">_text_triat</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_cjt__textos.html#a694c051eb330d0988e5c78bfbba1fc71">   26</a></span>&#160;    map&lt;string, Text&gt; <a class="code" href="class_cjt__textos.html#a694c051eb330d0988e5c78bfbba1fc71">_textos</a>;              <span class="comment">//string conté el títol del Text</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_cjt__textos.html#a5da48f4dcd5d84bcfffabad520c5931c">   27</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__textos.html#a5da48f4dcd5d84bcfffabad520c5931c">_n_frases</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_cjt__textos.html#ac8129a853cc3112e210d0d246669ac91">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__textos.html#ac8129a853cc3112e210d0d246669ac91">_n_paraules</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//Constructora </span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_cjt__textos.html">Cjt_textos</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ~<a class="code" href="class_cjt__textos.html">Cjt_textos</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">//Modificadores</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> afegir_text(<span class="keywordtype">string</span> titol);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> eliminar_text(); </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> modificar_cita(<a class="code" href="class_cita.html">Cita</a>&amp; c, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> triar_text(<span class="keywordtype">bool</span>&amp; trobat, <span class="keyword">const</span> vector&lt;string&gt;&amp; paraules);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> buscar_text(<span class="keywordtype">bool</span>&amp; trobat, <span class="keyword">const</span> vector&lt;string&gt;&amp; paraules);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> substitueix (<span class="keywordtype">string</span> par1, <span class="keywordtype">string</span> par2);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">//Consultores</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> titol_triat(<span class="keywordtype">string</span>&amp; titol);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> text_triat(<a class="code" href="class_text.html">Text</a>&amp; text);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">//Escriptura</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> escriure_titols();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> escriure_info();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> escriure_info_triat();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> escriure_contringut(<span class="keywordtype">bool</span> tot, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> escriure_nombre_frases();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> escriure_nombre_paraules();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> frases_paraules(vector&lt;string&gt; paraules);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Cjt_textos_hh */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_text_html"><div class="ttname"><a href="class_text.html">Text</a></div><div class="ttdoc">Representa un text. </div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00020">Text.hh:20</a></div></div>
+<div class="ttc" id="class_cjt__textos_html_a5da48f4dcd5d84bcfffabad520c5931c"><div class="ttname"><a href="class_cjt__textos.html#a5da48f4dcd5d84bcfffabad520c5931c">Cjt_textos::_n_frases</a></div><div class="ttdeci">int _n_frases</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__textos_8hh_source.html#l00027">Cjt_textos.hh:27</a></div></div>
+<div class="ttc" id="_cita_8hh_html"><div class="ttname"><a href="_cita_8hh.html">Cita.hh</a></div><div class="ttdoc">Especificació de la classe Cita. </div></div>
+<div class="ttc" id="class_cita_html"><div class="ttname"><a href="class_cita.html">Cita</a></div><div class="ttdoc">Representa un text amb autor i conjunt de frases que són el contingut. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00018">Cita.hh:18</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="_text_8hh_html"><div class="ttname"><a href="_text_8hh.html">Text.hh</a></div><div class="ttdoc">Especificació de la classe Text. </div></div>
+<div class="ttc" id="class_cjt__textos_html_a41f2e84ed7fd3d07e0003c8020087e21"><div class="ttname"><a href="class_cjt__textos.html#a41f2e84ed7fd3d07e0003c8020087e21">Cjt_textos::_text_triat</a></div><div class="ttdeci">map&lt; string, Text &gt;::iterator _text_triat</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__textos_8hh_source.html#l00025">Cjt_textos.hh:25</a></div></div>
+<div class="ttc" id="class_cjt__textos_html_ac8129a853cc3112e210d0d246669ac91"><div class="ttname"><a href="class_cjt__textos.html#ac8129a853cc3112e210d0d246669ac91">Cjt_textos::_n_paraules</a></div><div class="ttdeci">int _n_paraules</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__textos_8hh_source.html#l00028">Cjt_textos.hh:28</a></div></div>
+<div class="ttc" id="class_cjt__textos_html_a694c051eb330d0988e5c78bfbba1fc71"><div class="ttname"><a href="class_cjt__textos.html#a694c051eb330d0988e5c78bfbba1fc71">Cjt_textos::_textos</a></div><div class="ttdeci">map&lt; string, Text &gt; _textos</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__textos_8hh_source.html#l00026">Cjt_textos.hh:26</a></div></div>
+<div class="ttc" id="class_cjt__textos_html"><div class="ttname"><a href="class_cjt__textos.html">Cjt_textos</a></div><div class="ttdoc">Representa un conjunt de textos. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__textos_8hh_source.html#l00018">Cjt_textos.hh:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat a Dj Mai 12 2016 12:40:37 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

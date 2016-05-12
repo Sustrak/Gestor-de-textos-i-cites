@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['_5fautor',['_autor',['../class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba',1,'Cita']]],
+  ['_5fautor_5ftriat',['_autor_triat',['../class_biblioteca.html#ad17a3e5d034159991a0f653ada8694ac',1,'Biblioteca']]],
+  ['_5fautors',['_autors',['../class_biblioteca.html#a6c56637a176249eb4d72689d1e8a4518',1,'Biblioteca']]],
+  ['_5fcites',['_cites',['../class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b',1,'Cjt_cites']]],
+  ['_5fcontingut',['_contingut',['../class_text.html#a26ed48461785fd88abc74e3df0faa79b',1,'Text']]],
+  ['_5feliminada',['_eliminada',['../class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d',1,'Cita']]],
+  ['_5ffrase',['_frase',['../class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080',1,'Frase']]],
+  ['_5ffrases',['_frases',['../class_cita.html#aba2721c0e7a820243c82e9b707cfa108',1,'Cita']]],
+  ['_5fn_5ffrases',['_n_frases',['../class_cjt__textos.html#a5da48f4dcd5d84bcfffabad520c5931c',1,'Cjt_textos']]],
+  ['_5fn_5fparaules',['_n_paraules',['../class_cjt__textos.html#ac8129a853cc3112e210d0d246669ac91',1,'Cjt_textos::_n_paraules()'],['../class_frase.html#af181dd7f55db33d164b974ccddb9b46f',1,'Frase::_n_paraules()'],['../class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099',1,'Text::_n_paraules()']]],
+  ['_5fn_5fprimera',['_n_primera',['../class_cita.html#ae97763fca834e407f9a5060e6244e030',1,'Cita']]],
+  ['_5ftaula',['_taula',['../class_taula__freq.html#a734a5436371ee639b2ad2b14003157c1',1,'Taula_freq']]],
+  ['_5ftext_5ftriat',['_text_triat',['../class_cjt__textos.html#a41f2e84ed7fd3d07e0003c8020087e21',1,'Cjt_textos']]],
+  ['_5ftextos',['_textos',['../class_cjt__textos.html#a694c051eb330d0988e5c78bfbba1fc71',1,'Cjt_textos']]],
+  ['_5ftfreq',['_tfreq',['../class_biblioteca.html#a04f410bd3e519ca692d47e727d338f3c',1,'Biblioteca']]],
+  ['_5ftitol',['_titol',['../class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5',1,'Cita']]],
+  ['_5ftriat',['_triat',['../class_biblioteca.html#a1beffaec4c8a0343d892232dac9056c4',1,'Biblioteca']]]
+];
