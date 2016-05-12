@@ -4,7 +4,7 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = "Laboratorio de PRO2. Caso de estudio: experimentos inmunologicos. "
+PROJECT_NAME           = "Laboratori de PRO2. Gestor de textos i cites"
 PROJECT_NUMBER         = "v5.0 13-11-2014"
 OUTPUT_DIRECTORY       = "."
 CREATE_SUBDIRS         = NO
@@ -95,7 +95,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  = "."
 INPUT_ENCODING         = UTF-8
-FILE_PATTERNS          =
+FILE_PATTERNS          = *.hh \ program.cc
 RECURSIVE              = NO
 EXCLUDE                = *~
 EXCLUDE_SYMLINKS       = NO
@@ -154,7 +154,7 @@ FORMULA_FONTSIZE       = 10
 #---------------------------------------------------------------------------
 # configuration options related to the LaTeX output
 #---------------------------------------------------------------------------
-GENERATE_LATEX         = YES
+GENERATE_LATEX         = NO
 LATEX_OUTPUT           = latex
 LATEX_CMD_NAME         = latex
 MAKEINDEX_CMD_NAME     = makeindex

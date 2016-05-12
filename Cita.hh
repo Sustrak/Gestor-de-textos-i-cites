@@ -11,7 +11,6 @@
 #include <map>
 #endif
 
-#include "Text.hh"
 #include "Frase.hh"
 using namespace std;
 
