@@ -53,7 +53,7 @@ void Biblioteca::triar_text(string paraules)
         _triat = true;
         _autor_triat = it_autor;
         _tfreq.clear();
-        _autor_triat.fer_taula(_tfreq);
+        (*_autor_triat).second.fer_taula(_tfreq);
     }
     else {
         _triat = false;
