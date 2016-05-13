@@ -44,6 +44,13 @@ int Frase::n_paraules()
 	return _n_paraules;
 }
 
+void Frase::actualitzar_taula(Taula_freq& t)
+{
+	for (int i = 0; i < _frase.size(); ++i) {
+		if (es_lletra(_frase[i].back()) t.incrementa_freq(_frase[i]);
+	}
+}
+
 void Frase::escriure()
 {
 	for (int i = 0; i < _frase.size(); ++i) {
