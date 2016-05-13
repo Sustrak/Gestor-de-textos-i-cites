@@ -13,6 +13,8 @@
 #include "Func_auxiliars.hh"
 #endif
 
+#include "Taula_freq.hh"
+
 using namespace std;
 
 class Frase {
@@ -70,6 +72,12 @@ public:
      */
     bool buscar_paraules(const vector<string>& paraules);
 
+    /** @brief Afegeix per referència a la taula de freqüències <em>t</em> les paraules del paràmetre implícit.
+     \pre <em>Cert</em>.
+     \post Afegeix per referència a la taula de freqüències <em>t</em> les paraules del paràmetre implícit.
+     */
+    void actualitzar_taula(Taula_freq& t);   
+    
   //Escriptura
 
     /** @brief S'escriu el paràmetre implícit.
