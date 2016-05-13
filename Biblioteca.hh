@@ -13,6 +13,7 @@
 
 #include "Cjt_textos.hh"
 #include "Text.hh"
+#include "Taula_freq.hh"
 using namespace std;
 
 class Biblioteca {
@@ -25,6 +26,7 @@ private:
     bool _triat;
     map<string, Cjt_textos>::iterator _autor_triat;
     map<string, Cjt_textos> _autors;                //L'string es el nom de l'autor.
+    Taula_freq _tfreq;
         
 public:
 
