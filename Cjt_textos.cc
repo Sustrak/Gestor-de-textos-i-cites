@@ -54,7 +54,7 @@ void Cjt_textos::substitueix (string par1, string par2)
 
 void Cjt_textos::fer_taula(Taula_freq& t)
 {
-	_text_triat.fer_taula(t);
+	(*_text_triat).second.fer_taula(t);
 }
     
 void Cjt_textos::escriure_titols()
