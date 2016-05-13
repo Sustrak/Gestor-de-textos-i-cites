@@ -52,6 +52,11 @@ void Text::afegir_contingut(Cita& cita, int x, int y)
 	cita.afegir_contingut(_contingut, x, y);
 }
 
+void Text::fer_taula(Taula_freq& t)
+{
+	for (int i = 0; i < _contingut.size(); ++i) _contingut[i].actualitzar_taula(t);
+}
+
 void Text::escriure_contingut()
 {
     for (int i = 0; i < _contingut.size(); ++i) {
