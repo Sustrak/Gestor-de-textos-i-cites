@@ -42,6 +42,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (op == "triar") {
 		iss >> op;
 		if (op == "text") {
+			ws(iss);
+			getline(iss, linia);
 			b.triar_text(linia);
 		}
 	}
