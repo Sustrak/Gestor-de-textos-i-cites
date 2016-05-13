@@ -52,6 +52,8 @@ void Biblioteca::triar_text(string paraules)
     if (trobat) {
         _triat = true;
         _autor_triat = it_autor;
+        _tfreq.clear();
+        _autor_triat.fer_taula(_tfreq);
     }
     else {
         _triat = false;
@@ -67,7 +69,11 @@ void Biblioteca::eliminar_text()
     
 void Biblioteca::substitueix (string par1, string par2)
 {
-    (*_autor_triat).second.substitueix(par1, par2);
+    if (_triat) {
+		(*_autor_triat).second.substitueix(par1, par2);
+		_tfreq.substitueix(par1, par2);
+	}
+	else cout << "error" << endl; //No hi ha un text triat.
 }
     
 bool Biblioteca::triat()
