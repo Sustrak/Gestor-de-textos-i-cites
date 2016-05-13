@@ -14,6 +14,7 @@
 
 #include "Frase.hh"
 #include "Cita.hh"
+#include "Taula_freq.hh"
 using namespace std;
 
 
@@ -81,6 +82,12 @@ public:
      \post <em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i.
     */
     void afegir_contingut(Cita& cita, int x, int y);
+    
+    /** @brief Retorna per referencia la taula de freqüències del paràmetre implícit.
+     \pre <em>Cert</em>.
+     \post Retorna per referencia la taula de freqüències del p.i.
+     */
+    void fer_taula(Taula_freq& t);    
     
     //Escriptura
 
