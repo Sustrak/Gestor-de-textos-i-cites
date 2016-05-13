@@ -1,0 +1,13 @@
+Revisar que totes les accions estan implementades: Biblioteca::frases_expressio, Frase::buscar_paraules, Cjt_textos d'escriptura.
+
+evaluar expressio
+
+definir l'ordre del set de Taula_freq
+
+quan s'eliminen tots els textos d'un autor, hauriem d'eliminar l'autor
+
+fer funcio fer_ref
+
+Parametres per referencia!!
+
+Ordenar entre modificadores i consultores

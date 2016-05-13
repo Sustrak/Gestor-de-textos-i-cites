@@ -34,6 +34,11 @@ void Cita::eliminar() {
 	_eliminada = true;
 }
 
+bool Cita::es_cita()
+{
+	return _eliminada;
+}
+
 string Cita::autor()
 {
 	return _autor;
@@ -48,6 +53,7 @@ int Cita::n_primera()
 {
 	return _n_primera;
 }
+
 int Cita::n_ultima()
 {
 	return _n_primera + _frases.size();

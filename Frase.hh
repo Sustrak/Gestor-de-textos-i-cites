@@ -76,7 +76,13 @@ public:
      \pre <em>Cert</em>.
      \post Afegeix per referència a la taula de freqüències <em>t</em> les paraules del paràmetre implícit.
      */
-    void actualitzar_taula(Taula_freq& t);   
+    void actualitzar_taula(Taula_freq& t);
+    
+    /** @brief Retorna si el paràmetre implícit compleix l'expressió.
+     \pre <em>Cert</em>
+     \post Retorna si el p.i. compleix l'expressió.
+     */
+    bool compleix_expressio(expressio);   
     
   //Escriptura
 

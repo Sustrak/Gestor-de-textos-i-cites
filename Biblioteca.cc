@@ -57,13 +57,13 @@ void Biblioteca::triar_text(string paraules)
     }
     else {
         _triat = false;
-        cout << "error" << endl;
+        cout << "error" << endl;   //No hi ha cap text o n'hi més d'un que ho compleixi.
     }
 }
 
 void Biblioteca::eliminar_text()
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else (*_autor_triat).second.eliminar_text();
 }
     
@@ -91,7 +91,7 @@ void Biblioteca::modificar_cita(Cita& c, int x, int y)
     
 void Biblioteca::info_triat(string& autor, string& titol)
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         autor = (*_autor_triat).first;
         (*_autor_triat).second.titol_triat(titol);
@@ -125,7 +125,7 @@ void Biblioteca::tots_autors()
     
 void Biblioteca::info()
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         cout << (*_autor_triat).first << " ";
         (*_autor_triat).second.escriure_info_triat();
@@ -135,7 +135,7 @@ void Biblioteca::info()
 
 void Biblioteca::autor()
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         cout << (*_autor_triat).first;
     }
@@ -143,7 +143,7 @@ void Biblioteca::autor()
 
 void Biblioteca::contingut()
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         bool tot = true;
         int x, y;
@@ -153,7 +153,7 @@ void Biblioteca::contingut()
 
 void Biblioteca::frasesxy (int x, int y)
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat or x > y) cout << "error" << endl; //No hi ha un text triat o x>y.
     else {
         bool tot = false;
         (*_autor_triat).second.escriure_contringut(tot, x, y);
@@ -162,7 +162,7 @@ void Biblioteca::frasesxy (int x, int y)
     
 void Biblioteca::nombre_frases()
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         (*_autor_triat).second.escriure_nombre_frases();
     }
@@ -170,18 +170,29 @@ void Biblioteca::nombre_frases()
 
 void Biblioteca::nombre_paraules()
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         (*_autor_triat).second.escriure_nombre_paraules();
     }
 }
 
+void Biblioteca::taula_freq()
+{
+	_tfreq.escriure();
+}
 
-void Biblioteca::frases_expressio(string expressio){}
+void Biblioteca::frases_expressio(string expressio)
+{
+    if (not _triat) cout << "error" << endl; 	//No hi ha un text triat.
+    else {
+		//Netejar expressio.
+		(*_autor_triat).second.frases_expressio(expressio);
+	}
+}
     
 void Biblioteca::frases_paraules(string paraules)
 {
-    if (not _triat) cout << "error" << endl;
+    if (not _triat) cout << "error" << endl; 	//No hi ha un text triat.
     else {
         normalitzar(paraules);
         vector<string> vec_par = par_buscar(paraules);

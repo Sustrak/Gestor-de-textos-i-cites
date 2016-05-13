@@ -96,6 +96,12 @@ public:
         \post S'escriu el contingut del p.i. amb les frases numerades.
     */
     void escriure_contingut();
+   
+    /** @brief S'escriuen les frases del contingut del paràmetre implícit que compleixen l'expressió.
+     \pre <em>Cert</em>
+     \post S'escriuen les frases del contingut del p.i. que compleixen l'expressió pel canal estàndard de sortida.
+     */
+    void frases_expressio(string& expressio);
     
 };
 #endif /* Text_hh */

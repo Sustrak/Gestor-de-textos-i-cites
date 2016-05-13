@@ -4,15 +4,14 @@
 
 #include "Cjt_cites.hh"
 
-static void fer_referencia(string& ref, const string& autor)
+static void fer_ini(string& ini, const string& autor)
 {
 	istringstream iss(autor);
 	string m;
-	while (iss >> m) ref.push_back(m.front());
-	ref.push_back('1');
+	while (iss >> m) ini.push_back(m.front());
 }
 
-static void incrementa_ref(string& ref);
+static void fer_ref(const string& ini, const int& i, string& ref);
 
 Cjt_cites::Cjt_cites(){}
     
@@ -24,16 +23,19 @@ void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 		Cita c;
 		b.modificar_cita(c, x, y);
 		
-		string ref;
+		string ref, ini;
 		bool error = false;
-		fer_referencia(ref, c.autor());
+		fer_ini(ini, c.autor());
+		ref = ini + "1"
+		int i = 1;
 		map<string, Cita>::iterator it = _cites.find(ref);
 		while (it != _cites.end() and it->first == ref and not error) {
 			if (it->second.es_cita()) error = it->second.autor() == c.autor() and it->second.titol() == c.titol() and it->second.n_primera() == x and it->second.n_ultima() == y;
 			if (error) cout << "error" << endl; //Existeix una cita igual
 			else {
-				incrementa_ref(ref);
 				++it;
+				++i;
+				fer_ref (ini, i, ref);				
 			}
 		}
 		if (not error) _cites.insert(make_pair(ref, c));
@@ -41,7 +43,6 @@ void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 	else cout << "error" << endl; //No hi ha un text triat o x > y.
 }
 	
- 
 void Cjt_cites::eliminar_cita(string ref)
 {
 	map<string, Cita>::iterator it = _cites.find(ref);
@@ -68,8 +69,10 @@ void Cjt_cites::info_cita(string ref)
 
 void Cjt_cites::cites_autor(string autor)
 {
-	string ref;
-	fer_referencia(ref, autor);
+	string ref, ini;
+	fer_ini(ini, autor);
+	ref = ini + "1";
+	int i = 1;
 	map<string, Cita>::iterator it = _cites.find(ref);
 	while (it != _cites.end() and ref == it->first) {
 		if (it->second.es_cita() and it->second.autor() == autor) {
@@ -77,7 +80,8 @@ void Cjt_cites::cites_autor(string autor)
 			it->second.escriure_contingut();
 			cout << it->second.autor() << " " << it->second.titol() << endl;
 		}
-		incrementa_ref(ref);
+		++i;
+		fer_ref(ini, i, ref);
 		++it;
 	}
 }
@@ -85,21 +89,25 @@ void Cjt_cites::cites_autor(string autor)
 void Cjt_cites::cites_text(Biblioteca& b)
 {
 	if (b.triat()) {
-		string autor, titol, ref;
+		string autor, titol, ref, ini;
 		b.info_triat(autor, titol);
-		fer_referencia(ref, autor);
+		fer_ini(ini, autor);
+		ref = ini + "1";
+		int i = 1;
 		map<string, Cita>::iterator it = _cites.find(ref);
 		while (it != _cites.end() and ref == it->first) {
 			if (it->second.es_cita() and it->second.autor() == autor and it->second.titol() == titol) {
 				cout << ref << endl;
 				it->second.escriure_contingut();
 			}
-			incrementa_ref(ref);
+			++i;
+			fer_ref(ini, i, ref);
 			++it;
 		}
 	}
 	else cout << "error" << endl; //No hi ha un text triat.
 }
+
 void Cjt_cites::totes_cites()
 {
 	map<string, Cita>::iterator it = _cites.begin();

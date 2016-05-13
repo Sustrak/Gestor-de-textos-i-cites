@@ -78,6 +78,11 @@ void Taula_freq::incrementa_freq (string s)
 	}		
 }
 
+void Taula_freq::clear()
+{
+	_taula.clear();
+}
+
 int Taula_freq::freq(string& s)
 {
 	bool trobat = false;

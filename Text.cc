@@ -47,6 +47,13 @@ void Text::llegir_text()
 	}
 }
 
+void Text::substitueix (string par1, string par2)
+{
+    for (int i = 0; i < _contingut.size(); ++i) {
+        _contingut[i].substitueix(par1, par2);
+    }
+}
+
 void Text::afegir_contingut(Cita& cita, int x, int y)
 {
 	cita.afegir_contingut(_contingut, x, y);
@@ -66,9 +73,9 @@ void Text::escriure_contingut()
     }
 }
 
-void Text::substitueix (string par1, string par2)
+void Text::frases_expressio(string& expressio)
 {
-    for (int i = 0; i < _contingut.size(); ++i) {
-        _contingut[i].substitueix(par1, par2);
-    }
+	for (int i = 0; i < _contingut.size(); ++i) {
+		if (_contingut[i].compleix_expressio(expressio)) _contingut[i].escriure();
+	}
 }

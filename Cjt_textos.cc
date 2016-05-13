@@ -14,7 +14,8 @@ Cjt_textos::~Cjt_textos(){}
     
 void Cjt_textos::afegir_text(string titol)
 {
-    _textos[titol].llegir_text();
+    if (_textos.find(titol) != _textos.end()) _textos[titol].llegir_text();
+    else cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
 }
     
 void Cjt_textos::eliminar_text()
@@ -64,4 +65,9 @@ void Cjt_textos::escriure_titols()
         cout << (*it).first << " ";
     }
     cout << endl;
+}
+
+void Cjt_textos::frases_expressio(string& expressio)
+{
+	(*_text_triat).second.frases_expressio(expressio);
 }

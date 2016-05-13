@@ -54,6 +54,12 @@ public:
     */
     void incrementa_freq (string s);
 
+    /** @brief El paràmetre implícit queda buit.
+        \pre <em>Cert</em>.
+        \post El paràmetre implícit queda buit.
+    */
+    void clear();
+
   //Consultora
 
     /** @brief Retorna la freqüència de <em>s</em>.

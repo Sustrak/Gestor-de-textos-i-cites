@@ -44,10 +44,37 @@ int Frase::n_paraules()
 	return _n_paraules;
 }
 
+bool Frase::buscar_paraules(const vector<string>& paraules);
+
 void Frase::actualitzar_taula(Taula_freq& t)
 {
 	for (int i = 0; i < _frase.size(); ++i) {
 		if (es_lletra(_frase[i].back()) t.incrementa_freq(_frase[i]);
+	}
+}
+
+bool Frase::compleix_expressio(expressio)
+{
+	if (expressio[0] == '{') {
+		normalitzar(expressio);
+		vector<string> paraules = par_buscar(expressio);
+		return buscar_paraules(paraules);
+	}
+	normalitzar(expressio);
+	int i = 0;
+	int j = 0;
+	bool parada = false;
+	for (int j = 0; j < expressio.length(); ++j) {
+		if (expressio[j] == '(') ++i;
+		else if (expressio[j] == ')') --i;
+		else if (i == 0 and expressio[j] == '&') {
+			//arreglar esq i dreta;
+			return compleix_expressio(esq) and compleix_expressio(dreta);
+		}
+		else if (i == 0 and expressio[j] == '|') {
+			//arreglar esq i dreta;
+			return compleix_expressio(esq) or compleix_expressio(dreta);
+		}
 	}
 }
 
