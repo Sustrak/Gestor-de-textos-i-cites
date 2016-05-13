@@ -13,6 +13,7 @@
 
 #include "Text.hh"
 #include "Cita.hh"
+#include "Taula_freq.hh"
 using namespace std;
 
 class Cjt_textos {
@@ -90,12 +91,18 @@ public:
     */
     void titol_triat(string& titol);
     
-    /** @brief Retorna per referencia el text triat
-     \pre Hi ha un text triat
-     \post Retorna per referencia el text triat
+    /** @brief Retorna per referencia el text triat.
+     \pre Hi ha un text triat.
+     \post Retorna per referencia el text triat.
      */
     void text_triat(Text& text);
-
+    
+    /** @brief Retorna per referencia la taula de freqüències del text triat.
+     \pre Hi ha un text triat.
+     \post Retorna per referencia la taula de freqüències del text triat.
+     */
+    void fer_taula(Taula_freq& t);
+    
   //Escriptura
     
     /** @brief S'escriuen els títols dels textos del paràmetre implícit.
