@@ -28,6 +28,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	if (op == "afegir") {
 		iss >> op;
 		if (op == "text") {
+			ws(iss);
+			getline(iss, linia);
 			b.afegir_text(linia);
 		}
 		else if (op == "cita") {
@@ -67,7 +69,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (op == "textos") {
 		iss >> op;
 		if (op == "autor") {
-			iss >> op;
+			ws(iss);
+			getline(iss, op);
 			b.textos_autor(op);
 		}
 	}
@@ -112,8 +115,9 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		b.taula_freq();
 	}
 	else if (op == "frases") {
-		iss >> op;
-		if (op[0] == '"') {
+		ws(iss);
+		getline(iss, linia);
+		if (linia[0] == '"') {
 			b.frases_paraules(linia);
 		}
 		else b.frases_expressio(linia);
@@ -121,7 +125,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (op == "cites") {
 		iss >> op;
 		if (op == "autor") {
-			iss >> op;
+			ws(iss);
+			getline(iss, op);
 			c.cites_autor(op);
 		}
 		else if (op == "?") {
