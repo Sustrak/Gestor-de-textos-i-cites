@@ -29,21 +29,21 @@ void Cjt_textos::modificar_cita(Cita& c, int x, int y)
 	(*_text_triat).second.afegir_contingut(c, x, y);
 }
 
-void Cjt_textos::triar_text(bool& trobat, const vector<string>& paraules)
+void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules)
 {
     map<string, Text>::iterator it_text = _textos.begin();
     while (not trobat and it_text != _textos.end()) {
-        trobat = (*it_text).second.conte_paraules(paraules);
+        trobat = (*it_text).second.conte_paraules(false, paraules);
         ++it_text;
     }
     if (trobat) _text_triat = --it_text;
 }
 
-void Cjt_textos::buscar_text(bool& trobat, const vector<string>& paraules)
+void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules)
 {
     map<string, Text>::iterator it_text = ++_text_triat;
     while (trobat and it_text != _textos.end()) {
-        if ((*it_text).second.conte_paraules(paraules)) trobat = false;
+        if ((*it_text).second.conte_paraules(false, paraules)) trobat = false;
         else ++it_text;
     }
 }
@@ -67,7 +67,41 @@ void Cjt_textos::escriure_titols()
     cout << endl;
 }
 
+void Cjt_textos::escriure_info()
+{
+    cout << _textos.size() << " " << _n_frases << " " << _n_paraules << endl;
+}
+
+void Cjt_textos::escriure_info_triat()
+{
+    cout << (*_text_triat).first << " " << (*_text_triat).second.n_frases() << " " << (*_text_triat).second.n_paraules() << endl;
+}
+
+void Cjt_textos::escriure_contingut(bool tot, int x, int y)
+{
+    if (tot) {
+        x = 0;
+        y = (*_text_triat).second.n_frases()-1;
+    }
+    (*_text_triat).second.escriure_contingut(x, y);
+}
+
+void Cjt_textos::escriure_nombre_frases()
+{
+    cout << (*_text_triat).second.n_frases() << endl;
+}
+
+void Cjt_textos::escriure_nombre_paraules()
+{
+    cout << (*_text_triat).second.n_paraules() << endl;
+}
+
 void Cjt_textos::frases_expressio(string& expressio)
 {
 	(*_text_triat).second.frases_expressio(expressio);
+}
+
+void Cjt_textos::frases_paraules(vector<string> paraules)
+{
+    (*_text_triat).second.conte_paraules(true, paraules);
 }

@@ -63,7 +63,7 @@ public:
         \pre <em>Cert</em>.
         \post Retorna si el p.i. conté totes les paraules de <em>paraules</em>.
     */
-    bool conte_paraules(const vector<string>& paraules);
+    bool conte_paraules(bool consec, vector<string>& paraules);
     
     /** @brief Llegeix un text del canal d'entrada.
      \pre El canal d'entrada estandard conté el text en una línia.
@@ -91,11 +91,11 @@ public:
     
     //Escriptura
 
-    /** @brief S'escriu el contingut del paràmetre implícit.
+    /** @brief S'escriu el contingut de la frase x a la y del paràmetre implícit
         \pre <em>Cert</em>.
-        \post S'escriu el contingut del p.i. amb les frases numerades.
+        \post S'escriu el contingut del p.i. amb les frases numerades de la x a la y.
     */
-    void escriure_contingut();
+    void escriure_contingut(int x, int y);
    
     /** @brief S'escriuen les frases del contingut del paràmetre implícit que compleixen l'expressió.
      \pre <em>Cert</em>

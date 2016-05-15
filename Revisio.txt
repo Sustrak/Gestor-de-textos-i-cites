@@ -1,4 +1,5 @@
-Revisar que totes les accions estan implementades: Biblioteca::frases_expressio, Frase::buscar_paraules, Cjt_textos d'escriptura.
+Revisar que totes les accions estan implementades: Biblioteca::frases_expressio,
+    Revisar: Frase::buscar_paraules, Cjt_textos d'escriptura.
 
 evaluar expressio
 
@@ -11,3 +12,12 @@ fer funcio fer_ref
 Parametres per referencia!!
 
 Ordenar entre modificadores i consultores
+
+A Cjt_textos s'acctualitzen _n_frases i _n_paraules ???
+
+Revisar funcio Biblioteca::info_triat
+
+Ara totes les funcions que cridin Frase::buscar_paraules el vector de paraules s'anira buidan a mida que es trobin les paraules per tant mirar si es millor que aquestes operacions no pasin els parametres per referencia.
+
+Implementar Frases::consecutives
+

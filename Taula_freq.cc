@@ -2,7 +2,7 @@
     @brief Implementació de les funcions de Taula_freq.hh
 */
 
-#include "Taula.hh"
+#include "Taula_freq.hh"
 
 Taula_freq::Taula_freq(){}
 

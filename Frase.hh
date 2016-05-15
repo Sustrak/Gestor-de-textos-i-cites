@@ -70,8 +70,14 @@ public:
         \pre <em>Cert</em>
         \post Retorna true si les paraules del vector estan en el p.i, altrament retorna false
      */
-    bool buscar_paraules(const vector<string>& paraules);
-
+    bool buscar_paraules(vector<string>& paraules);
+    
+    /** @brief Mira si al p.i hi ha les paraules del vector consecutivament
+     \pre <em>Cert</em>
+     \post Retorna true si les paraules del vector estan de forma consecutiva en el p.i, altrament retorna false
+     */
+    bool buscar_consecutives(vector<string>& paraules);
+    
     /** @brief Afegeix per referència a la taula de freqüències <em>t</em> les paraules del paràmetre implícit.
      \pre <em>Cert</em>.
      \post Afegeix per referència a la taula de freqüències <em>t</em> les paraules del paràmetre implícit.
@@ -82,7 +88,7 @@ public:
      \pre <em>Cert</em>
      \post Retorna si el p.i. compleix l'expressió.
      */
-    bool compleix_expressio(expressio);   
+    bool compleix_expressio(string expressio);
     
   //Escriptura
 

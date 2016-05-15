@@ -89,12 +89,12 @@ void Biblioteca::modificar_cita(Cita& c, int x, int y)
 	}
 }
     
-void Biblioteca::info_triat(string& autor, string& titol)
+void Biblioteca::info_triat(string& autor, string& titol) //REVISAR SI ES NECESITA AQUESTA FUNCIO
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         autor = (*_autor_triat).first;
-        (*_autor_triat).second.titol_triat(titol);
+        (*_autor_triat).second.escriure_info_triat();
     }
 }
 
@@ -147,7 +147,7 @@ void Biblioteca::contingut()
     else {
         bool tot = true;
         int x, y;
-        (*_autor_triat).second.escriure_contringut(tot, x, y);
+        (*_autor_triat).second.escriure_contingut(tot, x, y);
     }
 }
 
@@ -156,7 +156,7 @@ void Biblioteca::frasesxy (int x, int y)
     if (not _triat or x > y) cout << "error" << endl; //No hi ha un text triat o x>y.
     else {
         bool tot = false;
-        (*_autor_triat).second.escriure_contringut(tot, x, y);
+        (*_autor_triat).second.escriure_contingut(tot, x, y);
     }
 }
     

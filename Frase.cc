@@ -44,16 +44,36 @@ int Frase::n_paraules()
 	return _n_paraules;
 }
 
-bool Frase::buscar_paraules(const vector<string>& paraules);
+bool Frase::buscar_paraules(vector<string>& paraules)
+{
+    bool b = true, aux = false;
+    for (int i = 0; b and i < paraules.size(); ++i) {
+        for (int j = 0; not aux and j < _frase.size(); ++j) {
+            if (paraules[i] == _frase[j]){
+                aux = true;
+                paraules[i] = paraules[paraules.size()-1]; //Si troba la paraula la elimina del vector de paraules
+                paraules.pop_back();
+            }
+        }
+        if (not aux) b = false;
+        else aux = false;
+    }
+    return b;
+}
+
+bool Frase::buscar_consecutives(vector<string>& paraules)
+{
+    
+}
 
 void Frase::actualitzar_taula(Taula_freq& t)
 {
 	for (int i = 0; i < _frase.size(); ++i) {
-		if (es_lletra(_frase[i].back()) t.incrementa_freq(_frase[i]);
+		if (es_lletra(_frase[i].back())) t.incrementa_freq(_frase[i]);
 	}
 }
 
-bool Frase::compleix_expressio(expressio)
+bool Frase::compleix_expressio(string expressio)
 {
 	if (expressio[0] == '{') {
 		normalitzar(expressio);

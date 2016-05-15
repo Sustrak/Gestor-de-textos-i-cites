@@ -21,11 +21,13 @@ int Text::n_paraules()
     return _n_paraules;
 }
 
-bool Text::conte_paraules(const vector<string>& paraules)
+bool Text::conte_paraules(bool consec, vector<string>& paraules)
 {
     bool trobat = false;
+    
     for (int i = 0; not trobat and i < _contingut.size(); ++i) {
-        trobat = _contingut[i].buscar_paraules(paraules);
+        if (not consec) trobat = _contingut[i].buscar_paraules(paraules);
+        else trobat = _contingut[i].buscar_consecutives(paraules);
     }
     return trobat;
 }
@@ -64,12 +66,13 @@ void Text::fer_taula(Taula_freq& t)
 	for (int i = 0; i < _contingut.size(); ++i) _contingut[i].actualitzar_taula(t);
 }
 
-void Text::escriure_contingut()
+void Text::escriure_contingut(int x, int y)
 {
-    for (int i = 0; i < _contingut.size(); ++i) {
-        cout << i+1 << " ";
-        _contingut[i].escriure();
+    while (x <= y) {
+        cout << x << " ";
+        _contingut[x].escriure();
         cout << endl;
+        ++x;
     }
 }
 

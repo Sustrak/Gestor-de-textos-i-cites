@@ -69,13 +69,13 @@ public:
         \pre <em>Cert</em>.
         \post Si en conté, es tria el primer text que conté les paraules de <em>paraules</em> i <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void triar_text(bool& trobat, const vector<string>& paraules);
+    void triar_text(bool& trobat, vector<string>& paraules);
     
     /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
         \pre <em>Cert</em>.
         \post Si hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>,  <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void buscar_text(bool& trobat, const vector<string>& paraules);
+    void buscar_text(bool& trobat, vector<string>& paraules);
     
     /** @brief Substitueix una paraula per una altre en el text triat.
         \pre Hi ha un text triat.
@@ -116,11 +116,11 @@ public:
         \pre Hi ha un text triat
         \post S'escriu pel canal estàndard de sortida el contingut del text triat si tot es cert altrament s'escriu de la frase x al la frase y
      */
-    void escriure_contringut(bool tot, int x, int y);
+    void escriure_contingut(bool tot, int x, int y);
     
     /** @brief Escriu el nombre de frases de l'ultim text triat
         \pre Hi ha un text triat
-        \post S'escriu pel canal estàndard de sortida el nobre de frases del text triat
+        \post S'escriu pel canal estàndard de sortida el nombre de frases del text triat
      */
     void escriure_nombre_frases();
     
