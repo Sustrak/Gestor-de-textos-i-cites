@@ -46,7 +46,9 @@ void Text::llegir_text()
 	while (linia.length()>0){
 		frase.llegir(linia);
 		_contingut.push_back(frase);
+        _n_paraules += frase.n_paraules();
 	}
+    
 }
 
 void Text::substitueix (string par1, string par2)

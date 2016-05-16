@@ -82,19 +82,27 @@ bool Frase::compleix_expressio(string expressio)
 	}
 	normalitzar(expressio);
 	int i = 0;
-	int j = 0;
 	bool parada = false;
 	for (int j = 0; j < expressio.length(); ++j) {
+        string esq, dreta;
 		if (expressio[j] == '(') ++i;
 		else if (expressio[j] == ')') --i;
 		else if (i == 0 and expressio[j] == '&') {
-			//arreglar esq i dreta;
+            expressio.erase(expressio.begin());
+            expressio.erase(expressio.begin());
+            dreta = expressio;
 			return compleix_expressio(esq) and compleix_expressio(dreta);
 		}
 		else if (i == 0 and expressio[j] == '|') {
-			//arreglar esq i dreta;
+            expressio.erase(expressio.begin());
+            expressio.erase(expressio.begin());
+            dreta = expressio;
 			return compleix_expressio(esq) or compleix_expressio(dreta);
 		}
+        else {
+            esq.push_back(expressio[j]);
+            expressio.erase(expressio.begin());
+        }
 	}
 }
 

@@ -65,6 +65,8 @@ void Biblioteca::eliminar_text()
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else (*_autor_triat).second.eliminar_text();
+    
+    if ((*_autor_triat).second.es_buit()) _autors.erase(_autor_triat);
 }
     
 void Biblioteca::substitueix (string par1, string par2)

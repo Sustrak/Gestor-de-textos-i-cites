@@ -69,7 +69,7 @@ public:
         \pre <em>Cert</em>.
         \post Si en conté, es tria el primer text que conté les paraules de <em>paraules</em> i <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void triar_text(bool& trobat, vector<string>& paraules);
+    void triar_text(bool& trobat, vector<string> paraules);
     
     /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
         \pre <em>Cert</em>.
@@ -90,6 +90,12 @@ public:
      \post Retorna per referencia la taula de freqüències del text triat.
      */
     void fer_taula(Taula_freq& t);
+    
+    /** @brief Retorna si el paràmetre implícit conté textos.
+     \pre <em>Cert</em>.
+     \post Retorna true si el p.i és buit altrament retorna false.
+     */
+    bool es_buit();
     
   //Escriptura
     

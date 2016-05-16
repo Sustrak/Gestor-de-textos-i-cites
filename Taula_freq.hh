@@ -14,6 +14,15 @@
 
 using namespace std;
 
+
+bool operator<(const string &s, const string &t)
+{
+    if (s.length() < t.length()) return true;
+    else if (s.length() == t.length() and not(s >= t)) return true;
+    else return false;
+}
+
+
 class Taula_freq {
 
     /** @class Taula_freq

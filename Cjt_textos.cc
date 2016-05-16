@@ -16,10 +16,15 @@ void Cjt_textos::afegir_text(string titol)
 {
     if (_textos.find(titol) != _textos.end()) _textos[titol].llegir_text();
     else cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
+    
+    _n_frases += _textos[titol].n_frases();
+    _n_paraules += _textos[titol].n_paraules();
 }
     
 void Cjt_textos::eliminar_text()
 {
+    _n_paraules -= (*_text_triat).second.n_paraules();
+    _n_frases -= (*_text_triat).second.n_frases();
     _textos.erase(_text_triat);
 }
 
@@ -29,7 +34,7 @@ void Cjt_textos::modificar_cita(Cita& c, int x, int y)
 	(*_text_triat).second.afegir_contingut(c, x, y);
 }
 
-void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules)
+void Cjt_textos::triar_text(bool& trobat, vector<string> paraules)
 {
     map<string, Text>::iterator it_text = _textos.begin();
     while (not trobat and it_text != _textos.end()) {
@@ -57,7 +62,13 @@ void Cjt_textos::fer_taula(Taula_freq& t)
 {
 	(*_text_triat).second.fer_taula(t);
 }
-    
+
+bool Cjt_textos::es_buit()
+{
+    if (_n_frases == 0) return true;
+    else return false;
+}
+
 void Cjt_textos::escriure_titols()
 {
     map<string, Text>::iterator it = _textos.begin();
