@@ -11,7 +11,14 @@ static void fer_ini(string& ini, const string& autor)
 	while (iss >> m) ini.push_back(m.front());
 }
 
-static void fer_ref(const string& ini, const int& i, string& ref);
+static void fer_ref(const string& ini, const int& i, string& ref)
+{
+    string num;
+    ostringstream convert;
+    convert << i;
+    num = convert.str();
+    ref = ini+num;
+}
 
 Cjt_cites::Cjt_cites(){}
     
@@ -26,7 +33,7 @@ void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 		string ref, ini;
 		bool error = false;
 		fer_ini(ini, c.autor());
-		ref = ini + "1"
+		ref = ini + "1";
 		int i = 1;
 		map<string, Cita>::iterator it = _cites.find(ref);
 		while (it != _cites.end() and it->first == ref and not error) {
