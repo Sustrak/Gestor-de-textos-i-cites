@@ -63,7 +63,7 @@ public:
         \pre <em>Cert</em>.
         \post Retorna si el p.i. conté totes les paraules de <em>paraules</em>.
     */
-    bool conte_paraules(bool consec, vector<string>& paraules);
+    bool conte_paraules(bool consec, vector<string> paraules);
     
     /** @brief Llegeix un text del canal d'entrada.
      \pre El canal d'entrada estandard conté el text en una línia.

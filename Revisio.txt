@@ -4,10 +4,6 @@ Parametres per referencia!!
 
 Ordenar entre modificadores i consultores
 
-Revisar funcio Biblioteca::info_triat
-
-Ara totes les funcions que cridin Frase::buscar_paraules el vector de paraules s'anira buidan a mida que es trobin les paraules per tant mirar si es millor que aquestes operacions no pasin els parametres per referencia.
-
 Implementar Frases::consecutives
 
 A Biblioteca::info() falta que escrigui les cites associades de l'autor

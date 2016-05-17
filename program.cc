@@ -85,7 +85,10 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	}
 	else if (op == "info") {
 		iss >> op;
-		if (op == "?") b.info();
+		if (op == "?") {
+			b.info();
+			c.cites_text(b);
+		}
 		else if (op == "cita") {
 			iss >> op;
 			c.info_cita(op);

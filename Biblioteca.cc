@@ -96,7 +96,7 @@ void Biblioteca::info_triat(string& autor, string& titol) //REVISAR SI ES NECESI
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
         autor = (*_autor_triat).first;
-        (*_autor_triat).second.escriure_info_triat();
+        (*_autor_triat).second.titol_triat(titol);
     }
 }
 
@@ -131,7 +131,6 @@ void Biblioteca::info()
     else {
         cout << (*_autor_triat).first << " ";
         (*_autor_triat).second.escriure_info_triat();
-        //Falta escriure les cites associades
     }
 }
 

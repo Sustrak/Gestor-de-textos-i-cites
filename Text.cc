@@ -21,7 +21,7 @@ int Text::n_paraules()
     return _n_paraules;
 }
 
-bool Text::conte_paraules(bool consec, vector<string>& paraules)
+bool Text::conte_paraules(bool consec, vector<string> paraules)
 {
     bool trobat = false;
     

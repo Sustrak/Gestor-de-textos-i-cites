@@ -34,7 +34,7 @@ void Cjt_textos::modificar_cita(Cita& c, int x, int y)
 	(*_text_triat).second.afegir_contingut(c, x, y);
 }
 
-void Cjt_textos::triar_text(bool& trobat, vector<string> paraules)
+void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules)
 {
     map<string, Text>::iterator it_text = _textos.begin();
     while (not trobat and it_text != _textos.end()) {
@@ -68,6 +68,11 @@ bool Cjt_textos::es_buit()
     if (_n_frases == 0) return true;
     else return false;
 }
+
+void Cjt_textos::titol_triat(string& titol)
+{
+	titol = (*_text_triat).first;
+}	
 
 void Cjt_textos::escriure_titols()
 {

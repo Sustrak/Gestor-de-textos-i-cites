@@ -63,7 +63,18 @@ bool Frase::buscar_paraules(vector<string>& paraules)
 
 bool Frase::buscar_consecutives(vector<string>& paraules)
 {
-    
+	bool trobat = false;
+    for (int i = 0; i <= _frase.size()-paraules.size() and not trobat; ++i) {
+		if (_frase[i] == paraules[0]) {
+			trobat = true;
+			int p = 0;		//Compte els signes de puntuacio.
+			for (int j = 1; j < paraules.size() and trobat; ++j) {
+				if (not es_lletra(_frase[i+j+p][0]) ++p;
+				else trobat = _frase[i+j+p] == paraules [j];
+			}
+		}
+	}
+	return trobat;			
 }
 
 void Frase::actualitzar_taula(Taula_freq& t)
@@ -82,27 +93,24 @@ bool Frase::compleix_expressio(string expressio)
 	}
 	normalitzar(expressio);
 	int i = 0;
-	bool parada = false;
-	for (int j = 0; j < expressio.length(); ++j) {
-        string esq, dreta;
-		if (expressio[j] == '(') ++i;
-		else if (expressio[j] == ')') --i;
-		else if (i == 0 and expressio[j] == '&') {
+	while (0 < expressio.length()) {
+        string esq;
+		if (expressio[0] == '(') ++i;
+		else if (expressio[0] == ')') --i;
+		else if (i == 0 and expressio[0] == '&') {
+			esq.erase(esq.end());
             expressio.erase(expressio.begin());
             expressio.erase(expressio.begin());
-            dreta = expressio;
-			return compleix_expressio(esq) and compleix_expressio(dreta);
+            return compleix_expressio(esq) and compleix_expressio(expressio);
 		}
-		else if (i == 0 and expressio[j] == '|') {
+		else if (i == 0 and expressio[0] == '|') {
+			esq.erase(esq.end());
             expressio.erase(expressio.begin());
             expressio.erase(expressio.begin());
-            dreta = expressio;
-			return compleix_expressio(esq) or compleix_expressio(dreta);
+			return compleix_expressio(esq) or compleix_expressio(expressio);
 		}
-        else {
-            esq.push_back(expressio[j]);
-            expressio.erase(expressio.begin());
-        }
+		esq.push_back(expressio[0]);
+        expressio.erase(expressio.begin());
 	}
 }
 

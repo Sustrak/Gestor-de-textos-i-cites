@@ -69,7 +69,7 @@ public:
         \pre <em>Cert</em>.
         \post Si en conté, es tria el primer text que conté les paraules de <em>paraules</em> i <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void triar_text(bool& trobat, vector<string> paraules);
+    void triar_text(bool& trobat, vector<string>& paraules);
     
     /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
         \pre <em>Cert</em>.
@@ -96,6 +96,12 @@ public:
      \post Retorna true si el p.i és buit altrament retorna false.
      */
     bool es_buit();
+    
+    /** @brief Retorna per referencia el títol del text triat.
+     \pre Hi ha un text triat.
+     \post Retorna per referencia el títol del text triat.
+     */
+    void titol_triat(string& titol);
     
   //Escriptura
     
