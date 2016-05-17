@@ -13,7 +13,7 @@
 
 #include "Cita.hh"
 #include "Biblioteca.hh"
-using namespace std;
+
 
 class Cjt_cites {
 
@@ -24,8 +24,8 @@ class Cjt_cites {
 private:
     map<string, Cita> _cites;			//L'string es la referència.
     
-    static void fer_ini(string& ini, const string& autor);
-	static void fer_ref(const string& ini, const int& i, string& ref);
+    static void fer_ini(string& ini, string autor);
+	static void fer_ref(string& ini, int& i, string& ref);
     
 public:
 

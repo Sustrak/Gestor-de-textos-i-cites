@@ -14,7 +14,8 @@
 #include "Cjt_textos.hh"
 #include "Text.hh"
 #include "Taula_freq.hh"
-using namespace std;
+#include "Func_auxiliars.hh"
+
 
 class Biblioteca {
 

@@ -12,7 +12,7 @@ void Taula_freq::substitueix(string par1, string par2)
 {
 	bool trobat = false;		//trobat indica si hem trobat par1.
 	map<int, set<string, ordenar>>::iterator it1 = _taula.begin();
-	set<string>::iterator it2;
+	set<string, ordenar>::iterator it2;
 	int f1 = 0;
 	while (not trobat and it1 != _taula.end()) {
 		it2 = it1->second.find(par1);
@@ -56,7 +56,7 @@ void Taula_freq::incrementa_freq (string s)
 {
 	bool trobat = false;
 	map<int, set<string, ordenar>>::iterator it1 = _taula.begin();
-	set<string>::iterator it2;
+	set<string, ordenar>::iterator it2;
 	int f = 1;
 	while (not trobat and it1 != _taula.end()) {
 		it2 = it1->second.find(s);
@@ -87,7 +87,7 @@ int Taula_freq::freq(string& s)
 {
 	bool trobat = false;
 	map<int, set<string, ordenar>>::iterator it1 = _taula.begin();
-	set<string>::iterator it2;
+	set<string, ordenar>::iterator it2;
 	int f = 0;
 	while (not trobat and it1 != _taula.end()) {
 		it2 = it1->second.find(s);
@@ -101,7 +101,7 @@ int Taula_freq::freq(string& s)
 void Taula_freq::escriure()
 {
 	map<int, set<string, ordenar>>::iterator it1 = _taula.end();
-	set<string>::iterator it2;
+	set<string, ordenar>::iterator it2;
 	while (it1 != _taula.begin()) {
 		for (it2 = it1->second.begin(); it2 != it1->second.end(); ++it2) cout << *it2 << " " << it1->first << endl;
 		--it1;

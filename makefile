@@ -1,7 +1,7 @@
 OPCIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -ansi -O2 -Wall -Wextra -Wno-uninitialized -Wno-sign-compare -std=c++0x
 
-program.exe: program.o Cjt_cites.o Cjt_textos.o Cita.o Biblioteca.o Frase.o Text.o Func_auxiliars.o Taula.o
-	g++ -o program.exe program.o
+program.exe: program.o Cjt_cites.o Cjt_textos.o Cita.o Biblioteca.o Frase.o Text.o Func_auxiliars.o Taula_freq.o
+	g++ -o program.exe program.o Cjt_cites.o Cjt_textos.o Cita.o Biblioteca.o Frase.o Text.o Func_auxiliars.o Taula_freq.o
 
 program.o: program.cc
 	g++ -c program.cc $(OPCIONS)
@@ -27,8 +27,8 @@ Text.o: Text.cc Text.hh
 Func_auxiliars.o: Func_auxiliars.cc Func_auxiliars.hh
 	g++ -c Func_auxiliars.cc $(OPCIONS)
 
-Taula.o: Taula.cc Taula.hh
-	g++ -c Taula.cc $(OPCIONS)
+Taula_freq.o: Taula_freq.cc Taula_freq.hh
+	g++ -c Taula_freq.cc $(OPCIONS)
 
 clean:
 	rm *.o
