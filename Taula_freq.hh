@@ -15,20 +15,13 @@
 using namespace std;
 
 
-bool operator<(const string &s, const string &t)
+struct ordenar
 {
-    if (s.length() < t.length()) return true;
-    else if (s.length() == t.length() and not(s >= t)) return true;
-    else return false;
-}
-
-struct comp {
-	bool ordenar() (const string &s, const string &t)
-	{
-		if (s.length() < t.length()) return true;
-		else if (s.length() == t.length() and not(s >= t)) return true;
-		else return false;
-	}
+    bool operator() (const string& s, const string& t){
+        if (s.length() < t.length()) return true;
+        else if (s.length() == t.length() and s < t) return true;
+        else return false;
+    }
 };
 
 
@@ -39,7 +32,7 @@ class Taula_freq {
     */
 
 private:
-	map<int, set <string, comp>> _taula;
+	map<int, set <string, ordenar>> _taula;
 
 public:
 

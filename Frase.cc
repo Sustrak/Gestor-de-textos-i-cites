@@ -69,7 +69,7 @@ bool Frase::buscar_consecutives(vector<string>& paraules)
 			trobat = true;
 			int p = 0;		//Compte els signes de puntuacio.
 			for (int j = 1; j < paraules.size() and trobat; ++j) {
-				if (not es_lletra(_frase[i+j+p][0]) ++p;
+				if (not es_lletra(_frase[i+j+p][0])) ++p;
 				else trobat = _frase[i+j+p] == paraules [j];
 			}
 		}
@@ -112,6 +112,7 @@ bool Frase::compleix_expressio(string expressio)
 		esq.push_back(expressio[0]);
         expressio.erase(expressio.begin());
 	}
+    return true;
 }
 
 void Frase::escriure()

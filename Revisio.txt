@@ -1,25 +1,4 @@
-Revisar que totes les accions estan implementades: Biblioteca::frases_expressio -> Fase::compleix_expressio
-
 Parametres per referencia!!
 
 Ordenar entre modificadores i consultores
 
-Implementar Frases::consecutives
-
-A Biblioteca::info() falta que escrigui les cites associades de l'autor
-
-
-
-JA FET:
-
-fer funcio fer_ref
-
-A Cjt_textos s'acctualitzen _n_frases i _n_paraules ???
-
-definir l'ordre del set de Taula_freq - NO SE SI ESTA BEN COLOCADA
-
-quan s'eliminen tots els textos d'un autor, hauriem d'eliminar l'autor
-
-Revisar: Frase::buscar_paraules, Cjt_textos d'escriptura.
-
-Evaluar expressio: esq i dreta ja s'omplen d'una forma molt rudimentaria
