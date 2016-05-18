@@ -16,7 +16,7 @@ using namespace std;
     \post Elimina el primer i últim caracter d'una string
 */
 
-void normalitzar(string linia);
+void normalitzar(string& linia);
 vector<string> par_buscar(string paraules);
 bool es_lletra(char c);
 

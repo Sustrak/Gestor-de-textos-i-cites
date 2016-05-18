@@ -4,14 +4,14 @@
 
 #include "Cjt_cites.hh"
 
-void fer_ini(string& ini, string autor)
+void Cjt_cites::fer_ini(string& ini, string autor)
 {
 	istringstream iss(autor);
 	string m;
 	while (iss >> m) ini.push_back(m.front());
 }
 
-void fer_ref(string& ini, int& i, string& ref)
+void Cjt_cites::fer_ref(string& ini, int& i, string& ref)
 {
     string num;
     ostringstream convert;
