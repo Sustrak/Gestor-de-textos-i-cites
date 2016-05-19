@@ -18,13 +18,12 @@ Biblioteca::~Biblioteca(){}
 
 void Biblioteca::afegir_text(string titol)
 {
-    cout << titol << endl;
     normalitzar(titol);
-    cout << titol << endl;
     string autor;
-    cin >> autor >> autor;
+    cin >> autor;
+    getline(cin, autor);
+    autor.erase(autor.begin());
     normalitzar(autor);
-    cout << autor << endl;
     _autors[autor].afegir_text(titol);
 }
 
@@ -115,6 +114,7 @@ void Biblioteca::tots_textos()
     while (it != _autors.end()){
         cout << (*it).first << " ";
         (*it).second.escriure_titols();
+        ++it;
     }
 }
     
@@ -124,6 +124,7 @@ void Biblioteca::tots_autors()
     while (it != _autors.end()) {
         cout << (*it).first << endl;
         (*it).second.escriure_info();
+        ++it;
     }
 }
     

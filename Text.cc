@@ -13,7 +13,7 @@ Text::~Text(){}
 
 int Text::n_frases()
 {
-    return _contingut.size()-1;
+    return _contingut.size();
 }
 
 int Text::n_paraules()
@@ -40,17 +40,13 @@ void Text::llegir_text()
 	while (l != "****") {  //Es posa tot el text en un únic string
 		linia += l;
 		getline(cin, l);
-        cout << "Encara no" << endl;
 	}
-    cout << "Ara si" << endl;
     Frase frase;
 	while (linia.length()>0){
-        cout << "Estic en mig" << endl;
 		frase.llegir(linia);
 		_contingut.push_back(frase);
         _n_paraules += frase.n_paraules();
 	}
-    cout << "ja he acabat" << endl;
 }
 
 void Text::substitueix (string par1, string par2)
