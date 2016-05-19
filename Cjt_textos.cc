@@ -46,7 +46,8 @@ void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules)
 
 void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules)
 {
-    map<string, Text>::iterator it_text = ++_text_triat;
+    map<string, Text>::iterator it_text = _text_triat;
+    ++it_text;
     while (trobat and it_text != _textos.end()) {
         if ((*it_text).second.conte_paraules(false, paraules)) trobat = false;
         else ++it_text;

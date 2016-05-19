@@ -41,8 +41,9 @@ void Text::llegir_text()
 		linia += l;
 		getline(cin, l);
 	}
-    Frase frase;
+    
 	while (linia.length()>0){
+        Frase frase;
 		frase.llegir(linia);
 		_contingut.push_back(frase);
         _n_paraules += frase.n_paraules();

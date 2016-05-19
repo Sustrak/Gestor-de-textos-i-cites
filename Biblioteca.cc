@@ -103,8 +103,9 @@ void Biblioteca::info_triat(string& autor, string& titol) //REVISAR SI ES NECESI
 
 void Biblioteca::textos_autor(string autor)
 {
+    normalitzar(autor);
     map<string, Cjt_textos>::iterator it = _autors.find(autor);
-    (*it).second.escriure_titols();
+    if (it != _autors.end()) (*it).second.escriure_titols();
 }
     
 void Biblioteca::tots_textos()
@@ -141,7 +142,7 @@ void Biblioteca::autor()
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
-        cout << (*_autor_triat).first;
+        cout << (*_autor_triat).first << endl;
     }
 }
 
@@ -182,7 +183,8 @@ void Biblioteca::nombre_paraules()
 
 void Biblioteca::taula_freq()
 {
-	_tfreq.escriure();
+    if (not _triat) cout << "error" << endl;
+	else _tfreq.escriure();
 }
 
 void Biblioteca::frases_expressio(string expressio)

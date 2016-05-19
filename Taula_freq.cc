@@ -64,18 +64,31 @@ void Taula_freq::incrementa_freq (string s)
 		if (trobat) f = it1->first + 1;
 		++it1;
 	}
-	if (it1 == _taula.end() or it1->first != f) {	//No existeix a maps el conjunt de paraules de freq. f.
-		set<string, ordenar> t;
-		t.insert(s);
-		_taula.insert(make_pair(f, t));
-	}
-	else it1->second.insert(s);						//Ja existeix a maps el conjunt de paraules de freq. f.
+    
+    if (trobat) {									//Originalment s ja estava a la taula de freq, l'eliminem del conjunt amb la seva freq. original.
+        if (it1->first == f) it1->second.insert(s);
+        else {
+            set<string, ordenar> t;
+            t.insert(s);
+            _taula.insert(make_pair(f, t));
+        }
+        --it1;
+        it1->second.erase(it2);
+        if (it1->second.empty()) _taula.erase(it1);	//Si el conjunt de paraules de freq. f-1 és buit, l'eliminem;
+        
+    }
+    
+    else {
+        it1 = _taula.begin();
+        if (it1 != _taula.end() and it1->first == 1) it1->second.insert(s);  //Existeix frq 1
+        else {	//No existeix a maps el conjunt de paraules de freq. 1.
+            set<string, ordenar> t;
+            t.insert(s);
+            _taula.insert(make_pair(1, t));
+        }
+    }
 	
-	if (trobat) {									//Originalment s ja estava a la taula de freq, l'eliminem del conjunt amb la seva freq. original.
-		--it1;
-		it1->second.erase(it2);
-		if (it1->second.empty()) _taula.erase(it1);	//Si el conjunt de paraules de freq. f-1 és buit, l'eliminem;
-	}		
+			
 }
 
 void Taula_freq::clear()
@@ -103,7 +116,8 @@ void Taula_freq::escriure()
 	map<int, set<string, ordenar>>::iterator it1 = _taula.end();
 	set<string, ordenar>::iterator it2;
 	while (it1 != _taula.begin()) {
+        --it1;
 		for (it2 = it1->second.begin(); it2 != it1->second.end(); ++it2) cout << *it2 << " " << it1->first << endl;
-		--it1;
+		
 	}
 }

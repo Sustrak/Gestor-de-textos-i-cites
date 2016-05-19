@@ -112,7 +112,6 @@ void Cjt_cites::cites_text(Biblioteca& b)
 			++it;
 		}
 	}
-	else cout << "error" << endl; //No hi ha un text triat.
 }
 
 void Cjt_cites::totes_cites()
