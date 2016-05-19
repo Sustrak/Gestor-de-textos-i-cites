@@ -18,11 +18,13 @@ Biblioteca::~Biblioteca(){}
 
 void Biblioteca::afegir_text(string titol)
 {
+    cout << titol << endl;
     normalitzar(titol);
+    cout << titol << endl;
     string autor;
     cin >> autor >> autor;
     normalitzar(autor);
-    
+    cout << autor << endl;
     _autors[autor].afegir_text(titol);
 }
 

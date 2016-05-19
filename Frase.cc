@@ -13,11 +13,15 @@ Frase::~Frase(){}
 
 void Frase::llegir(string& linia)
 {
+    cout << "Entro a llegir" << endl;
 	istringstream iss(linia);
 	string m;
 	do {
+        cout << "estic en el bucle" << endl;
 		iss >> m;
+        cout << m << " " << endl;
 		if (not es_lletra(m.back())) {
+            cout << "No es lletra" << endl;
 			string m1 = m;
 			m1.pop_back();
 			string m2;
@@ -26,10 +30,13 @@ void Frase::llegir(string& linia)
 			_frase.push_back(m2);
 		}
 		else _frase.push_back(m);
+        cout << m.back() << " " << "m.back()" << endl;
 		++_n_paraules;		
 	} while (m.back() != '.' or m.back() != '?' or m.back() != '!');
 	ws(iss);
 	getline(iss, linia);
+    cout << linia << " " << endl;
+    cout << "surto de llegir" << endl;
 }
 
 void Frase::substitueix (string par1, string par2)

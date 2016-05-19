@@ -3,7 +3,7 @@
 void normalitzar(string& linia)
 {
   linia.erase(linia.begin());
-  linia.erase(linia.end());
+  linia.erase(linia.end()-1);
 }
 
 vector<string> par_buscar(string paraules)
