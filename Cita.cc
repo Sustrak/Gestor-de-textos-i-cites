@@ -36,7 +36,7 @@ void Cita::eliminar() {
 
 bool Cita::es_cita()
 {
-	return _eliminada;
+	return not _eliminada;
 }
 
 string Cita::autor()
