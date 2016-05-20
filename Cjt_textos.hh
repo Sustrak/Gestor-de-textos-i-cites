@@ -69,13 +69,13 @@ public:
         \pre <em>Cert</em>.
         \post Si en conté, es tria el primer text que conté les paraules de <em>paraules</em> i <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void triar_text(bool& trobat, vector<string>& paraules);
+    void triar_text(bool& trobat, vector<string>& paraules, string& autor);
     
     /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
         \pre <em>Cert</em>.
         \post Si hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>,  <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void buscar_text(bool& trobat, vector<string>& paraules);
+    void buscar_text(bool& trobat, vector<string>& paraules, string& autor);
     
     /** @brief Substitueix una paraula per una altre en el text triat.
         \pre Hi ha un text triat.

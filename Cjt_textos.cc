@@ -34,22 +34,24 @@ void Cjt_textos::modificar_cita(Cita& c, int x, int y)
 	(*_text_triat).second.afegir_contingut(c, x, y);
 }
 
-void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules)
+void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules, string& autor)
 {
     map<string, Text>::iterator it_text = _textos.begin();
     while (not trobat and it_text != _textos.end()) {
-        trobat = (*it_text).second.conte_paraules(false, paraules);
+        string titol = (*it_text).first;
+        trobat = (*it_text).second.conte_paraules(paraules, autor, titol);
         ++it_text;
     }
     if (trobat) _text_triat = --it_text;
 }
 
-void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules)
+void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules, string& autor)
 {
     map<string, Text>::iterator it_text = _text_triat;
     ++it_text;
     while (trobat and it_text != _textos.end()) {
-        if ((*it_text).second.conte_paraules(false, paraules)) trobat = false;
+        string titol = (*it_text).first;
+        if ((*it_text).second.conte_paraules(paraules, autor, titol)) trobat = false;
         else ++it_text;
     }
 }
@@ -121,5 +123,5 @@ void Cjt_textos::frases_expressio(string& expressio)
 
 void Cjt_textos::frases_paraules(vector<string> paraules)
 {
-    (*_text_triat).second.conte_paraules(true, paraules);
+    (*_text_triat).second.conte_consecutives(paraules);
 }

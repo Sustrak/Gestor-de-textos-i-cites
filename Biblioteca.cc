@@ -37,16 +37,19 @@ void Biblioteca::triar_text(string paraules)
     bool trobat = false;
     
     while (not trobat and it_autor != _autors.end()){
-        (*it_autor).second.triar_text(trobat, paraules_buscar);
+        string autor = (*it_autor).first;
+        (*it_autor).second.triar_text(trobat, paraules_buscar, autor);
         ++it_autor;
     }
     if (trobat) {
         --it_autor;
         map<string, Cjt_textos>::iterator it = it_autor;
-        (*it).second.buscar_text(trobat, paraules_buscar); //Comprova si hi ha un altre text amb paraules en el mateix autor.
+        string autor = (*it).first;
+        (*it).second.buscar_text(trobat, paraules_buscar, autor); //Comprova si hi ha un altre text amb paraules en el mateix autor.
         ++it;
         while (trobat and it != _autors.end()) {
-            (*it).second.triar_text(trobat, paraules_buscar);
+            string autor = (*it).first;
+            (*it).second.triar_text(trobat, paraules_buscar, autor);
             ++it;
         }
     }
@@ -73,6 +76,8 @@ void Biblioteca::eliminar_text()
 void Biblioteca::substitueix (string par1, string par2)
 {
     if (_triat) {
+        normalitzar(par1);
+        normalitzar(par2);
 		(*_autor_triat).second.substitueix(par1, par2);
 		_tfreq.substitueix(par1, par2);
 	}
@@ -191,7 +196,8 @@ void Biblioteca::frases_expressio(string expressio)
 {
     if (not _triat) cout << "error" << endl; 	//No hi ha un text triat.
     else {
-		//Netejar expressio.
+        expressio.erase(expressio.end()-1);
+        expressio.erase(expressio.end()-1);
 		(*_autor_triat).second.frases_expressio(expressio);
 	}
 }

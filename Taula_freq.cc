@@ -66,13 +66,16 @@ void Taula_freq::incrementa_freq (string s)
 	}
     
     if (trobat) {									//Originalment s ja estava a la taula de freq, l'eliminem del conjunt amb la seva freq. original.
-        if (it1->first == f) it1->second.insert(s);
+        if (it1->first == f){
+           it1->second.insert(s);
+            --it1;
+        }
         else {
+            --it1;
             set<string, ordenar> t;
             t.insert(s);
             _taula.insert(make_pair(f, t));
         }
-        --it1;
         it1->second.erase(it2);
         if (it1->second.empty()) _taula.erase(it1);	//Si el conjunt de paraules de freq. f-1 és buit, l'eliminem;
         

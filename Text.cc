@@ -21,13 +21,49 @@ int Text::n_paraules()
     return _n_paraules;
 }
 
-bool Text::conte_paraules(bool consec, vector<string> paraules)
+bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
 {
     bool trobat = false;
     
+    istringstream iss (autor);
+    string aux;
+    
+    while (iss >> aux) {
+        bool b = false;
+        for (int i = 0; not b and i < paraules.size(); ++i) {
+            b = aux == paraules[i];
+            if (b){
+                paraules[i] = paraules[paraules.size()-1];
+                paraules.pop_back();
+            }
+        }
+    }
+    
+    istringstream isss (titol);
+    
+    while (isss >> aux) {
+        bool b = false;
+        for (int i = 0; not b and i < paraules.size(); ++i) {
+            b = aux == paraules[i];
+            if (b){
+                paraules[i] = paraules[paraules.size()-1];
+                paraules.pop_back();
+            }
+        }
+    }
+    
     for (int i = 0; not trobat and i < _contingut.size(); ++i) {
-        if (not consec) trobat = _contingut[i].buscar_paraules(paraules);
-        else trobat = _contingut[i].buscar_consecutives(paraules);
+        trobat = _contingut[i].buscar_paraules(paraules);
+    }
+    return trobat;
+}
+
+bool Text::conte_consecutives(vector<string>& paraules)
+{
+    bool trobat = false;
+    
+    for (int i = 0; not trobat and i < _contingut.size(); ++i){
+        trobat = _contingut[i].buscar_consecutives(paraules);
     }
     return trobat;
 }
@@ -70,7 +106,7 @@ void Text::fer_taula(Taula_freq& t)
 void Text::escriure_contingut(int x, int y)
 {
     while (x <= y) {
-        cout << x << " ";
+        cout << x+1 << " ";
         _contingut[x].escriure();
         cout << endl;
         ++x;

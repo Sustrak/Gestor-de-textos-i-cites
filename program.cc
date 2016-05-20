@@ -71,8 +71,6 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		if (op == "autor") {
 			ws(iss);
 			getline(iss, op);
-            op.erase(op.end()-1);
-            op.erase(op.end()-1);
 			b.textos_autor(op);
 		}
 	}

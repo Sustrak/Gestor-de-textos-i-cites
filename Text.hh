@@ -63,7 +63,13 @@ public:
         \pre <em>Cert</em>.
         \post Retorna si el p.i. conté totes les paraules de <em>paraules</em>.
     */
-    bool conte_paraules(bool consec, vector<string> paraules);
+    bool conte_paraules(vector<string> paraules, string& autor, string& titol);
+    
+    /** @brief Retorna si el parametre implícit conté totes les paraules cosecutivament de <em>paraules</em>.
+     \pre <em>Cert</em>.
+     \post Retorna si el p.i. conté totes les paraules consecutivament de <em>paraules</em>.
+     */
+    bool conte_consecutives(vector<string>& paraules);
     
     /** @brief Llegeix un text del canal d'entrada.
      \pre El canal d'entrada estandard conté el text en una línia.
