@@ -32,7 +32,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			getline(iss, linia);
 			b.afegir_text(linia);
 		}
-		else if (op == "cita") {er
+		else if (op == "cita") {
 			int x, y;
 			iss >> op;
 			x = op[0] -'0';
@@ -102,9 +102,6 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (linia == "contingut ?") {
 		b.contingut();
 	}
-	else if (op == "frases") {
-
-	}
 	else if (linia == "nombre de frases ?") {
 		b.nombre_frases();
 	}
@@ -127,7 +124,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			string x, y;
 			iss >> x;
 			iss >> y;
-			b.frasesxy(fer_num(x), fer_num(y));
+			//b.frasesxy(fer_num(x), fer_num(y));
 		}
 	}
 	else if (op == "cites") {
