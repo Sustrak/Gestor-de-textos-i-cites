@@ -33,12 +33,10 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			b.afegir_text(linia);
 		}
 		else if (op == "cita") {
-			int x, y;
-			iss >> op;
-			x = op[0] -'0';
-			iss >> op;
-			y = op[0] -'0';
-			c.afegir_cita(b, x, y);
+			string x, y;
+			iss >> x;
+			iss >> y;
+			//c.afegir_cita(b, fer_num(x), fer_num(y));
 		}
 	}
 	else if (op == "triar") {

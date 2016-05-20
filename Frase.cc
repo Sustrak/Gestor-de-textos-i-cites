@@ -96,18 +96,18 @@ bool Frase::compleix_expressio(string expressio)
 	}
 	normalitzar(expressio);
 	int i = 0;
+    string esq;
 	while (0 < expressio.length()) {
-        string esq;
 		if (expressio[0] == '(') ++i;
 		else if (expressio[0] == ')') --i;
 		else if (i == 0 and expressio[0] == '&') {
-			esq.erase(esq.end());
+			esq.erase(esq.end()-1);
             expressio.erase(expressio.begin());
             expressio.erase(expressio.begin());
             return compleix_expressio(esq) and compleix_expressio(expressio);
 		}
 		else if (i == 0 and expressio[0] == '|') {
-			esq.erase(esq.end());
+			esq.erase(esq.end()-1);
             expressio.erase(expressio.begin());
             expressio.erase(expressio.begin());
 			return compleix_expressio(esq) or compleix_expressio(expressio);
