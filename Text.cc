@@ -38,7 +38,7 @@ void Text::llegir_text()
 	getline(cin, linia);
 	getline(cin, l);
 	while (l != "****") {  //Es posa tot el text en un únic string
-		linia += l;
+		linia += " " + l;
 		getline(cin, l);
 	}
     
