@@ -2,3 +2,6 @@ Parametres per referencia!!
 
 Ordenar entre modificadores i consultores
 
+fer funcio fer_num.
+
+posar el numero de frase quan fem frases ({expressio}) o frases "paraules"
