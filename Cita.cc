@@ -15,7 +15,7 @@ void Cita::afegir_contingut(const vector<Frase>& contingut, int x, int y)
 {
 	_n_primera = x;
 	while (x <= y) {
-		_frases.push_back(contingut[x]);
+		_frases.push_back(contingut[x-1]);
 		++x;
 	}
 }
