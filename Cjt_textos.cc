@@ -80,11 +80,12 @@ void Cjt_textos::titol_triat(string& titol)
 	titol = (*_text_triat).first;
 }	
 
-void Cjt_textos::escriure_titols()
+void Cjt_textos::escriure_titols(string& autor, bool tots)
 {
     map<string, Text>::iterator it = _textos.begin();
     while (it != _textos.end()) {
-        cout << '"' << (*it).first << '"' << " ";
+        if (tots) cout << autor << " ";
+        cout << '"' << (*it).first << '"';
         ++it;
     }
     cout << endl;

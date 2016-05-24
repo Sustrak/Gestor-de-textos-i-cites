@@ -70,7 +70,9 @@ bool Frase::buscar_consecutives(vector<string>& paraules)
 			int p = 0;		//Compte els signes de puntuacio.
 			for (int j = 1; j < paraules.size() and trobat; ++j) {
 				if (not es_lletra(_frase[i+j+p][0])) ++p;
-				else trobat = _frase[i+j+p] == paraules [j];
+				else {
+					trobat = _frase[i+j+p] == paraules [j];
+				}
 			}
 		}
 	}

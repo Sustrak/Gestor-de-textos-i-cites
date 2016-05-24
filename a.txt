@@ -3,8 +3,8 @@ afegir text "The Picture of Dorian Gray"
 afegir text "La ciencia. Su metodo y su filosofia"
 
 tots textos ?
-Mario Bunge "La ciencia. Su metodo y su filosofia" 
-Oscar Wilde "The Picture of Dorian Gray" 
+Mario Bunge "La ciencia. Su metodo y su filosofia"
+Oscar Wilde "The Picture of Dorian Gray"
 
 info ?
 error
@@ -29,7 +29,7 @@ frases 5 7 ?
 7 Journals are well written, or badly written.
 
 textos autor "Mario Bunge" ?
-"La ciencia. Su metodo y su filosofia" 
+"La ciencia. Su metodo y su filosofia"
 
 tots autors ?
 Mario Bunge 1 1 24
@@ -56,11 +56,11 @@ afegir text "Los sistemas de riego antes del siglo X"
 afegir text "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
 
 tots textos ?
-Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible" 
-Mario Bunge "La ciencia. Su metodo y su filosofia" 
-Mariona Blay Andreu "Los sistemas de riego antes del siglo X" 
-Maurice Sendak "Where the wild things are" 
-Oscar Wilde "The Picture of Dorian Gray" 
+Mar Sierra "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
+Mario Bunge "La ciencia. Su metodo y su filosofia"
+Mariona Blay Andreu "Los sistemas de riego antes del siglo X"
+Maurice Sendak "Where the wild things are"
+Oscar Wilde "The Picture of Dorian Gray"
 
 triar text {Saturn moon}
 error
@@ -120,17 +120,17 @@ contingut ?
 frases (({night wolf} | {When}) & {And}) ?
 
 frases (({night wolf} | {When}) & {and}) ?
-The night Max wore his wolf suit and made mischief of one kind and another.
-When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
+1 The night Max wore his wolf suit and made mischief of one kind and another.
+4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
 
 frases ({king} | {roars eyes}) ?
-When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
-They made him king of all wild things.
+4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
+6 They made him king of all wild things.
 
 frases (({tamed} | {mischief}) | {king wild}) ?
-The night Max wore his wolf suit and made mischief of one kind and another.
-Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
-They made him king of all wild things.
+1 The night Max wore his wolf suit and made mischief of one kind and another.
+5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
+6 They made him king of all wild things.
 
 frases "they terrible" ?
 

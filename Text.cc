@@ -60,14 +60,15 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
     return trobat;
 }
 
-bool Text::conte_consecutives(vector<string>& paraules)
+void Text::conte_consecutives(vector<string>& paraules)
 {
-    bool trobat = false;
     
-    for (int i = 0; not trobat and i < _contingut.size(); ++i){
-        trobat = _contingut[i].buscar_consecutives(paraules);
+    for (int i = 0; i < _contingut.size(); ++i){
+        if(_contingut[i].buscar_consecutives(paraules)) {
+			cout << i+1 << " ";
+			_contingut[i].escriure();
+		}
     }
-    return trobat;
 }
 
 void Text::llegir_text()
@@ -119,6 +120,9 @@ void Text::escriure_contingut(int x, int y)
 void Text::frases_expressio(string& expressio)
 {
 	for (int i = 0; i < _contingut.size(); ++i) {
-		if (_contingut[i].compleix_expressio(expressio)) _contingut[i].escriure();
+		if (_contingut[i].compleix_expressio(expressio)) {
+			cout << i+1 << " ";
+			_contingut[i].escriure();
+		}
 	}
 }

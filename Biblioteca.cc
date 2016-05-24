@@ -110,7 +110,7 @@ void Biblioteca::textos_autor(string autor)
 {
     normalitzar(autor);
     map<string, Cjt_textos>::iterator it = _autors.find(autor);
-    if (it != _autors.end()) (*it).second.escriure_titols();
+    if (it != _autors.end()) (*it).second.escriure_titols(autor, false);
 }
     
 void Biblioteca::tots_textos()
@@ -118,8 +118,8 @@ void Biblioteca::tots_textos()
     map<string, Cjt_textos>::iterator it = _autors.begin();
     
     while (it != _autors.end()){
-        cout << (*it).first << " ";
-        (*it).second.escriure_titols();
+        string autor = (*it).first;
+        (*it).second.escriure_titols(autor, true);
         ++it;
     }
 }

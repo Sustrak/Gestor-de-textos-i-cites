@@ -109,7 +109,7 @@ public:
         \pre <em>Cert</em>.
         \post S'escriuen pel canal estàndard de sortida el títol de tots els textos del p.i. ordenats alfabèticament.
     */   
-    void escriure_titols();
+    void escriure_titols(string& autor, bool tots);
     
     /** @brief S'secriuen el nombre de títols del paràmetre implicit, el nombre de frases i paraules
         \pre <em>Cert</em>
