@@ -52,9 +52,9 @@ void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules, string& aut
 {
     map<string, Text>::iterator it_text = _text_triat;
     ++it_text;
-    while (trobat and it_text != _textos.end()) {
+    while (not trobat and it_text != _textos.end()) {
         string titol = (*it_text).first;
-        if ((*it_text).second.conte_paraules(paraules, autor, titol)) trobat = false;
+        if ((*it_text).second.conte_paraules(paraules, autor, titol)) trobat = true;
         else ++it_text;
     }
 }

@@ -34,26 +34,26 @@ void Biblioteca::triar_text(string paraules)
     vector<string> paraules_buscar = par_buscar(paraules);
     
     map<string, Cjt_textos>::iterator it_autor = _autors.begin();
-    bool trobat = false;
+    bool trobat1 = false, trobat2 = false;
     
-    while (not trobat and it_autor != _autors.end()){
+    while (not trobat1 and it_autor != _autors.end()){
         string autor = (*it_autor).first;
-        (*it_autor).second.triar_text(trobat, paraules_buscar, autor);
+        (*it_autor).second.triar_text(trobat1, paraules_buscar, autor);
         ++it_autor;
     }
-    if (trobat) {
+    if (trobat1) {
         --it_autor;
         map<string, Cjt_textos>::iterator it = it_autor;
         string autor = (*it).first;
-        (*it).second.buscar_text(trobat, paraules_buscar, autor); //Comprova si hi ha un altre text amb paraules en el mateix autor.
+        (*it).second.buscar_text(trobat2, paraules_buscar, autor); //Comprova si hi ha un altre text amb paraules en el mateix autor.
         ++it;
-        while (trobat and it != _autors.end()) {
+        while (not trobat2 and it != _autors.end()) {
             string autor = (*it).first;
-            (*it).second.triar_text(trobat, paraules_buscar, autor);
+            (*it).second.triar_text(trobat2, paraules_buscar, autor);
             ++it;
         }
     }
-    if (trobat) {
+    if (trobat1 and not trobat2) {
         _triat = true;
         _autor_triat = it_autor;
         _tfreq.clear();
