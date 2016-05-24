@@ -96,6 +96,7 @@ void Cjt_cites::cites_autor(string autor)
 void Cjt_cites::cites_text(Biblioteca& b)
 {
 	if (b.triat()) {
+		cout << "Cites Associades:" << endl;
 		string autor, titol, ref, ini;
 		b.info_triat(autor, titol);
 		fer_ini(ini, autor);

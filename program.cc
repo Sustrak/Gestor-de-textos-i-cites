@@ -15,6 +15,7 @@ Aplicació per a gestionar informació de textos i cites associades a aquest tex
 #include <map>
 #endif
 
+#include "Func_auxiliars.hh"
 #include "Biblioteca.hh"
 #include "Cjt_cites.hh"
 using namespace std;
@@ -36,7 +37,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			string x, y;
 			iss >> x;
 			iss >> y;
-			//c.afegir_cita(b, fer_num(x), fer_num(y));
+			c.afegir_cita(b, fer_num(x), fer_num(y));
 		}
 	}
 	else if (op == "triar") {
@@ -112,6 +113,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (op == "frases") {
 		ws(iss);
 		getline(iss, linia);
+		istringstream iss(linia);
 		if (linia[0] == '(' or linia[0] == '{') {
 			b.frases_expressio(linia);
 		}
@@ -122,7 +124,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			string x, y;
 			iss >> x;
 			iss >> y;
-			//b.frasesxy(fer_num(x), fer_num(y));
+			b.frasesxy(fer_num(x), fer_num(y));
 		}
 	}
 	else if (op == "cites") {

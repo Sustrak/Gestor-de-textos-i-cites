@@ -19,5 +19,6 @@ using namespace std;
 void normalitzar(string& linia);
 vector<string> par_buscar(string paraules);
 bool es_lletra(char c);
+int fer_num(string& s);
 
 #endif

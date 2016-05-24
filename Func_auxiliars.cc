@@ -20,3 +20,11 @@ bool es_lletra(char c)
     if ((c >= 'A' and c <= 'Z') or (c >= 'a' and c <= 'z')) return true;
     else return false;
 }
+
+int fer_num(string& s)
+{
+	int n;
+	istringstream iss(s);
+	iss >> n;
+    return n;
+}

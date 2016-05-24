@@ -66,7 +66,7 @@ void Taula_freq::incrementa_freq (string s)
 	}
     
     if (trobat) {									//Originalment s ja estava a la taula de freq, l'eliminem del conjunt amb la seva freq. original.
-        if (it1->first == f){
+        if (it1 != _taula.end() and it1->first == f){
            it1->second.insert(s);
             --it1;
         }

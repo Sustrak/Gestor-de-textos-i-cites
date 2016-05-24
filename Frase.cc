@@ -47,19 +47,18 @@ int Frase::n_paraules()
 
 bool Frase::buscar_paraules(vector<string>& paraules)
 {
-    bool b = true, aux = false;
-    for (int i = 0; b and i < paraules.size(); ++i) {
+    for (int i = 0; i < paraules.size(); ++i) {
+		bool aux = false;;
         for (int j = 0; not aux and j < _frase.size(); ++j) {
-            if (paraules[i] == _frase[j]){
-                aux = true;
+			aux = paraules[i] == _frase[j];
+            if (aux){
                 paraules[i] = paraules[paraules.size()-1]; //Si troba la paraula la elimina del vector de paraules
                 paraules.pop_back();
+                --i;
             }
         }
-        if (not aux) b = false;
-        else aux = false;
     }
-    return b;
+    return paraules.size() == 0;
 }
 
 bool Frase::buscar_consecutives(vector<string>& paraules)
@@ -82,7 +81,7 @@ void Frase::actualitzar_taula(Taula_freq& t)
 {
 	for (int i = 0; i < _frase.size(); ++i) {
         if (es_lletra(_frase[i].back())){
-           t.incrementa_freq(_frase[i]); 
+			t.incrementa_freq(_frase[i]); 
         }
 	}
 }
@@ -92,8 +91,7 @@ bool Frase::compleix_expressio(string expressio)
 	if (expressio[0] == '{') {
 		normalitzar(expressio);
 		vector<string> paraules = par_buscar(expressio);
-        bool b = buscar_paraules(paraules);
-        return b;
+		return buscar_paraules(paraules);
 	}
 	normalitzar(expressio);
 	int i = 0;
@@ -116,7 +114,7 @@ bool Frase::compleix_expressio(string expressio)
 		esq.push_back(expressio[0]);
         expressio.erase(expressio.begin());
 	}
-    return false;
+    return true;
 }
 
 void Frase::escriure()

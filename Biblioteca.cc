@@ -30,7 +30,7 @@ void Biblioteca::afegir_text(string titol)
 void Biblioteca::triar_text(string paraules)
 {
     normalitzar(paraules);
-    
+
     vector<string> paraules_buscar = par_buscar(paraules);
     
     map<string, Cjt_textos>::iterator it_autor = _autors.begin();
@@ -128,7 +128,7 @@ void Biblioteca::tots_autors()
 {
     map<string, Cjt_textos>::iterator it = _autors.begin();
     while (it != _autors.end()) {
-        cout << (*it).first << endl;
+        cout << (*it).first << " ";
         (*it).second.escriure_info();
         ++it;
     }

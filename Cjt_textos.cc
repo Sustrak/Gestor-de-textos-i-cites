@@ -42,7 +42,10 @@ void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules, string& auto
         trobat = (*it_text).second.conte_paraules(paraules, autor, titol);
         ++it_text;
     }
-    if (trobat) _text_triat = --it_text;
+    if (trobat) {
+		--it_text;
+		_text_triat = it_text;
+	}
 }
 
 void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules, string& autor)
@@ -81,7 +84,7 @@ void Cjt_textos::escriure_titols()
 {
     map<string, Text>::iterator it = _textos.begin();
     while (it != _textos.end()) {
-        cout << (*it).first << " ";
+        cout << '"' << (*it).first << '"' << " ";
         ++it;
     }
     cout << endl;
@@ -94,14 +97,14 @@ void Cjt_textos::escriure_info()
 
 void Cjt_textos::escriure_info_triat()
 {
-    cout << (*_text_triat).first << " " << (*_text_triat).second.n_frases() << " " << (*_text_triat).second.n_paraules() << endl;
+    cout << '"' << (*_text_triat).first << '"' << " " << (*_text_triat).second.n_frases() << " " << (*_text_triat).second.n_paraules() << endl;
 }
 
 void Cjt_textos::escriure_contingut(bool tot, int x, int y)
 {
     if (tot) {
-        x = 0;
-        y = (*_text_triat).second.n_frases()-1;
+        x = 1;
+        y = (*_text_triat).second.n_frases();
     }
     (*_text_triat).second.escriure_contingut(x, y);
 }

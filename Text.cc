@@ -28,7 +28,7 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
     istringstream iss (autor);
     string aux;
     
-    while (iss >> aux) {
+    while (not trobat and iss >> aux) {
         bool b = false;
         for (int i = 0; not b and i < paraules.size(); ++i) {
             b = aux == paraules[i];
@@ -37,11 +37,12 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
                 paraules.pop_back();
             }
         }
+        trobat = paraules.size() == 0;
     }
     
     istringstream isss (titol);
     
-    while (isss >> aux) {
+    while (not trobat and isss >> aux) {
         bool b = false;
         for (int i = 0; not b and i < paraules.size(); ++i) {
             b = aux == paraules[i];
@@ -50,6 +51,7 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
                 paraules.pop_back();
             }
         }
+        trobat = paraules.size() == 0;
     }
     
     for (int i = 0; not trobat and i < _contingut.size(); ++i) {
@@ -100,15 +102,16 @@ void Text::afegir_contingut(Cita& cita, int x, int y)
 
 void Text::fer_taula(Taula_freq& t)
 {
-	for (int i = 0; i < _contingut.size(); ++i) _contingut[i].actualitzar_taula(t);
+	for (int i = 0; i < _contingut.size(); ++i) {
+		_contingut[i].actualitzar_taula(t);
+	}
 }
 
 void Text::escriure_contingut(int x, int y)
 {
     while (x <= y) {
-        cout << x+1 << " ";
-        _contingut[x].escriure();
-        cout << endl;
+        cout << x << " ";
+        _contingut[x-1].escriure();
         ++x;
     }
 }
