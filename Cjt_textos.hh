@@ -120,9 +120,15 @@ public:
     
     /** @brief Escriu el títol, nombre de frases i paraules del text triat
         \pre Hi ha un text triat
-        \post S'esciuen pel canal estàndard de sortida el títol i el nombre de frases i paraules del text triat
+        \post S'escriuen pel canal estàndard de sortida el títol i el nombre de frases i paraules del text triat
      */
     void escriure_info_triat();
+    
+    /** @brief Escriu el títol del text triat
+        \pre Hi ha un text triat
+        \post S'escriu pel canal estàndard de sortida el títol del text triat
+     */
+    void escriure_titol_triat();
     
     /** @brief Escriu el contingut del text triat si tot es cert altrament escriurà només les frases de la x a la y
         \pre Hi ha un text triat

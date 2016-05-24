@@ -101,6 +101,11 @@ void Cjt_textos::escriure_info_triat()
     cout << '"' << (*_text_triat).first << '"' << " " << (*_text_triat).second.n_frases() << " " << (*_text_triat).second.n_paraules() << endl;
 }
 
+void Cjt_textos::escriure_titol_triat()
+{
+	cout << '"' << (*_text_triat).first << '"';
+}
+
 void Cjt_textos::escriure_contingut(bool tot, int x, int y)
 {
     if (tot) {

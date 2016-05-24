@@ -56,7 +56,7 @@ int Cita::n_primera()
 
 int Cita::n_ultima()
 {
-	return _n_primera + _frases.size();
+	return _n_primera + _frases.size() - 1;
 }
 
 void Cita::escriure_contingut()

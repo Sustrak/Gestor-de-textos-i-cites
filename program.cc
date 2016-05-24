@@ -88,6 +88,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		iss >> op;
 		if (op == "?") {
 			b.info();
+			if (b.triat()) cout << "Cites Associades:" << endl;
 			c.cites_text(b);
 		}
 		else if (op == "cita") {
@@ -135,7 +136,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			c.cites_autor(op);
 		}
 		else if (op == "?") {
-			c.cites_text(b);
+			if(c.cites_text(b)) b.autor_titol();
 		}
 	}
 	else if (linia == "totes cites ?") {

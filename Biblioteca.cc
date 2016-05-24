@@ -68,9 +68,11 @@ void Biblioteca::triar_text(string paraules)
 void Biblioteca::eliminar_text()
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
-    else (*_autor_triat).second.eliminar_text();
-    
-    if ((*_autor_triat).second.es_buit()) _autors.erase(_autor_triat);
+    else {
+		(*_autor_triat).second.eliminar_text();
+		if ((*_autor_triat).second.es_buit()) _autors.erase(_autor_triat);
+		_triat = false;
+	}
 }
     
 void Biblioteca::substitueix (string par1, string par2)
@@ -151,6 +153,15 @@ void Biblioteca::autor()
     }
 }
 
+void Biblioteca::autor_titol()
+{
+	if (_triat) {
+        cout << (*_autor_triat).first << " ";
+        (*_autor_triat).second.escriure_titol_triat();
+        cout << endl;
+    }
+}
+
 void Biblioteca::contingut()
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
@@ -206,6 +217,8 @@ void Biblioteca::frases_paraules(string paraules)
 {
     if (not _triat) cout << "error" << endl; 	//No hi ha un text triat.
     else {
+		paraules.erase(paraules.end()-1);
+        paraules.erase(paraules.end()-1);
         normalitzar(paraules);
         vector<string> vec_par = par_buscar(paraules);
         

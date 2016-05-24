@@ -52,6 +52,7 @@ void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 	
 void Cjt_cites::eliminar_cita(string ref)
 {
+	normalitzar(ref);
 	map<string, Cita>::iterator it = _cites.find(ref);
 	if (it != _cites.end() and it->second.es_cita()) it->second.eliminar();
 	else cout << "error" << endl;  //No existeix cap cita amb la referencia ref.
@@ -65,9 +66,10 @@ bool Cjt_cites::te_cita(string ref)
     
 void Cjt_cites::info_cita(string ref)
 {
+	normalitzar(ref);
 	map<string, Cita>::iterator it = _cites.find(ref);
 	if (it != _cites.end()) {
-		cout << it->second.autor() << " " << it->second.titol() << endl;
+		cout << it->second.autor() << " " << '"' << it->second.titol() << '"' << endl;
 		cout << it->second.n_primera() << "-" << it->second.n_ultima() << endl;
 		it->second.escriure_contingut();
 	}
@@ -76,6 +78,9 @@ void Cjt_cites::info_cita(string ref)
 
 void Cjt_cites::cites_autor(string autor)
 {
+	autor.erase(autor.end()-1);
+	autor.erase(autor.end()-1);
+	normalitzar(autor);
 	string ref, ini;
 	fer_ini(ini, autor);
 	ref = ini + "1";
@@ -85,7 +90,7 @@ void Cjt_cites::cites_autor(string autor)
 		if (it->second.es_cita() and it->second.autor() == autor) {
 			cout << ref << endl;
 			it->second.escriure_contingut();
-			cout << it->second.autor() << " " << it->second.titol() << endl;
+			cout << '"' << it->second.titol() << '"' << endl;
 		}
 		++i;
 		fer_ref(ini, i, ref);
@@ -93,10 +98,10 @@ void Cjt_cites::cites_autor(string autor)
 	}
 }
     
-void Cjt_cites::cites_text(Biblioteca& b)
+bool Cjt_cites::cites_text(Biblioteca& b)
 {
+	bool te_cites = false;
 	if (b.triat()) {
-		cout << "Cites Associades:" << endl;
 		string autor, titol, ref, ini;
 		b.info_triat(autor, titol);
 		fer_ini(ini, autor);
@@ -107,12 +112,14 @@ void Cjt_cites::cites_text(Biblioteca& b)
 			if (it->second.es_cita() and it->second.autor() == autor and it->second.titol() == titol) {
 				cout << ref << endl;
 				it->second.escriure_contingut();
+				te_cites = true;
 			}
 			++i;
 			fer_ref(ini, i, ref);
 			++it;
 		}
 	}
+	return te_cites;
 }
 
 void Cjt_cites::totes_cites()
@@ -122,7 +129,7 @@ void Cjt_cites::totes_cites()
 		if (it->second.es_cita()) {
 			cout << it->first << endl;
 			it->second.escriure_contingut();
-			cout << endl << it->second.autor() << " " << it->second.titol() << endl;
+			cout << it->second.autor() << " " << '"' << it->second.titol() << '"' << endl;
 		}
 		++it;
 	}
