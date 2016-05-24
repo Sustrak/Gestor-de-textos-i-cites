@@ -92,7 +92,8 @@ bool Frase::compleix_expressio(string expressio)
 	if (expressio[0] == '{') {
 		normalitzar(expressio);
 		vector<string> paraules = par_buscar(expressio);
-		return buscar_paraules(paraules);
+        bool b = buscar_paraules(paraules);
+        return b;
 	}
 	normalitzar(expressio);
 	int i = 0;
@@ -115,7 +116,7 @@ bool Frase::compleix_expressio(string expressio)
 		esq.push_back(expressio[0]);
         expressio.erase(expressio.begin());
 	}
-    return true;
+    return false;
 }
 
 void Frase::escriure()
