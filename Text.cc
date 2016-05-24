@@ -45,6 +45,7 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
     while (not trobat and isss >> aux) {
         bool b = false;
         for (int i = 0; not b and i < paraules.size(); ++i) {
+			if (not es_lletra(aux.back())) aux.erase(aux.end()-1);
             b = aux == paraules[i];
             if (b){
                 paraules[i] = paraules[paraules.size()-1];
