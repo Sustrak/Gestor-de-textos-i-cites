@@ -20,6 +20,7 @@ void Taula_freq::substitueix(string par1, string par2)
 		if (trobat) f1 = it1->first;
 		++it1;
 	}
+
 	if (trobat) {
 		--it1;
 		it1->second.erase(it2);
@@ -34,11 +35,13 @@ void Taula_freq::substitueix(string par1, string par2)
 			if (trobat) f2 = it3->first;
 			++it3;
 		}
+
 		if (trobat) {
-			if (it1->second.empty()) _taula.erase(it1);		//Eliminen el conjunt on es trobava par1 si és buit.
 			--it3;
+			if (it1->second.empty()) _taula.erase(it1);		//Eliminen el conjunt on es trobava par1 si és buit.
 			it3->second.erase(it2);
 			if (it3->second.empty()) _taula.erase(it3);		//Eliminen el conjunt on es trobava par2 si és buit.
+			
 			f2 += f1;										//par 2 passa a tenir la suma de ambdues freq.
 			it1 = _taula.find(f2);
 			if (it1 == _taula.end()) {						//No existeix a maps el conjunt de paraules de freq. f2.

@@ -63,7 +63,6 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
 
 void Text::conte_consecutives(vector<string>& paraules)
 {
-    
     for (int i = 0; i < _contingut.size(); ++i){
         if(_contingut[i].buscar_consecutives(paraules)) {
 			cout << i+1 << " ";
@@ -111,11 +110,14 @@ void Text::fer_taula(Taula_freq& t)
 
 void Text::escriure_contingut(int x, int y)
 {
-    while (x <= y) {
-        cout << x << " ";
-        _contingut[x-1].escriure();
-        ++x;
-    }
+	if (y > _contingut.size() or x < 1) cout << "error" << endl;
+	else {
+		while (x <= y) {
+			cout << x << " ";
+			_contingut[x-1].escriure();
+			++x;
+		}
+	}
 }
 
 void Text::frases_expressio(string& expressio)
