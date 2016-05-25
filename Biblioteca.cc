@@ -99,7 +99,7 @@ void Biblioteca::modificar_cita(Cita& c, int x, int y)
 	}
 }
     
-void Biblioteca::info_triat(string& autor, string& titol) //REVISAR SI ES NECESITA AQUESTA FUNCIO
+void Biblioteca::info_triat(string& autor, string& titol) 
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {

@@ -87,8 +87,9 @@ void Cjt_textos::escriure_titols(string& autor, bool tots)
         if (tots) cout << autor << " ";
         cout << '"' << (*it).first << '"';
         ++it;
+        cout << endl;
+
     }
-    cout << endl;
 }
 
 void Cjt_textos::escriure_info()
