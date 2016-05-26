@@ -64,16 +64,23 @@ bool Frase::buscar_paraules(vector<string>& paraules)
 bool Frase::buscar_consecutives(vector<string>& paraules)
 {
 	bool trobat = false;
-    for (int i = 0; i <= _frase.size()-paraules.size() and not trobat; ++i) {
+    int k = _frase.size() - paraules.size();
+    for (int i = 0; i <= k and not trobat; ++i) {
 		if (_frase[i] == paraules[0]) {
 			trobat = true;
 			int p = 0;		//Compte els signes de puntuacio.
-			for (int j = 1; j < paraules.size() and trobat; ++j) {
+            int j = 1;
+			while (j < paraules.size() and trobat) {
 				if (i+j+p < _frase.size()) {
-					if (not es_lletra(_frase[i+j+p][0])) ++p;
-					else trobat = _frase[i+j+p] == paraules [j];
+                    if (not es_lletra(_frase[i+j+p][0])) ++p;
+                    else{
+                        trobat = _frase[i+j+p] == paraules [j];
+                        ++j;
+                    }
 				}
+                else trobat = false;
 			}
+            
 		}
 	}
 	return trobat;			

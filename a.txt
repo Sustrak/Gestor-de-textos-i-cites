@@ -19,3 +19,10 @@ contingut ?
 frases "la tierra" ?
 1 Los Puquios son en construcciones sofisticadas en forma de espiral que se hunden en la, tierra.
 
+afegir text "probes"
+
+triar text {probes}
+
+frases "No se puede tener todo una agricultura ecologica una ganaderia extensiva" ?
+1 No se, puede, tener, todo: una agricultura ecologica, una ganaderia, extensiva.
+

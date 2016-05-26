@@ -29,4 +29,13 @@ contingut ?
 
 frases "la tierra" ?
 
+afegir text "probes"
+autor "josep"
+No se, puede, tener, todo: una agricultura ecologica, una ganaderia, extensiva. dejar los: bosques como, estan y comer, carne! como lo hacemos. Hay; que elegir. De todos estos, factores el mas.
+****
+
+triar text {probes}
+
+frases "No se puede tener todo una agricultura ecologica una ganaderia extensiva" ?
+
 sortir
