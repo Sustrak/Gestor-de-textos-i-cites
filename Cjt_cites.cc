@@ -26,26 +26,29 @@ Cjt_cites::~Cjt_cites(){}
 
 void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 {
-	if (x <= y and b.triat()) {
+	if (x > 0 and x <= y and b.triat()) {
 		Cita c;
 		b.modificar_cita(c, x, y);
-
-		string ref, ini;
-		bool error = false;
-		fer_ini(ini, c.autor());
-		ref = ini + "1";
-		int i = 1;
-		map<string, Cita>::iterator it = _cites.find(ref);
-		while (it != _cites.end() and it->first == ref and not error) {
-			if (it->second.es_cita()) error = it->second.autor() == c.autor() and it->second.titol() == c.titol() and it->second.n_primera() == x and it->second.n_ultima() == y;
-			if (error) cout << "error" << endl; //Existeix una cita igual
-			else {
-				++it;
-				++i;
-				fer_ref (ini, i, ref);
+		
+		if (c.es_cita()) {
+			string ref, ini;
+			bool error = false;
+			fer_ini(ini, c.autor());
+			ref = ini + "1";
+			int i = 1;
+			map<string, Cita>::iterator it = _cites.find(ref);
+			while (it != _cites.end() and it->first == ref and not error) {
+				if (it->second.es_cita()) error = it->second.autor() == c.autor() and it->second.titol() == c.titol() and it->second.n_primera() == x and it->second.n_ultima() == y;
+				if (error) cout << "error" << endl; //Existeix una cita igual
+				else {
+					++it;
+					++i;
+					fer_ref (ini, i, ref);
+				}
 			}
+			if (not error) _cites.insert(make_pair(ref, c));
 		}
-		if (not error) _cites.insert(make_pair(ref, c));
+		else cout << "error" << endl;
 	}
 	else cout << "error" << endl; //No hi ha un text triat o x > y.
 }

@@ -13,11 +13,14 @@ Cita::~Cita (){}
 
 void Cita::afegir_contingut(const vector<Frase>& contingut, int x, int y)
 {
-	_n_primera = x;
-	while (x <= y) {
-		_frases.push_back(contingut[x-1]);
-		++x;
+	if (y <= contingut.size()) {
+		_n_primera = x;
+		while (x <= y) {
+			_frases.push_back(contingut[x-1]);
+			++x;
+		}
 	}
+	else _eliminada = true;			//Per fer saber al conjunt de cites que no l'afageixi.
 }
 
 void Cita::afegir_autor(const string& autor)
