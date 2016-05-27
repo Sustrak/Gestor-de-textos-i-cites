@@ -1,7 +1,7 @@
-Parametres per referencia!!
+Parametres per referencia, funcions const i static.
 
 Ordenar entre modificadores i consultores
 
-fer funcio fer_num.
+Joc de proves.
 
-posar el numero de frase quan fem frases ({expressio}) o frases "paraules"
+Document repartiment de la feina.

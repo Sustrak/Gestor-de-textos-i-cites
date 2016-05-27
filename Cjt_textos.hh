@@ -69,13 +69,13 @@ public:
         \pre <em>Cert</em>.
         \post Si en conté, es tria el primer text que conté les paraules de <em>paraules</em> i <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void triar_text(bool& trobat, vector<string>& paraules);
+    void triar_text(bool& trobat, vector<string>& paraules, string& autor);
     
     /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
         \pre <em>Cert</em>.
         \post Si hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>,  <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
     */
-    void buscar_text(bool& trobat, vector<string>& paraules);
+    void buscar_text(bool& trobat, vector<string>& paraules, string& autor);
     
     /** @brief Substitueix una paraula per una altre en el text triat.
         \pre Hi ha un text triat.
@@ -109,7 +109,7 @@ public:
         \pre <em>Cert</em>.
         \post S'escriuen pel canal estàndard de sortida el títol de tots els textos del p.i. ordenats alfabèticament.
     */   
-    void escriure_titols();
+    void escriure_titols(string& autor, bool tots);
     
     /** @brief S'secriuen el nombre de títols del paràmetre implicit, el nombre de frases i paraules
         \pre <em>Cert</em>
@@ -120,9 +120,15 @@ public:
     
     /** @brief Escriu el títol, nombre de frases i paraules del text triat
         \pre Hi ha un text triat
-        \post S'esciuen pel canal estàndard de sortida el títol i el nombre de frases i paraules del text triat
+        \post S'escriuen pel canal estàndard de sortida el títol i el nombre de frases i paraules del text triat
      */
     void escriure_info_triat();
+    
+    /** @brief Escriu el títol del text triat
+        \pre Hi ha un text triat
+        \post S'escriu pel canal estàndard de sortida el títol del text triat
+     */
+    void escriure_titol_triat();
     
     /** @brief Escriu el contingut del text triat si tot es cert altrament escriurà només les frases de la x a la y
         \pre Hi ha un text triat

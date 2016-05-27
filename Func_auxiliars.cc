@@ -3,7 +3,7 @@
 void normalitzar(string& linia)
 {
   linia.erase(linia.begin());
-  linia.erase(linia.end());
+  linia.erase(linia.end()-1);
 }
 
 vector<string> par_buscar(string paraules)
@@ -17,6 +17,14 @@ vector<string> par_buscar(string paraules)
 
 bool es_lletra(char c)
 {
-    if ((c >= 'A' and c <= 'Z') or (c >= 'a' and c <= 'z')) return true;
+    if ((c >= 'A' and c <= 'Z') or (c >= 'a' and c <= 'z') or (c >= '0' and c <= '9')) return true;
     else return false;
+}
+
+int fer_num(string& s)
+{
+	int n;
+	istringstream iss(s);
+	iss >> n;
+    return n;
 }

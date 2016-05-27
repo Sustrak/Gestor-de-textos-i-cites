@@ -14,11 +14,17 @@ Cjt_textos::~Cjt_textos(){}
     
 void Cjt_textos::afegir_text(string titol)
 {
-    if (_textos.find(titol) != _textos.end()) _textos[titol].llegir_text();
-    else cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
-    
-    _n_frases += _textos[titol].n_frases();
-    _n_paraules += _textos[titol].n_paraules();
+    if (_textos.find(titol) == _textos.end()) {
+		_textos[titol].llegir_text();
+		_n_frases += _textos[titol].n_frases();
+		_n_paraules += _textos[titol].n_paraules();
+	}
+    else{
+        cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
+        string s;
+        getline(cin, s);
+        while (s != "****") getline(cin, s);		//Es llegeix el text que està a l'input
+    }
 }
     
 void Cjt_textos::eliminar_text()
@@ -34,21 +40,27 @@ void Cjt_textos::modificar_cita(Cita& c, int x, int y)
 	(*_text_triat).second.afegir_contingut(c, x, y);
 }
 
-void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules)
+void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules, string& autor)
 {
     map<string, Text>::iterator it_text = _textos.begin();
     while (not trobat and it_text != _textos.end()) {
-        trobat = (*it_text).second.conte_paraules(false, paraules);
+        string titol = (*it_text).first;
+        trobat = (*it_text).second.conte_paraules(paraules, autor, titol);
         ++it_text;
     }
-    if (trobat) _text_triat = --it_text;
+    if (trobat) {
+		--it_text;
+		_text_triat = it_text;
+	}
 }
 
-void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules)
+void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules, string& autor)
 {
-    map<string, Text>::iterator it_text = ++_text_triat;
-    while (trobat and it_text != _textos.end()) {
-        if ((*it_text).second.conte_paraules(false, paraules)) trobat = false;
+    map<string, Text>::iterator it_text = _text_triat;
+    ++it_text;
+    while (not trobat and it_text != _textos.end()) {
+        string titol = (*it_text).first;
+        if ((*it_text).second.conte_paraules(paraules, autor, titol)) trobat = true;
         else ++it_text;
     }
 }
@@ -74,13 +86,16 @@ void Cjt_textos::titol_triat(string& titol)
 	titol = (*_text_triat).first;
 }	
 
-void Cjt_textos::escriure_titols()
+void Cjt_textos::escriure_titols(string& autor, bool tots)
 {
     map<string, Text>::iterator it = _textos.begin();
     while (it != _textos.end()) {
-        cout << (*it).first << " ";
+        if (tots) cout << autor << " ";
+        cout << '"' << (*it).first << '"';
+        ++it;
+        cout << endl;
+
     }
-    cout << endl;
 }
 
 void Cjt_textos::escriure_info()
@@ -90,14 +105,19 @@ void Cjt_textos::escriure_info()
 
 void Cjt_textos::escriure_info_triat()
 {
-    cout << (*_text_triat).first << " " << (*_text_triat).second.n_frases() << " " << (*_text_triat).second.n_paraules() << endl;
+    cout << '"' << (*_text_triat).first << '"' << " " << (*_text_triat).second.n_frases() << " " << (*_text_triat).second.n_paraules() << endl;
+}
+
+void Cjt_textos::escriure_titol_triat()
+{
+	cout << '"' << (*_text_triat).first << '"';
 }
 
 void Cjt_textos::escriure_contingut(bool tot, int x, int y)
 {
     if (tot) {
-        x = 0;
-        y = (*_text_triat).second.n_frases()-1;
+        x = 1;
+        y = (*_text_triat).second.n_frases();
     }
     (*_text_triat).second.escriure_contingut(x, y);
 }
@@ -119,5 +139,5 @@ void Cjt_textos::frases_expressio(string& expressio)
 
 void Cjt_textos::frases_paraules(vector<string> paraules)
 {
-    (*_text_triat).second.conte_paraules(true, paraules);
+    (*_text_triat).second.conte_consecutives(paraules);
 }

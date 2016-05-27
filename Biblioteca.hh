@@ -124,6 +124,12 @@ public:
     */
     void autor();
     
+    /** @brief S'escriu l'autor i titol del text triat.
+        \pre Hi ha un text triat.
+        \post S'escriu l'autor i el titol del text triat pel canal estàndard de sortida.
+    */
+    void autor_titol();
+    
     /** @brief S'escriu el contingut del text triat.
         \pre Hi ha un text triat.
         \post S'escriu el contingut del text triat pel canal estàndard de sortida.

@@ -14,22 +14,29 @@ Frase::~Frase(){}
 void Frase::llegir(string& linia)
 {
 	istringstream iss(linia);
-	string m;
+	string m, aux = linia;
 	do {
 		iss >> m;
 		if (not es_lletra(m.back())) {
-			string m1 = m;
-			m1.pop_back();
-			string m2;
-			m2.push_back(m.back());
-			_frase.push_back(m1);
-			_frase.push_back(m2);
+			if (m.size() == 1) {
+				_frase.push_back(m);
+				--_n_paraules;
+			}
+			else {
+				string m1 = m;
+				m1.pop_back();
+				string m2;
+				m2.push_back(m.back());
+				_frase.push_back(m1);
+				_frase.push_back(m2);
+			}
 		}
 		else _frase.push_back(m);
-		++_n_paraules;		
-	} while (m.back() != '.' or m.back() != '?' or m.back() != '!');
+		++_n_paraules;
+	} while (m.back() != '.' and m.back() != '?' and m.back() != '!');
 	ws(iss);
 	getline(iss, linia);
+    if (aux == linia) linia = "";
 }
 
 void Frase::substitueix (string par1, string par2)
@@ -46,32 +53,40 @@ int Frase::n_paraules()
 
 bool Frase::buscar_paraules(vector<string>& paraules)
 {
-    bool b = true, aux = false;
-    for (int i = 0; b and i < paraules.size(); ++i) {
+    for (int i = 0; i < paraules.size(); ++i) {
+		bool aux = false;;
         for (int j = 0; not aux and j < _frase.size(); ++j) {
-            if (paraules[i] == _frase[j]){
-                aux = true;
+			aux = paraules[i] == _frase[j];
+            if (aux){
                 paraules[i] = paraules[paraules.size()-1]; //Si troba la paraula la elimina del vector de paraules
                 paraules.pop_back();
+                --i;
             }
         }
-        if (not aux) b = false;
-        else aux = false;
     }
-    return b;
+    return paraules.size() == 0;
 }
 
 bool Frase::buscar_consecutives(vector<string>& paraules)
 {
 	bool trobat = false;
-    for (int i = 0; i <= _frase.size()-paraules.size() and not trobat; ++i) {
+    int k = _frase.size() - paraules.size();
+    for (int i = 0; i <= k and not trobat; ++i) {
 		if (_frase[i] == paraules[0]) {
 			trobat = true;
 			int p = 0;		//Compte els signes de puntuacio.
-			for (int j = 1; j < paraules.size() and trobat; ++j) {
-				if (not es_lletra(_frase[i+j+p][0])) ++p;
-				else trobat = _frase[i+j+p] == paraules [j];
+            int j = 1;
+			while (j < paraules.size() and trobat) {
+				if (i+j+p < _frase.size()) {
+                    if (not es_lletra(_frase[i+j+p][0])) ++p;
+                    else{
+                        trobat = _frase[i+j+p] == paraules [j];
+                        ++j;
+                    }
+				}
+                else trobat = false;
 			}
+            
 		}
 	}
 	return trobat;			
@@ -80,7 +95,9 @@ bool Frase::buscar_consecutives(vector<string>& paraules)
 void Frase::actualitzar_taula(Taula_freq& t)
 {
 	for (int i = 0; i < _frase.size(); ++i) {
-		if (es_lletra(_frase[i].back())) t.incrementa_freq(_frase[i]);
+        if (es_lletra(_frase[i].front())){
+			t.incrementa_freq(_frase[i]); 
+        }
 	}
 }
 
@@ -93,18 +110,18 @@ bool Frase::compleix_expressio(string expressio)
 	}
 	normalitzar(expressio);
 	int i = 0;
+    string esq;
 	while (0 < expressio.length()) {
-        string esq;
 		if (expressio[0] == '(') ++i;
 		else if (expressio[0] == ')') --i;
 		else if (i == 0 and expressio[0] == '&') {
-			esq.erase(esq.end());
+			esq.erase(esq.end()-1);
             expressio.erase(expressio.begin());
             expressio.erase(expressio.begin());
             return compleix_expressio(esq) and compleix_expressio(expressio);
 		}
 		else if (i == 0 and expressio[0] == '|') {
-			esq.erase(esq.end());
+			esq.erase(esq.end()-1);
             expressio.erase(expressio.begin());
             expressio.erase(expressio.begin());
 			return compleix_expressio(esq) or compleix_expressio(expressio);

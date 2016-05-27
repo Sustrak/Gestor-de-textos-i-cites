@@ -11,6 +11,7 @@
 #include <sstream>
 #endif
 
+#include "Func_auxiliars.hh"
 #include "Cita.hh"
 #include "Biblioteca.hh"
 
@@ -80,11 +81,11 @@ public:
     */
     void cites_autor(string autor);
     
-    /** @brief S'escriu informació de totes les cites al paràmetre implícit provinents del text triat a <em>b<em/>.
+    /** @brief Retorna si hi ha cites associades al text triat a <em>b<em/>, en aquest cas n'escriu la informació d'aquestes.
         \pre <em>b</em> té un text triat.
-        \post S'escriu la referència, el contingut i l'autor i el títol del text d’on provenen cada cita del p.i. provinent del text triat a <em>b<em/>.
+        \post Retorna si hi ha cites associades al text triat a <em>b<em/>, en aquest cas n'escriu la informació d'aquestes.
     */
-    void cites_text(Biblioteca& b);
+    bool cites_text(Biblioteca& b);
     
     /** @brief S'escriu informació de totes les cites del paràmetre implícit.
         \pre <em>Cert</em>.

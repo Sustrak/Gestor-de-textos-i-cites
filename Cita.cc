@@ -15,7 +15,7 @@ void Cita::afegir_contingut(const vector<Frase>& contingut, int x, int y)
 {
 	_n_primera = x;
 	while (x <= y) {
-		_frases.push_back(contingut[x]);
+		_frases.push_back(contingut[x-1]);
 		++x;
 	}
 }
@@ -36,7 +36,7 @@ void Cita::eliminar() {
 
 bool Cita::es_cita()
 {
-	return _eliminada;
+	return not _eliminada;
 }
 
 string Cita::autor()
@@ -56,7 +56,7 @@ int Cita::n_primera()
 
 int Cita::n_ultima()
 {
-	return _n_primera + _frases.size();
+	return _n_primera + _frases.size() - 1;
 }
 
 void Cita::escriure_contingut()

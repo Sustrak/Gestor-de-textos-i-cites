@@ -1,0 +1,18 @@
+afegir text "The Picture of  Gra"
+
+afegir text "Picture of Dorian Gray"
+
+triar text {Gra}
+
+taula de frequencies ?
+
+substitueix "T" per "a"
+
+taula de frequencies ?
+
+info ?
+Oscar Wilde "The Picture of  Gra" 0 0
+Cites Associades:
+
+contingut ?
+

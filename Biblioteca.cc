@@ -19,37 +19,43 @@ Biblioteca::~Biblioteca(){}
 void Biblioteca::afegir_text(string titol)
 {
     normalitzar(titol);
-    string autor;
-    cin >> autor >> autor;
+    string autor, s;
+    getline(cin,autor);
+    istringstream iss(autor);
+    iss >> s;
+    ws(iss);
+	getline(iss, autor);
     normalitzar(autor);
-    
     _autors[autor].afegir_text(titol);
 }
 
 void Biblioteca::triar_text(string paraules)
 {
     normalitzar(paraules);
-    
+
     vector<string> paraules_buscar = par_buscar(paraules);
     
     map<string, Cjt_textos>::iterator it_autor = _autors.begin();
-    bool trobat = false;
+    bool trobat1 = false, trobat2 = false;
     
-    while (not trobat and it_autor != _autors.end()){
-        (*it_autor).second.triar_text(trobat, paraules_buscar);
+    while (not trobat1 and it_autor != _autors.end()){
+        string autor = (*it_autor).first;
+        (*it_autor).second.triar_text(trobat1, paraules_buscar, autor);
         ++it_autor;
     }
-    if (trobat) {
+    if (trobat1) {
         --it_autor;
         map<string, Cjt_textos>::iterator it = it_autor;
-        (*it).second.buscar_text(trobat, paraules_buscar); //Comprova si hi ha un altre text amb paraules en el mateix autor.
+        string autor = (*it).first;
+        (*it).second.buscar_text(trobat2, paraules_buscar, autor); //Comprova si hi ha un altre text amb paraules en el mateix autor.
         ++it;
-        while (trobat and it != _autors.end()) {
-            (*it).second.triar_text(trobat, paraules_buscar);
+        while (not trobat2 and it != _autors.end()) {
+            string autor = (*it).first;
+            (*it).second.triar_text(trobat2, paraules_buscar, autor);
             ++it;
         }
     }
-    if (trobat) {
+    if (trobat1 and not trobat2) {
         _triat = true;
         _autor_triat = it_autor;
         _tfreq.clear();
@@ -64,16 +70,22 @@ void Biblioteca::triar_text(string paraules)
 void Biblioteca::eliminar_text()
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
-    else (*_autor_triat).second.eliminar_text();
-    
-    if ((*_autor_triat).second.es_buit()) _autors.erase(_autor_triat);
+    else {
+		(*_autor_triat).second.eliminar_text();
+		if ((*_autor_triat).second.es_buit()) _autors.erase(_autor_triat);
+		_triat = false;
+	}
 }
     
 void Biblioteca::substitueix (string par1, string par2)
 {
     if (_triat) {
-		(*_autor_triat).second.substitueix(par1, par2);
-		_tfreq.substitueix(par1, par2);
+        normalitzar(par1);
+        normalitzar(par2);
+        if (par1 != par2) {
+			(*_autor_triat).second.substitueix(par1, par2);
+			_tfreq.substitueix(par1, par2);
+		}
 	}
 	else cout << "error" << endl; //No hi ha un text triat.
 }
@@ -91,7 +103,7 @@ void Biblioteca::modificar_cita(Cita& c, int x, int y)
 	}
 }
     
-void Biblioteca::info_triat(string& autor, string& titol) //REVISAR SI ES NECESITA AQUESTA FUNCIO
+void Biblioteca::info_triat(string& autor, string& titol) 
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
@@ -102,8 +114,9 @@ void Biblioteca::info_triat(string& autor, string& titol) //REVISAR SI ES NECESI
 
 void Biblioteca::textos_autor(string autor)
 {
+    normalitzar(autor);
     map<string, Cjt_textos>::iterator it = _autors.find(autor);
-    (*it).second.escriure_titols();
+    if (it != _autors.end()) (*it).second.escriure_titols(autor, false);
 }
     
 void Biblioteca::tots_textos()
@@ -111,8 +124,9 @@ void Biblioteca::tots_textos()
     map<string, Cjt_textos>::iterator it = _autors.begin();
     
     while (it != _autors.end()){
-        cout << (*it).first << " ";
-        (*it).second.escriure_titols();
+        string autor = (*it).first;
+        (*it).second.escriure_titols(autor, true);
+        ++it;
     }
 }
     
@@ -120,8 +134,9 @@ void Biblioteca::tots_autors()
 {
     map<string, Cjt_textos>::iterator it = _autors.begin();
     while (it != _autors.end()) {
-        cout << (*it).first << endl;
+        cout << (*it).first << " ";
         (*it).second.escriure_info();
+        ++it;
     }
 }
     
@@ -138,7 +153,16 @@ void Biblioteca::autor()
 {
     if (not _triat) cout << "error" << endl; //No hi ha un text triat.
     else {
-        cout << (*_autor_triat).first;
+        cout << (*_autor_triat).first << endl;
+    }
+}
+
+void Biblioteca::autor_titol()
+{
+	if (_triat) {
+        cout << (*_autor_triat).first << " ";
+        (*_autor_triat).second.escriure_titol_triat();
+        cout << endl;
     }
 }
 
@@ -179,14 +203,16 @@ void Biblioteca::nombre_paraules()
 
 void Biblioteca::taula_freq()
 {
-	_tfreq.escriure();
+    if (not _triat) cout << "error" << endl;
+	else _tfreq.escriure();
 }
 
 void Biblioteca::frases_expressio(string expressio)
 {
     if (not _triat) cout << "error" << endl; 	//No hi ha un text triat.
     else {
-		//Netejar expressio.
+        expressio.erase(expressio.end()-1);
+        expressio.erase(expressio.end()-1);
 		(*_autor_triat).second.frases_expressio(expressio);
 	}
 }
@@ -195,6 +221,8 @@ void Biblioteca::frases_paraules(string paraules)
 {
     if (not _triat) cout << "error" << endl; 	//No hi ha un text triat.
     else {
+		paraules.erase(paraules.end()-1);
+        paraules.erase(paraules.end()-1);
         normalitzar(paraules);
         vector<string> vec_par = par_buscar(paraules);
         

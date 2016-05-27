@@ -15,6 +15,7 @@ Aplicació per a gestionar informació de textos i cites associades a aquest tex
 #include <map>
 #endif
 
+#include "Func_auxiliars.hh"
 #include "Biblioteca.hh"
 #include "Cjt_cites.hh"
 using namespace std;
@@ -33,12 +34,10 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			b.afegir_text(linia);
 		}
 		else if (op == "cita") {
-			int x, y;
-			iss >> op;
-			x = op[0] -'0';
-			iss >> op;
-			y = op[0] -'0';
-			c.afegir_cita(b, x, y);
+			string x, y;
+			iss >> x;
+			iss >> y;
+			c.afegir_cita(b, fer_num(x), fer_num(y));
 		}
 	}
 	else if (op == "triar") {
@@ -71,6 +70,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		if (op == "autor") {
 			ws(iss);
 			getline(iss, op);
+            op.erase(op.end()-1);
+            op.erase(op.end()-1);
 			b.textos_autor(op);
 		}
 	}
@@ -87,6 +88,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		iss >> op;
 		if (op == "?") {
 			b.info();
+			if (b.triat()) cout << "Cites Associades:" << endl;
 			c.cites_text(b);
 		}
 		else if (op == "cita") {
@@ -100,14 +102,6 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (linia == "contingut ?") {
 		b.contingut();
 	}
-	else if (op == "frases") {
-		int x, y;
-		iss >> op;
-		x = op[0] -'0';
-		iss >> op;
-		y = op[0] -'0';
-		b.frasesxy(x, y);
-	}
 	else if (linia == "nombre de frases ?") {
 		b.nombre_frases();
 	}
@@ -120,10 +114,19 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 	else if (op == "frases") {
 		ws(iss);
 		getline(iss, linia);
-		if (linia[0] == '"') {
+		istringstream iss(linia);
+		if (linia[0] == '(' or linia[0] == '{') {
+			b.frases_expressio(linia);
+		}
+		else if (linia[0] == '"') {
 			b.frases_paraules(linia);
 		}
-		else b.frases_expressio(linia);
+		else {
+			string x, y;
+			iss >> x;
+			iss >> y;
+			b.frasesxy(fer_num(x), fer_num(y));
+		}
 	}
 	else if (op == "cites") {
 		iss >> op;
@@ -133,7 +136,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			c.cites_autor(op);
 		}
 		else if (op == "?") {
-			c.cites_text(b);
+			if (not b.triat()) cout << "error" << endl;
+			if(c.cites_text(b)) b.autor_titol();
 		}
 	}
 	else if (linia == "totes cites ?") {
