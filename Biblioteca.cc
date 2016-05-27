@@ -19,10 +19,12 @@ Biblioteca::~Biblioteca(){}
 void Biblioteca::afegir_text(string titol)
 {
     normalitzar(titol);
-    string autor;
-    cin >> autor;
-    getline(cin, autor);
-    autor.erase(autor.begin());
+    string autor, s;
+    getline(cin,autor);
+    istringstream iss(autor);
+    iss >> s;
+    ws(iss);
+	getline(iss, autor);
     normalitzar(autor);
     _autors[autor].afegir_text(titol);
 }

@@ -14,16 +14,17 @@ Cjt_textos::~Cjt_textos(){}
     
 void Cjt_textos::afegir_text(string titol)
 {
-    if (_textos.find(titol) == _textos.end()) _textos[titol].llegir_text();
+    if (_textos.find(titol) == _textos.end()) {
+		_textos[titol].llegir_text();
+		_n_frases += _textos[titol].n_frases();
+		_n_paraules += _textos[titol].n_paraules();
+	}
     else{
         cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
         string s;
         getline(cin, s);
-        while (s != "****") getline(cin, s);
+        while (s != "****") getline(cin, s);		//Es llegeix el text que està a l'input
     }
-    
-    _n_frases += _textos[titol].n_frases();
-    _n_paraules += _textos[titol].n_paraules();
 }
     
 void Cjt_textos::eliminar_text()
