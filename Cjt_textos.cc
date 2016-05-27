@@ -15,7 +15,12 @@ Cjt_textos::~Cjt_textos(){}
 void Cjt_textos::afegir_text(string titol)
 {
     if (_textos.find(titol) == _textos.end()) _textos[titol].llegir_text();
-    else cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
+    else{
+        cout << "error" << endl;		//Ja existeix un text amb el mateix titol.
+        string s;
+        getline(cin, s);
+        while (s != "****") getline(cin, s);
+    }
     
     _n_frases += _textos[titol].n_frases();
     _n_paraules += _textos[titol].n_paraules();

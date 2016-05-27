@@ -1,28 +1,74 @@
-afegir text "The Picture of Dorian Gray"
+afegir text "proba1"
 
-afegir text "La ciencia. Su metodo y su filosofia"
+triar text {proba1 Oscar Wilde}
 
-afegir text "Where the wild things are"
+triar text {Those who find ugly meanings in beautiful things are corrupt without being charming This is a fault Those who find beautiful meanings in beautiful things are the cultivated For these there is hope They are the elect to whom beautiful things mean only Beauty There is no such thing as a moral or an immoral book Books are well written or badly written That is all}
 
-afegir text "Los sistemas de riego antes del siglo X"
+info ?
+Oscar Wilde "proba1" 8 66
+Cites Associades:
 
-afegir text "Que comera la humanidad en el 2050? Reflexiones sobre alimentacion sostenible"
+afegir cita 1 2
 
-triar text {Mar X Puquios}
+afegir cita 2 3
 
-contingut ?
-1 Los Puquios son en construcciones sofisticadas en forma de espiral que se hunden en la, tierra.
-2 Estas construcciones se distribuyen por la desertica zona de Nazca, al sur de Peru, que fue el hogar de la cultura del mismo nombre entre los anos 200 y 600.
-3 Estas construcciones en espiral eran una especie de sistema de ventilacion que conducia el viento hasta una red de canales subterraneos.
-4 Los Puquios fueron claves para distribuir el agua y que el pueblo Nazca pudiera sobrevivir en esa zona desertica.
+afegir cita 3 4
 
-frases "la tierra" ?
-1 Los Puquios son en construcciones sofisticadas en forma de espiral que se hunden en la, tierra.
+afegir cita 4 5
 
-afegir text "probes"
+afegir cita 5 6
 
-triar text {probes}
+afegir cita 6 7
 
-frases "No se puede tener todo una agricultura ecologica una ganaderia extensiva" ?
-1 No se, puede, tener, todo: una agricultura ecologica, una ganaderia, extensiva.
+afegir cita 1 7
+
+afegir cita 2 3
+error
+
+afegir cita 2 4
+
+eliminar cita "OW1"
+
+eliminar cita "O3"
+error
+
+eliminar cita "OW3"
+
+afegir cita 1 2
+
+cites ?
+OW2
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+OW4
+4 For these there is hope.
+5 They are the elect to whom beautiful things mean only Beauty.
+OW5
+5 They are the elect to whom beautiful things mean only Beauty.
+6 There is no such thing as a moral or an immoral book.
+OW6
+6 There is no such thing as a moral or an immoral book.
+7 Books are well written, or badly written.
+OW7
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+4 For these there is hope.
+5 They are the elect to whom beautiful things mean only Beauty.
+6 There is no such thing as a moral or an immoral book.
+7 Books are well written, or badly written.
+OW8
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+4 For these there is hope.
+OW9
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+Oscar Wilde "proba1"
+
+triar text {adsas}
+error
+
+cites ?
+error
 

@@ -21,15 +21,15 @@ void Cjt_cites::fer_ref(string& ini, int& i, string& ref)
 }
 
 Cjt_cites::Cjt_cites(){}
-    
+
 Cjt_cites::~Cjt_cites(){}
-    
+
 void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 {
 	if (x <= y and b.triat()) {
 		Cita c;
 		b.modificar_cita(c, x, y);
-		
+
 		string ref, ini;
 		bool error = false;
 		fer_ini(ini, c.autor());
@@ -42,14 +42,14 @@ void Cjt_cites::afegir_cita(Biblioteca& b, int x, int y)
 			else {
 				++it;
 				++i;
-				fer_ref (ini, i, ref);				
+				fer_ref (ini, i, ref);
 			}
 		}
 		if (not error) _cites.insert(make_pair(ref, c));
 	}
 	else cout << "error" << endl; //No hi ha un text triat o x > y.
 }
-	
+
 void Cjt_cites::eliminar_cita(string ref)
 {
 	normalitzar(ref);
@@ -57,13 +57,13 @@ void Cjt_cites::eliminar_cita(string ref)
 	if (it != _cites.end() and it->second.es_cita()) it->second.eliminar();
 	else cout << "error" << endl;  //No existeix cap cita amb la referencia ref.
 }
-    
+
 bool Cjt_cites::te_cita(string ref)
 {
 	map<string, Cita>::iterator it = _cites.find(ref);
 	return it != _cites.end() and it->second.es_cita();
 }
-    
+
 void Cjt_cites::info_cita(string ref)
 {
 	normalitzar(ref);
@@ -74,7 +74,7 @@ void Cjt_cites::info_cita(string ref)
 		it->second.escriure_contingut();
 	}
 	else cout << "error" << endl; //No existeix cap cita amb la referencia ref.
-}	
+}
 
 void Cjt_cites::cites_autor(string autor)
 {
@@ -97,7 +97,7 @@ void Cjt_cites::cites_autor(string autor)
 		++it;
 	}
 }
-    
+
 bool Cjt_cites::cites_text(Biblioteca& b)
 {
 	bool te_cites = false;
@@ -134,4 +134,3 @@ void Cjt_cites::totes_cites()
 		++it;
 	}
 }
-    

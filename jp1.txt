@@ -1,0 +1,50 @@
+afegir text "proba1"
+autor "Oscar Wilde"
+Those who find ugly meanings in beautiful things are corrupt without being charming.
+This is a fault.
+Those who find beautiful meanings in beautiful things are the cultivated.
+For these there is hope. They are the elect to whom beautiful things mean only Beauty.
+There is no such thing as a moral or an immoral book.
+Books are well written, or badly written.
+That is all.
+****
+
+triar text {proba1 Oscar Wilde}
+
+triar text {Those who find ugly meanings in beautiful things are corrupt without being charming This is a fault Those who find beautiful meanings in beautiful things are the cultivated For these there is hope They are the elect to whom beautiful things mean only Beauty There is no such thing as a moral or an immoral book Books are well written or badly written That is all}
+
+info ?
+
+afegir cita 1 2
+
+afegir cita 2 3
+
+afegir cita 3 4
+
+afegir cita 4 5
+
+afegir cita 5 6
+
+afegir cita 6 7
+
+afegir cita 1 7
+
+afegir cita 2 3
+
+afegir cita 2 4
+
+eliminar cita "OW1"
+
+eliminar cita "O3"
+
+eliminar cita "OW3"
+
+afegir cita 1 2
+
+cites ?
+
+triar text {adsas}
+
+cites ?
+
+sortir

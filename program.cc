@@ -136,6 +136,7 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 			c.cites_autor(op);
 		}
 		else if (op == "?") {
+			if (not b.triat()) cout << "error" << endl;
 			if(c.cites_text(b)) b.autor_titol();
 		}
 	}
