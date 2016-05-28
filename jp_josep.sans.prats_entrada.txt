@@ -23,9 +23,9 @@ taula de frequencies ?
 
 afegir text "Where the wild things are"
 autor "Oraurice Wendak"
-The night Max wore his wolf suit and made mischief of one kind and another. That very night in his room a forest grew and grew. 
-An ocean tumbled by with a private boat for Max and he sailed off. When he came to the place where the wild things are they 
-roared their terrible roars and rolled their eyes. Max, tamed them with the magic trick of staring into their yellow eyes 
+The night Max wore his wolf suit and made mischief of one kind and another. That very night in his room a forest grew and grew.
+An ocean tumbled by with a private boat for Max and he sailed off. When he came to the place where the wild things are they
+roared their terrible roars and rolled their eyes. Max, tamed them with the magic trick of staring into their yellow eyes
 without blinking once. They made him king of all wild things.
 ****
 
@@ -49,9 +49,9 @@ frases (({Max tamed} & ({yellow} | {wild a})) | {wild}) ?
 
 frases (({Max tamed} | ({yellow} & {wild a})) | {with}) ?
 
-frases -1 4 ?
-
 frases {They made him king of all wild things} ?
+
+frases -1 4 ?
 
 frases 2 33 ?
 
@@ -59,15 +59,16 @@ sortir
 
 
 
-Text buit
-Text amb una unica paraula
-Nomes numeros
-Nomes lletres.
-Frases buides.
-Substituir de manera que la par2 quedi amb una frequenecia que no existeix.
-Text que ja hi és.
-Cites que ja hi son.
-Totes les accions que fan referencia al text triat qun no n'hi ha.
-Triar text d'un text eliminat.
-Comprovar que es fan be les referencies be (quan s'ha eliminat l'anterior, etc)
-Afegir un text o una cita que ja havia existit pero ha sigut eliminada.
+COMENTARI DEL JOC DE PROBES:
+
+En aquest joc de probes s'ha volgut probar les operacions de substituir, taula de freqüencies i les diferents variants de frases.
+
+Per probar l'operació de substituir es proba que, si el contingut d'un text està format per una sola paraula aquesta es substitueix bé i la taula de freqüencies s'acctualitza correctament.
+
+Per probar la taula de freqüencies es proba que aquesta funciona correctament a l'hora de crear noves freqüencies quan es substitueixen paraules del text, per això es substitueix la paraula que
+apareix més vegades en el text per la paraula anterior a aquesta.
+
+Per probar les variants de frases es proba primer la variant que ha de trobar frases amb paraules consecutives i es proba el funcionament quan es fa buscar tota la frase sencera, quan ha de buscar
+una sola paraula i quan dues paraules estan separades per un signe de puntuació. Per probar la segona variant de frases, les que han de cumplir una certa expressió booleana es proben casos amb diferents
+connectius lògics AND i OR i que passa quan posses tota una frase per pobar el cas de paraules seguides sense operador boolea. L'última variant de frases es proba que es tracten correctament els índex
+X i Y.

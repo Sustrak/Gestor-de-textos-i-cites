@@ -170,11 +170,11 @@ frases (({Max tamed} | ({yellow} & {wild a})) | {with}) ?
 3 An ocean tumbled by with a private boat for Max of he sailed off.
 5 Max, tamed them with the magic trick of staring into their yellow eyes without blinking once.
 
-frases -1 4 ?
-error
-
 frases {They made him king of all wild things} ?
 6 They made him king of all wild things.
+
+frases -1 4 ?
+error
 
 frases 2 33 ?
 error
