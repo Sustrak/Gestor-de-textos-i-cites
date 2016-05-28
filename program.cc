@@ -1,7 +1,7 @@
 /**
  * @mainpage Pràctica PRO2:  Gestió de textos i cites.
 
-Aplicació per a gestionar informació de textos i cites associades a aquest textos.
+	Aplicació per a gestionar informació de textos i cites associades a aquest textos.
 */
 
 /** @file main.cc

@@ -14,7 +14,7 @@
 
 using namespace std;
 
-
+#ifndef NO_DIAGRAM
 struct ordenar
 {
     bool operator() (const string& s, const string& t){
@@ -23,7 +23,7 @@ struct ordenar
         else return false;
     }
 };
-
+#endif
 
 class Taula_freq {
 

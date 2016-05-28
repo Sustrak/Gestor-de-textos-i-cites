@@ -1,0 +1,181 @@
+afegir text "A"
+
+triar text {The}
+
+taula de frequencies ?
+The 42
+
+substitueix "The" per "Hola"
+
+taula de frequencies ?
+Hola 42
+
+afegir text "Where the wild things are"
+
+triar text {The}
+
+taula de frequencies ?
+and 5
+of 3
+Max 3
+the 3
+their 3
+a 2
+he 2
+his 2
+eyes 2
+grew 2
+made 2
+wild 2
+with 2
+night 2
+things 2
+An 1
+by 1
+in 1
+to 1
+The 1
+all 1
+are 1
+for 1
+him 1
+off 1
+one 1
+That 1
+They 1
+When 1
+boat 1
+came 1
+into 1
+kind 1
+king 1
+once 1
+room 1
+suit 1
+them 1
+they 1
+very 1
+wolf 1
+wore 1
+magic 1
+ocean 1
+place 1
+roars 1
+tamed 1
+trick 1
+where 1
+forest 1
+roared 1
+rolled 1
+sailed 1
+yellow 1
+another 1
+private 1
+staring 1
+tumbled 1
+without 1
+blinking 1
+mischief 1
+terrible 1
+
+substitueix "and" per "of"
+
+taula de frequencies ?
+of 8
+Max 3
+the 3
+their 3
+a 2
+he 2
+his 2
+eyes 2
+grew 2
+made 2
+wild 2
+with 2
+night 2
+things 2
+An 1
+by 1
+in 1
+to 1
+The 1
+all 1
+are 1
+for 1
+him 1
+off 1
+one 1
+That 1
+They 1
+When 1
+boat 1
+came 1
+into 1
+kind 1
+king 1
+once 1
+room 1
+suit 1
+them 1
+they 1
+very 1
+wolf 1
+wore 1
+magic 1
+ocean 1
+place 1
+roars 1
+tamed 1
+trick 1
+where 1
+forest 1
+roared 1
+rolled 1
+sailed 1
+yellow 1
+another 1
+private 1
+staring 1
+tumbled 1
+without 1
+blinking 1
+mischief 1
+terrible 1
+
+frases "The night Max wore his wolf suit and made mischief of one kind and another" ?
+
+frases "of" ?
+1 The night Max wore his wolf suit of made mischief of one kind of another.
+2 That very night in his room a forest grew of grew.
+3 An ocean tumbled by with a private boat for Max of he sailed off.
+4 When he came to the place where the wild things are they roared their terrible roars of rolled their eyes.
+5 Max, tamed them with the magic trick of staring into their yellow eyes without blinking once.
+6 They made him king of all wild things.
+
+frases "Max tamed" ?
+5 Max, tamed them with the magic trick of staring into their yellow eyes without blinking once.
+
+frases ((({Max tamed} & {yellow}) | {wild a}) | {wild}) ?
+4 When he came to the place where the wild things are they roared their terrible roars of rolled their eyes.
+5 Max, tamed them with the magic trick of staring into their yellow eyes without blinking once.
+6 They made him king of all wild things.
+
+frases (({Max tamed} & ({yellow} | {wild a})) | {wild}) ?
+4 When he came to the place where the wild things are they roared their terrible roars of rolled their eyes.
+5 Max, tamed them with the magic trick of staring into their yellow eyes without blinking once.
+6 They made him king of all wild things.
+
+frases (({Max tamed} | ({yellow} & {wild a})) | {with}) ?
+3 An ocean tumbled by with a private boat for Max of he sailed off.
+5 Max, tamed them with the magic trick of staring into their yellow eyes without blinking once.
+
+frases -1 4 ?
+error
+
+frases {They made him king of all wild things} ?
+6 They made him king of all wild things.
+
+frases 2 33 ?
+error
+

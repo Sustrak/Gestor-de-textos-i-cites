@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Laboratori de PRO2. Gestor de textos i cites"
-PROJECT_NUMBER         = "v5.0 13-11-2014"
+PROJECT_NUMBER         = "31 de maig del 2016"
 OUTPUT_DIRECTORY       = "."
 CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = Catalan
@@ -95,7 +95,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 INPUT                  = "."
 INPUT_ENCODING         = UTF-8
-FILE_PATTERNS          = *.hh \ program.cc
+FILE_PATTERNS          = *.hh \ *.cc
 RECURSIVE              = NO
 EXCLUDE                = *~
 EXCLUDE_SYMLINKS       = NO

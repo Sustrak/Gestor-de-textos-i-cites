@@ -105,7 +105,8 @@ bool Frase::compleix_expressio(string expressio)
 {
 	if (expressio[0] == '{') {
 		normalitzar(expressio);
-		vector<string> paraules = par_buscar(expressio);
+		vector<string> paraules;
+		par_buscar(expressio, paraules);
 		return buscar_paraules(paraules);
 	}
 	normalitzar(expressio);

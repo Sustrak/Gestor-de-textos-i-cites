@@ -1,0 +1,73 @@
+afegir text "A"
+autor "J K l"
+The The The. The The, The.
+The.
+The The The. The The, The.
+The.
+The The The. The The, The.
+The.
+The The The. The The, The.
+The.
+The The The. The The, The.
+The, The The The. The The, The.
+The.
+****
+
+triar text {The}
+
+taula de frequencies ?
+
+substitueix "The" per "Hola"
+
+taula de frequencies ?
+
+afegir text "Where the wild things are"
+autor "Oraurice Wendak"
+The night Max wore his wolf suit and made mischief of one kind and another. That very night in his room a forest grew and grew. 
+An ocean tumbled by with a private boat for Max and he sailed off. When he came to the place where the wild things are they 
+roared their terrible roars and rolled their eyes. Max, tamed them with the magic trick of staring into their yellow eyes 
+without blinking once. They made him king of all wild things.
+****
+
+triar text {The}
+
+taula de frequencies ?
+
+substitueix "and" per "of"
+
+taula de frequencies ?
+
+frases "The night Max wore his wolf suit and made mischief of one kind and another" ?
+
+frases "of" ?
+
+frases "Max tamed" ?
+
+frases ((({Max tamed} & {yellow}) | {wild a}) | {wild}) ?
+
+frases (({Max tamed} & ({yellow} | {wild a})) | {wild}) ?
+
+frases (({Max tamed} | ({yellow} & {wild a})) | {with}) ?
+
+frases -1 4 ?
+
+frases {They made him king of all wild things} ?
+
+frases 2 33 ?
+
+sortir
+
+
+
+Text buit
+Text amb una unica paraula
+Nomes numeros
+Nomes lletres.
+Frases buides.
+Substituir de manera que la par2 quedi amb una frequenecia que no existeix.
+Text que ja hi és.
+Cites que ja hi son.
+Totes les accions que fan referencia al text triat qun no n'hi ha.
+Triar text d'un text eliminat.
+Comprovar que es fan be les referencies be (quan s'ha eliminat l'anterior, etc)
+Afegir un text o una cita que ja havia existit pero ha sigut eliminada.

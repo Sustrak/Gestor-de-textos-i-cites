@@ -30,6 +30,9 @@ Func_auxiliars.o: Func_auxiliars.cc Func_auxiliars.hh
 Taula_freq.o: Taula_freq.cc Taula_freq.hh
 	g++ -c Taula_freq.cc $(OPCIONS)
 
+practica.tar:
+	tar -cvf *.hh *.cc makefile
+
 clean:
 	rm *.o
 	rm *.exe

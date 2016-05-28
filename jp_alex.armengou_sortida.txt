@@ -1,0 +1,145 @@
+afegir text "The Picture of Gra"
+
+tots textos ?
+Oscar Wilde "The Picture of Gra"
+
+triar text {Oscar Wilde}
+
+contingut ?
+
+afegir cita 1 1
+error
+
+afegir text "Picture of Dorian Gray"
+
+afegir text "Picture of Dorian Gray"
+error
+
+triar text {Oscar all of}
+
+info ?
+Oscar Wilde "Picture of Dorian Gray" 8 66
+Cites Associades:
+
+afegir cita 1 5
+
+afegir cita 2 3
+
+eliminar cita "OW2"
+
+afegir cita 2 3
+
+info ?
+Oscar Wilde "Picture of Dorian Gray" 8 66
+Cites Associades:
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+4 For these there is hope.
+5 They are the elect to whom beautiful things mean only Beauty.
+OW3
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+
+eliminar text
+
+triar {Dorian Gray}
+
+afegir cita 1 2
+error
+
+eliminar text
+error
+
+afegir text "Where the wild things are"
+
+totes cites ?
+OW1
+1 Those who find ugly meanings in beautiful things are corrupt without being charming.
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+4 For these there is hope.
+5 They are the elect to whom beautiful things mean only Beauty.
+Oscar Wilde "Picture of Dorian Gray"
+OW3
+2 This is a fault.
+3 Those who find beautiful meanings in beautiful things are the cultivated.
+Oscar Wilde "Picture of Dorian Gray"
+
+triar text {The night Max wore his wolf suit and made mischief of one kind and another That very night in his room a forest grew and grew An ocean tumbled by with a private boat for Max and he sailed off When he came to the place where the wild things are they roared their terrible roars and rolled their eyes Max tamed them with the magic trick of staring into their yellow eyes without blinking once They made him king of all wild things}
+
+afegir cita 2 4
+
+afegir cita 2 4
+error
+
+info ?
+Oraurice Wendak "Where the wild things are" 6 84
+Cites Associades:
+OW4
+2 That very night in his room a forest grew and grew.
+3 An ocean tumbled by with a private boat for Max and he sailed off.
+4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
+
+cites autor "Oraurice Wendak" ?
+OW4
+2 That very night in his room a forest grew and grew.
+3 An ocean tumbled by with a private boat for Max and he sailed off.
+4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
+"Where the wild things are"
+
+afegir cita -1 4
+error
+
+afegir cita 3 22
+error
+
+afegir cita 3 2
+error
+
+contingut ?
+1 The night Max wore his wolf suit and made mischief of one kind and another.
+2 That very night in his room a forest grew and grew.
+3 An ocean tumbled by with a private boat for Max and he sailed off.
+4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
+5 Max tamed them with the magic trick of staring into their yellow eyes without blinking once.
+6 They made him king of all wild things.
+
+eliminar text
+
+cites ?
+error
+
+info cita "OW4" ?
+Oraurice Wendak "Where the wild things are"
+2-4
+2 That very night in his room a forest grew and grew.
+3 An ocean tumbled by with a private boat for Max and he sailed off.
+4 When he came to the place where the wild things are they roared their terrible roars and rolled their eyes.
+
+eliminar cita "OW5"
+error
+
+eliminar cita "OW2"
+error
+
+afegir text "e"
+
+triar text {s}
+
+contingut ?
+1 .
+2 ujwhw.
+3 w.
+4 a.
+5 w.
+6 q, p.
+7 .
+8 j; s; t.
+9 l.
+
+info ?
+J K Rowling "e" 9 10
+Cites Associades:
+

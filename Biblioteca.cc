@@ -2,10 +2,11 @@
     @brief Implementació de les funcions de Biblioteca.hh
 */
 
-#include "Biblioteca.hh"
-
-#include "Func_auxiliars.hh"
+#ifndef NO_DIAGRAM
 #include <sstream>
+#endif
+
+#include "Biblioteca.hh"
 
 using namespace std;
 
@@ -33,7 +34,8 @@ void Biblioteca::triar_text(string paraules)
 {
     normalitzar(paraules);
 
-    vector<string> paraules_buscar = par_buscar(paraules);
+    vector<string> paraules_buscar;
+    par_buscar(paraules, paraules_buscar);
     
     map<string, Cjt_textos>::iterator it_autor = _autors.begin();
     bool trobat1 = false, trobat2 = false;
@@ -224,7 +226,8 @@ void Biblioteca::frases_paraules(string paraules)
 		paraules.erase(paraules.end()-1);
         paraules.erase(paraules.end()-1);
         normalitzar(paraules);
-        vector<string> vec_par = par_buscar(paraules);
+        vector<string> vec_par;
+        par_buscar(paraules, vec_par);
         
         (*_autor_triat).second.frases_paraules(vec_par);
     }

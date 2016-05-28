@@ -5,3 +5,11 @@ Ordenar entre modificadores i consultores
 Joc de proves.
 
 Document repartiment de la feina.
+
+Descriure les funcions privades i els atributs de les classes.
+
+Descriure Funcions_auxiliars.hh
+
+Descriure .cc
+
+

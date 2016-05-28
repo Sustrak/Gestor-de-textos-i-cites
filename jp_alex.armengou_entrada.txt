@@ -1,0 +1,127 @@
+afegir text "The Picture of Gra"
+autor "Oscar Wilde"
+****
+
+tots textos ?
+
+triar text {Oscar Wilde}
+
+contingut ?
+
+afegir cita 1 1
+
+afegir text "Picture of Dorian Gray"
+autor "Oscar Wilde"
+Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. 
+Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect 
+to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, 
+or badly written. That is all. 
+****
+
+afegir text "Picture of Dorian Gray"
+autor "Oscar Wilde"
+Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. 
+Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect 
+to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, 
+or badly written. That is all. 
+****
+
+triar text {Oscar all of}
+
+info ?
+
+afegir cita 1 5
+
+afegir cita 2 3
+
+eliminar cita "OW2"
+
+afegir cita 2 3
+
+info ?
+
+eliminar text
+
+triar {Dorian Gray}
+
+afegir cita 1 2
+
+eliminar text
+
+afegir text "Where the wild things are"
+autor "Oraurice Wendak"
+The night Max wore his wolf suit and made mischief of one kind and another. That very night in his room a forest grew and grew. 
+An ocean tumbled by with a private boat for Max and he sailed off. When he came to the place where the wild things are they 
+roared their terrible roars and rolled their eyes. Max tamed them with the magic trick of staring into their yellow eyes 
+without blinking once. They made him king of all wild things.
+****
+
+totes cites ?
+
+triar text {The night Max wore his wolf suit and made mischief of one kind and another That very night in his room a forest grew and grew An ocean tumbled by with a private boat for Max and he sailed off When he came to the place where the wild things are they roared their terrible roars and rolled their eyes Max tamed them with the magic trick of staring into their yellow eyes without blinking once They made him king of all wild things}
+
+afegir cita 2 4
+
+afegir cita 2 4
+
+info ?
+
+cites autor "Oraurice Wendak" ?
+
+afegir cita -1 4
+
+afegir cita 3 22
+
+afegir cita 3 2
+
+contingut ?
+
+eliminar text
+
+cites ?
+
+info cita "OW4" ?
+
+eliminar cita "OW5"
+
+eliminar cita "OW2"
+
+afegir text "e"
+autor "J K Rowling"
+. ujwhw. w. a. w. q, p.
+. j; s; t.
+l.
+****
+
+triar text {s}
+
+contingut ?
+
+info ?
+
+sortir
+
+-------------------------------------------------------------------------------------------------------
+
+En aquest joc de proves es prova el funcionament de les accions afegir text, triar text i eliminar text,
+i la gestió de cites i els missatges d’error descrits en l’enunciat en les següents situacions extremes:
+
+- S'afegeix un text sense contingut, un text ja existent i un text amb frases buides i frases d'una paraula
+d'una lletra.
+
+- S'afegeix una cita d'un text sense contingut, una cita sense que hi hagi un text triat, una cita ja
+existent, una cita amb y>x, una cita igual que una que ha estat eliminada, una cita d'un autor que
+comparteix inicials amb un altre autor que té cites, una cita amb números negatius i una cita amb un número
+més gran que el nombre de frases del text triat.
+
+- Es tria un text amb paraules del títol, l'autor i el contingut alhora, un text que ha estat eliminat, un
+text amb totes les paraules del text i un text amb una paraula d'una lletra.
+
+- S'elimina el text sense que n'hi hagi cap triat.
+
+- S'elimina la cita que te l'índex més alt de la seva referencia i s'afegeix una altra amb les mateixes
+inicials, una cita que no existex i una cita que ja ha estat eliminada.
+
+- S'escriu les cites d'un autor que comparteix inicials amb un altre autor que també cites.
+
+- També s'escriu la informació o el contingut per saber si els text que es trien estàn ben afegits.
