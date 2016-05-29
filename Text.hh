@@ -65,11 +65,7 @@ public:
     */
     bool conte_paraules(vector<string> paraules, string& autor, string& titol);
     
-    /** @brief Escriu les frases del parametre implícit que contenen totes les paraules cosecutivament de <em>paraules</em>.
-     \pre <em>Cert</em>.
-     \post Escriu les frases del p.i. que contenen totes les paraules cosecutivament de <em>paraules</em>.
-     */
-    void conte_consecutives(vector<string>& paraules);
+    //Modificadores
     
     /** @brief Llegeix un text del canal d'entrada.
      \pre El canal d'entrada estandard conté el text en una línia.
@@ -96,7 +92,13 @@ public:
     void fer_taula(Taula_freq& t);    
     
     //Escriptura
-
+    
+    /** @brief Escriu les frases del parametre implícit que contenen totes les paraules cosecutivament de <em>paraules</em>.
+     \pre <em>Cert</em>.
+     \post Escriu les frases del p.i. que contenen totes les paraules cosecutivament de <em>paraules</em>.
+     */
+    void conte_consecutives(vector<string>& paraules);
+    
     /** @brief S'escriu el contingut de la frase x a la y del paràmetre implícit
         \pre <em>Cert</em>.
         \post S'escriu el contingut del p.i. amb les frases numerades de la x a la y.

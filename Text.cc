@@ -61,16 +61,6 @@ bool Text::conte_paraules(vector<string> paraules, string& autor, string& titol)
     return trobat;
 }
 
-void Text::conte_consecutives(vector<string>& paraules)
-{
-    for (int i = 0; i < _contingut.size(); ++i){
-        if(_contingut[i].buscar_consecutives(paraules)) {
-			cout << i+1 << " ";
-			_contingut[i].escriure();
-		}
-    }
-}
-
 void Text::llegir_text()
 {
 	string linia, l;
@@ -106,6 +96,16 @@ void Text::fer_taula(Taula_freq& t)
 	for (int i = 0; i < _contingut.size(); ++i) {
 		_contingut[i].actualitzar_taula(t);
 	}
+}
+
+void Text::conte_consecutives(vector<string>& paraules)
+{
+    for (int i = 0; i < _contingut.size(); ++i){
+        if(_contingut[i].buscar_consecutives(paraules)) {
+            cout << i+1 << " ";
+            _contingut[i].escriure();
+        }
+    }
 }
 
 void Text::escriure_contingut(int x, int y)

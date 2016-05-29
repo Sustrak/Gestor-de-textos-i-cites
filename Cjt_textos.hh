@@ -71,12 +71,6 @@ public:
     */
     void triar_text(bool& trobat, vector<string>& paraules, string& autor);
     
-    /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
-        \pre <em>Cert</em>.
-        \post Si hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>,  <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
-    */
-    void buscar_text(bool& trobat, vector<string>& paraules, string& autor);
-    
     /** @brief Substitueix una paraula per una altre en el text triat.
         \pre Hi ha un text triat.
         \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el text triat.
@@ -84,6 +78,12 @@ public:
     void substitueix (string par1, string par2);
     
   //Consultores
+    
+    /** @brief Busca s'hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>.
+     \pre <em>Cert</em>.
+     \post Si hi ha un text al paràmetre implícit posterior al triat que conté les paraules de <em>paraules</em>,  <em>trobat</em> té el valor contrari al original. Altrament, <em>trobat</em> es manté com originalment.
+     */
+    void buscar_text(bool& trobat, vector<string>& paraules, string& autor);
     
     /** @brief Retorna per referencia la taula de freqüències del text triat.
      \pre Hi ha un text triat.

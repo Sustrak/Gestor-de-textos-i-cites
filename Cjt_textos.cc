@@ -54,6 +54,13 @@ void Cjt_textos::triar_text(bool& trobat, vector<string>& paraules, string& auto
 	}
 }
 
+
+void Cjt_textos::substitueix (string par1, string par2)
+{
+    (*_text_triat).second.substitueix(par1, par2);
+}
+
+
 void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules, string& autor)
 {
     map<string, Text>::iterator it_text = _text_triat;
@@ -63,11 +70,6 @@ void Cjt_textos::buscar_text(bool& trobat, vector<string>& paraules, string& aut
         if ((*it_text).second.conte_paraules(paraules, autor, titol)) trobat = true;
         else ++it_text;
     }
-}
-
-void Cjt_textos::substitueix (string par1, string par2)
-{
-    (*_text_triat).second.substitueix(par1, par2);
 }
 
 void Cjt_textos::fer_taula(Taula_freq& t)
