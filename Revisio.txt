@@ -2,8 +2,6 @@ Parametres per referencia, funcions const i static.
 
 Ordenar entre modificadores i consultores
 
-Joc de proves.
-
 Document repartiment de la feina.
 
 Descriure les funcions privades i els atributs de les classes.

@@ -103,6 +103,8 @@ sortir
 
 -------------------------------------------------------------------------------------------------------
 
+COMENTARI DEL JOC DE PROBES:
+
 En aquest joc de proves es prova el funcionament de les accions afegir text, triar text i eliminar text,
 i la gestió de cites i els missatges d’error descrits en l’enunciat en les següents situacions extremes:
 
