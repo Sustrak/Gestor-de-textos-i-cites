@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratori de PRO2. Gestor de textos i cites
-   &#160;<span id="projectnumber">v5.0 13-11-2014</span>
+   &#160;<span id="projectnumber">31 de maig del 2016</span>
    </div>
   </td>
  </tr>
@@ -106,9 +106,9 @@ Mètodes públics</h2></td></tr>
 <tr class="memitem:ab4c1829e2d3b6bafdb29813238ab2667"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#ab4c1829e2d3b6bafdb29813238ab2667">n_paraules</a> ()</td></tr>
 <tr class="memdesc:ab4c1829e2d3b6bafdb29813238ab2667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna el nombre de paraules del parametre implícit.  <a href="#ab4c1829e2d3b6bafdb29813238ab2667">Més...</a><br /></td></tr>
 <tr class="separator:ab4c1829e2d3b6bafdb29813238ab2667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e062370878730cdfe9cdc70dc17fc41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a1e062370878730cdfe9cdc70dc17fc41">conte_paraules</a> (const vector&lt; string &gt; &amp;paraules)</td></tr>
-<tr class="memdesc:a1e062370878730cdfe9cdc70dc17fc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna si el parametre implícit conté totes les paraules de <em>paraules</em>.  <a href="#a1e062370878730cdfe9cdc70dc17fc41">Més...</a><br /></td></tr>
-<tr class="separator:a1e062370878730cdfe9cdc70dc17fc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bba70cd8524f39aca2824e024bfcff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#aa3bba70cd8524f39aca2824e024bfcff">conte_paraules</a> (vector&lt; string &gt; paraules, string &amp;autor, string &amp;titol)</td></tr>
+<tr class="memdesc:aa3bba70cd8524f39aca2824e024bfcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna si el parametre implícit conté totes les paraules de <em>paraules</em>.  <a href="#aa3bba70cd8524f39aca2824e024bfcff">Més...</a><br /></td></tr>
+<tr class="separator:aa3bba70cd8524f39aca2824e024bfcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89013b5f0d66bc06c961b96d581fa3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a89013b5f0d66bc06c961b96d581fa3a5">llegir_text</a> ()</td></tr>
 <tr class="memdesc:a89013b5f0d66bc06c961b96d581fa3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Llegeix un text del canal d'entrada.  <a href="#a89013b5f0d66bc06c961b96d581fa3a5">Més...</a><br /></td></tr>
 <tr class="separator:a89013b5f0d66bc06c961b96d581fa3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,9 +118,18 @@ Mètodes públics</h2></td></tr>
 <tr class="memitem:a3ca0dd8b8490c74e30b6eced3bcf8690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a3ca0dd8b8490c74e30b6eced3bcf8690">afegir_contingut</a> (<a class="el" href="class_cita.html">Cita</a> &amp;cita, int x, int y)</td></tr>
 <tr class="memdesc:a3ca0dd8b8490c74e30b6eced3bcf8690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afegeix a una cita el contingut amb les frases de la x-éssima a la y-éssima del paràmetre implicit.  <a href="#a3ca0dd8b8490c74e30b6eced3bcf8690">Més...</a><br /></td></tr>
 <tr class="separator:a3ca0dd8b8490c74e30b6eced3bcf8690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a5df883e4acc237ee095e7bd3e12fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a1a5df883e4acc237ee095e7bd3e12fac">escriure_contingut</a> ()</td></tr>
-<tr class="memdesc:a1a5df883e4acc237ee095e7bd3e12fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">S'escriu el contingut del paràmetre implícit.  <a href="#a1a5df883e4acc237ee095e7bd3e12fac">Més...</a><br /></td></tr>
-<tr class="separator:a1a5df883e4acc237ee095e7bd3e12fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b844812b40a2595b6c4e5ab427b750b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a6b844812b40a2595b6c4e5ab427b750b">fer_taula</a> (<a class="el" href="class_taula__freq.html">Taula_freq</a> &amp;t)</td></tr>
+<tr class="memdesc:a6b844812b40a2595b6c4e5ab427b750b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna per referencia la taula de freqüències del paràmetre implícit.  <a href="#a6b844812b40a2595b6c4e5ab427b750b">Més...</a><br /></td></tr>
+<tr class="separator:a6b844812b40a2595b6c4e5ab427b750b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a412f5e995acc62a16d3c5386d8c1d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a9a412f5e995acc62a16d3c5386d8c1d0">conte_consecutives</a> (vector&lt; string &gt; &amp;paraules)</td></tr>
+<tr class="memdesc:a9a412f5e995acc62a16d3c5386d8c1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escriu les frases del parametre implícit que contenen totes les paraules cosecutivament de <em>paraules</em>.  <a href="#a9a412f5e995acc62a16d3c5386d8c1d0">Més...</a><br /></td></tr>
+<tr class="separator:a9a412f5e995acc62a16d3c5386d8c1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd54fe5c686bf29bb135ded47af3f50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#aabd54fe5c686bf29bb135ded47af3f50">escriure_contingut</a> (int x, int y)</td></tr>
+<tr class="memdesc:aabd54fe5c686bf29bb135ded47af3f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">S'escriu el contingut de la frase x a la y del paràmetre implícit.  <a href="#aabd54fe5c686bf29bb135ded47af3f50">Més...</a><br /></td></tr>
+<tr class="separator:aabd54fe5c686bf29bb135ded47af3f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70afb12708c2426399515f26b2213a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_text.html#a70afb12708c2426399515f26b2213a28">frases_expressio</a> (string &amp;expressio)</td></tr>
+<tr class="memdesc:a70afb12708c2426399515f26b2213a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">S'escriuen les frases del contingut del paràmetre implícit que compleixen l'expressió.  <a href="#a70afb12708c2426399515f26b2213a28">Més...</a><br /></td></tr>
+<tr class="separator:a70afb12708c2426399515f26b2213a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atributs Privats</h2></td></tr>
@@ -132,7 +141,7 @@ Atributs Privats</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Descripció Detallada</h2>
 <div class="textblock"><p>Representa un text. </p>
 
-<p>Definició a la línia <a class="el" href="_text_8hh_source.html#l00020">20</a> del fitxer <a class="el" href="_text_8hh_source.html">Text.hh</a>.</p>
+<p>Definició a la línia <a class="el" href="_text_8hh_source.html#l00021">21</a> del fitxer <a class="el" href="_text_8hh_source.html">Text.hh</a>.</p>
 </div><h2 class="groupheader">Documentació del Constructor i el Destructor</h2>
 <a class="anchor" id="ab3e26143fccc52699bcc5149cae852bc"></a>
 <div class="memitem">
@@ -151,6 +160,12 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>El resultat és un text sense autor, ni contingut. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00007">7</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099">_n_paraules</a> = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a8f4cfb4cdd578d4c67bb4e19d5508099"><div class="ttname"><a href="class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099">Text::_n_paraules</a></div><div class="ttdeci">int _n_paraules</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00029">Text.hh:29</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2d49e5c280e205125b149f7777ae30c7"></a>
@@ -168,6 +183,9 @@ Atributs Privats</h2></td></tr>
 
 <p>Destructora per defecte. </p>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00012">12</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Documentació de les Funcions Membre</h2>
@@ -188,6 +206,12 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>Retorna el nombre de frases del p.i. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00014">14</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab4c1829e2d3b6bafdb29813238ab2667"></a>
@@ -207,18 +231,40 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>Retorna el nombre de paraules del p.i. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00019">19</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099">_n_paraules</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a8f4cfb4cdd578d4c67bb4e19d5508099"><div class="ttname"><a href="class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099">Text::_n_paraules</a></div><div class="ttdeci">int _n_paraules</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00029">Text.hh:29</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a1e062370878730cdfe9cdc70dc17fc41"></a>
+<a class="anchor" id="aa3bba70cd8524f39aca2824e024bfcff"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool Text::conte_paraules </td>
           <td>(</td>
-          <td class="paramtype">const vector&lt; string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>paraules</em></td><td>)</td>
+          <td class="paramtype">vector&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>paraules</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>autor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>titol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -227,6 +273,48 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>Retorna si el p.i. conté totes les paraules de <em>paraules</em>. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00024">24</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> trobat = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    istringstream iss (autor);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">string</span> aux;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">while</span> (not trobat and iss &gt;&gt; aux) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">bool</span> b = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; not b and i &lt; paraules.size(); ++i) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            b = aux == paraules[i];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">if</span> (b){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                paraules[i] = paraules[paraules.size()-1];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                paraules.pop_back();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        trobat = paraules.size() == 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    istringstream isss (titol);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">while</span> (not trobat and isss &gt;&gt; aux) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">bool</span> b = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; not b and i &lt; paraules.size(); ++i) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">if</span> (not <a class="code" href="_func__auxiliars_8cc.html#a05adc9fb5f08b90b8b097bcbd1af43b4">es_lletra</a>(aux.back())) aux.erase(aux.end()-1);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            b = aux == paraules[i];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (b){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                paraules[i] = paraules[paraules.size()-1];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                paraules.pop_back();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        trobat = paraules.size() == 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; not trobat and i &lt; <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size(); ++i) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        trobat = <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].buscar_paraules(paraules);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> trobat;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+<div class="ttc" id="_func__auxiliars_8cc_html_a05adc9fb5f08b90b8b097bcbd1af43b4"><div class="ttname"><a href="_func__auxiliars_8cc.html#a05adc9fb5f08b90b8b097bcbd1af43b4">es_lletra</a></div><div class="ttdeci">bool es_lletra(char c)</div><div class="ttdoc">Retorna si el caràcter c és una lletra o un dígit. </div><div class="ttdef"><b>Definition:</b> <a href="_func__auxiliars_8cc_source.html#l00020">Func_auxiliars.cc:20</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a89013b5f0d66bc06c961b96d581fa3a5"></a>
@@ -246,6 +334,29 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd>El canal d'entrada estandard conté el text en una línia. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>_contingut s'ha omplert i ara conté el text separat en frases. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00064">64</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">string</span> linia, l;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  linia.clear();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  getline(cin, l);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">while</span> (l != <span class="stringliteral">&quot;****&quot;</span>) {  <span class="comment">//Es posa tot el text en un únic string</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    linia += <span class="stringliteral">&quot; &quot;</span> + l;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    getline(cin, l);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">while</span> (linia.length()&gt;0){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_frase.html">Frase</a> frase;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    frase.<a class="code" href="class_frase.html#a03f6f613b0d96b9382be738d7ee8bf8f">llegir</a>(linia);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.push_back(frase);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099">_n_paraules</a> += frase.<a class="code" href="class_frase.html#adc262e9ccb038fd70d231d9120aaecdc">n_paraules</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+<div class="ttc" id="class_frase_html_a03f6f613b0d96b9382be738d7ee8bf8f"><div class="ttname"><a href="class_frase.html#a03f6f613b0d96b9382be738d7ee8bf8f">Frase::llegir</a></div><div class="ttdeci">void llegir(string &amp;linia)</div><div class="ttdoc">El paràmetre implícit conté la primera frase de linia. </div><div class="ttdef"><b>Definition:</b> <a href="_frase_8cc_source.html#l00014">Frase.cc:14</a></div></div>
+<div class="ttc" id="class_frase_html_adc262e9ccb038fd70d231d9120aaecdc"><div class="ttname"><a href="class_frase.html#adc262e9ccb038fd70d231d9120aaecdc">Frase::n_paraules</a></div><div class="ttdeci">int n_paraules()</div><div class="ttdoc">Retorna el nombre de paraules del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_frase_8cc_source.html#l00049">Frase.cc:49</a></div></div>
+<div class="ttc" id="class_frase_html"><div class="ttname"><a href="class_frase.html">Frase</a></div><div class="ttdoc">Representa una frase. </div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00020">Frase.hh:20</a></div></div>
+<div class="ttc" id="class_text_html_a8f4cfb4cdd578d4c67bb4e19d5508099"><div class="ttname"><a href="class_text.html#a8f4cfb4cdd578d4c67bb4e19d5508099">Text::_n_paraules</a></div><div class="ttdeci">int _n_paraules</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00029">Text.hh:29</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a614999a8504b3f59b215cf072407a994"></a>
@@ -276,6 +387,14 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd>Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el p.i. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00082">82</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size(); ++i) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].substitueix(par1, par2);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3ca0dd8b8490c74e30b6eced3bcf8690"></a>
@@ -312,25 +431,146 @@ Atributs Privats</h2></td></tr>
 <dl class="section pre"><dt>Precondició</dt><dd><em>cita</em> ja té títol i és el matéix que el del p.i., x &lt;= y. </dd></dl>
 <dl class="section post"><dt>Postcondició</dt><dd><em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00089">89</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  cita.<a class="code" href="class_cita.html#a955605bed9ac6973e638735448534724">afegir_contingut</a>(<a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>, x, y);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+<div class="ttc" id="class_cita_html_a955605bed9ac6973e638735448534724"><div class="ttname"><a href="class_cita.html#a955605bed9ac6973e638735448534724">Cita::afegir_contingut</a></div><div class="ttdeci">void afegir_contingut(const vector&lt; Frase &gt; &amp;contingut, int x, int y)</div><div class="ttdoc">El contingut del paràmetre implícit passa a ser les frases de la x-éssima a la y-éssima de contin...</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00014">Cita.cc:14</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a1a5df883e4acc237ee095e7bd3e12fac"></a>
+<a class="anchor" id="a6b844812b40a2595b6c4e5ab427b750b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Text::fer_taula </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_taula__freq.html">Taula_freq</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna per referencia la taula de freqüències del paràmetre implícit. </p>
+<dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>Retorna per referencia la taula de freqüències del p.i. </dd></dl>
+
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00094">94</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size(); ++i) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].actualitzar_taula(t);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9a412f5e995acc62a16d3c5386d8c1d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Text::conte_consecutives </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paraules</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escriu les frases del parametre implícit que contenen totes les paraules cosecutivament de <em>paraules</em>. </p>
+<dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>Escriu les frases del p.i. que contenen totes les paraules cosecutivament de <em>paraules</em>. </dd></dl>
+
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00101">101</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size(); ++i){</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].buscar_consecutives(paraules)) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            cout &lt;&lt; i+1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].escriure();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aabd54fe5c686bf29bb135ded47af3f50"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Text::escriure_contingut </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>S'escriu el contingut de la frase x a la y del paràmetre implícit. </p>
+<dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>S'escriu el contingut del p.i. amb les frases numerades de la x a la y. </dd></dl>
+
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00111">111</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span> (y &gt; <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size() or x &lt; 1) cout &lt;&lt; <span class="stringliteral">&quot;error&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">while</span> (x &lt;= y) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      cout &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[x-1].escriure();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      ++x;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a70afb12708c2426399515f26b2213a28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Text::frases_expressio </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>expressio</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>S'escriu el contingut del paràmetre implícit. </p>
-<dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em>. </dd></dl>
-<dl class="section post"><dt>Postcondició</dt><dd>S'escriu el contingut del p.i. amb les frases numerades. </dd></dl>
+<p>S'escriuen les frases del contingut del paràmetre implícit que compleixen l'expressió. </p>
+<dl class="section pre"><dt>Precondició</dt><dd><em>Cert</em> </dd></dl>
+<dl class="section post"><dt>Postcondició</dt><dd>S'escriuen les frases del contingut del p.i. que compleixen l'expressió pel canal estàndard de sortida. </dd></dl>
 
+<p>Definició a la línia <a class="el" href="_text_8cc_source.html#l00123">123</a> del fitxer <a class="el" href="_text_8cc_source.html">Text.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>.size(); ++i) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].compleix_expressio(expressio)) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      cout &lt;&lt; i+1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <a class="code" href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">_contingut</a>[i].escriure();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="ttc" id="class_text_html_a26ed48461785fd88abc74e3df0faa79b"><div class="ttname"><a href="class_text.html#a26ed48461785fd88abc74e3df0faa79b">Text::_contingut</a></div><div class="ttdeci">vector&lt; Frase &gt; _contingut</div><div class="ttdef"><b>Definition:</b> <a href="_text_8hh_source.html#l00028">Text.hh:28</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Documentació de les Dades Membre</h2>
@@ -352,7 +592,7 @@ Atributs Privats</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definició a la línia <a class="el" href="_text_8hh_source.html#l00027">27</a> del fitxer <a class="el" href="_text_8hh_source.html">Text.hh</a>.</p>
+<p>Definició a la línia <a class="el" href="_text_8hh_source.html#l00028">28</a> del fitxer <a class="el" href="_text_8hh_source.html">Text.hh</a>.</p>
 
 </div>
 </div>
@@ -374,17 +614,18 @@ Atributs Privats</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definició a la línia <a class="el" href="_text_8hh_source.html#l00028">28</a> del fitxer <a class="el" href="_text_8hh_source.html">Text.hh</a>.</p>
+<p>Definició a la línia <a class="el" href="_text_8hh_source.html#l00029">29</a> del fitxer <a class="el" href="_text_8hh_source.html">Text.hh</a>.</p>
 
 </div>
 </div>
-<hr/>La documentació d'aquesta classe es va generar a partir del següent fitxer:<ul>
+<hr/>La documentació d'aquesta classe es va generar a partir dels següents fitxers:<ul>
 <li><a class="el" href="_text_8hh_source.html">Text.hh</a></li>
+<li><a class="el" href="_text_8cc_source.html">Text.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat a Dj Mai 12 2016 12:40:37 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
+Generat a Dl Mai 30 2016 12:02:26 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

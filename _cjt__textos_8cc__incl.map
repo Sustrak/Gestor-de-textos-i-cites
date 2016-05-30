@@ -1,6 +1,7 @@
 <map id="Cjt_textos.cc" name="Cjt_textos.cc">
-<area shape="rect" id="node2" href="$_cjt__textos_8hh.html" title="Especificació de la classe Cjt_textos. " alt="" coords="25,80,131,107"/>
-<area shape="rect" id="node3" href="$_text_8hh.html" title="Especificació de la classe Text. " alt="" coords="10,155,77,181"/>
-<area shape="rect" id="node5" href="$_cita_8hh.html" title="Especificació de la classe Cita. " alt="" coords="46,229,113,256"/>
-<area shape="rect" id="node4" href="$_frase_8hh.html" title="Especificació de la classe Frase. " alt="" coords="5,304,81,331"/>
+<area shape="rect" id="node2" href="$_cjt__textos_8hh.html" title="Especificació de la classe Cjt_textos. " alt="" coords="56,80,163,107"/>
+<area shape="rect" id="node3" href="$_text_8hh.html" title="Especificació de la classe Text. " alt="" coords="5,155,72,181"/>
+<area shape="rect" id="node5" href="$_taula__freq_8hh.html" title="Especificació de la classe Taula_freq. " alt="" coords="31,379,137,405"/>
+<area shape="rect" id="node6" href="$_cita_8hh.html" title="Especificació de la classe Cita. " alt="" coords="76,229,143,256"/>
+<area shape="rect" id="node4" href="$_frase_8hh.html" title="Especificació de la classe Frase. " alt="" coords="46,304,122,331"/>
 </map>

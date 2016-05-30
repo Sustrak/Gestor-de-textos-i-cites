@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Laboratorio de PRO2. Caso de estudio: experimentos inmunologicos.: Fitxer de Codi Cita.cc</title>
+<title>Laboratori de PRO2. Gestor de textos i cites: Fitxer de Codi Cita.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Laboratorio de PRO2. Caso de estudio: experimentos inmunologicos.
-   &#160;<span id="projectnumber">v5.0 13-11-2014</span>
+   <div id="projectname">Laboratori de PRO2. Gestor de textos i cites
+   &#160;<span id="projectnumber">31 de maig del 2016</span>
    </div>
   </td>
  </tr>
@@ -96,74 +96,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_cita.html#a955605bed9ac6973e638735448534724">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a955605bed9ac6973e638735448534724">Cita::afegir_contingut</a>(<span class="keyword">const</span> vector&lt;Frase&gt;&amp; contingut, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a> = x;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">while</span> (x &lt;= y) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>.push_back(contingut[x]);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ++x;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_cita.html#a51ddef0aa663512336f272584acbbc8d">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a51ddef0aa663512336f272584acbbc8d">Cita::afegir_autor</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; autor)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba">_autor</a> = <a class="code" href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">autor</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_cita.html#ade9c9ea8468153d73553632cc8dae736">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#ade9c9ea8468153d73553632cc8dae736">Cita::afegir_titol</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; titol)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5">_titol</a> = <a class="code" href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">titol</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_cita.html#a14877863678ea873ebfe55b1b410c740">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a14877863678ea873ebfe55b1b410c740">Cita::eliminar</a>() {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d">_eliminada</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">   37</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">Cita::autor</a>()</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba">_autor</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">   42</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">Cita::titol</a>()</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5">_titol</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_cita.html#a141ce767c45fb58d17fd584c00e4fa89">   47</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_cita.html#a141ce767c45fb58d17fd584c00e4fa89">Cita::n_primera</a>()</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_cita.html#a2c8a323523e1b5967de137d3d307c4a8">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_cita.html#a2c8a323523e1b5967de137d3d307c4a8">Cita::n_ultima</a>()</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a> + <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>.size();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_cita.html#a2c638c6fc9fc76b2f991ae7e5a5705c0">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a2c638c6fc9fc76b2f991ae7e5a5705c0">Cita::escriure_contingut</a>()</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>.size(); ++i) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    cout &lt;&lt; <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a>+i &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>[i].escriure();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">if</span> (y &lt;= contingut.size()) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a> = x;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span> (x &lt;= y) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>.push_back(contingut[x-1]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      ++x;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">else</span> <a class="code" href="class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d">_eliminada</a> = <span class="keyword">true</span>;     <span class="comment">//Per fer saber al conjunt de cites que no l&#39;afageixi.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_cita.html#a51ddef0aa663512336f272584acbbc8d">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a51ddef0aa663512336f272584acbbc8d">Cita::afegir_autor</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; autor)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba">_autor</a> = <a class="code" href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">autor</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_cita.html#ade9c9ea8468153d73553632cc8dae736">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#ade9c9ea8468153d73553632cc8dae736">Cita::afegir_titol</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; titol)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5">_titol</a> = <a class="code" href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">titol</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_cita.html#a14877863678ea873ebfe55b1b410c740">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a14877863678ea873ebfe55b1b410c740">Cita::eliminar</a>() {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d">_eliminada</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_cita.html#a1857fa5a5321857a645589796ad71b9c">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_cita.html#a1857fa5a5321857a645589796ad71b9c">Cita::es_cita</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> not <a class="code" href="class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d">_eliminada</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">   45</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">Cita::autor</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba">_autor</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">   50</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">Cita::titol</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5">_titol</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_cita.html#a141ce767c45fb58d17fd584c00e4fa89">   55</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_cita.html#a141ce767c45fb58d17fd584c00e4fa89">Cita::n_primera</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_cita.html#a2c8a323523e1b5967de137d3d307c4a8">   60</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_cita.html#a2c8a323523e1b5967de137d3d307c4a8">Cita::n_ultima</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a> + <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>.size() - 1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_cita.html#a2c638c6fc9fc76b2f991ae7e5a5705c0">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_cita.html#a2c638c6fc9fc76b2f991ae7e5a5705c0">Cita::escriure_contingut</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>.size(); ++i) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cout &lt;&lt; <a class="code" href="class_cita.html#ae97763fca834e407f9a5060e6244e030">_n_primera</a>+i &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">_frases</a>[i].escriure();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="ttc" id="class_cita_html_a40ebe4fd414fa884f1aca3b78e77a38c"><div class="ttname"><a href="class_cita.html#a40ebe4fd414fa884f1aca3b78e77a38c">Cita::Cita</a></div><div class="ttdeci">Cita()</div><div class="ttdoc">Creadora per defecte. S&#39;executa automaticament al declarar una cita. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00007">Cita.cc:7</a></div></div>
-<div class="ttc" id="class_cita_html_a141ce767c45fb58d17fd584c00e4fa89"><div class="ttname"><a href="class_cita.html#a141ce767c45fb58d17fd584c00e4fa89">Cita::n_primera</a></div><div class="ttdeci">int n_primera()</div><div class="ttdoc">Retorna el número de la frase inicial del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00047">Cita.cc:47</a></div></div>
+<div class="ttc" id="class_cita_html_a141ce767c45fb58d17fd584c00e4fa89"><div class="ttname"><a href="class_cita.html#a141ce767c45fb58d17fd584c00e4fa89">Cita::n_primera</a></div><div class="ttdeci">int n_primera()</div><div class="ttdoc">Retorna el número de la frase inicial del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00055">Cita.cc:55</a></div></div>
 <div class="ttc" id="_cita_8hh_html"><div class="ttname"><a href="_cita_8hh.html">Cita.hh</a></div><div class="ttdoc">Especificació de la classe Cita. </div></div>
-<div class="ttc" id="class_cita_html_a14877863678ea873ebfe55b1b410c740"><div class="ttname"><a href="class_cita.html#a14877863678ea873ebfe55b1b410c740">Cita::eliminar</a></div><div class="ttdeci">void eliminar()</div><div class="ttdoc">S&#39;elimina el paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00033">Cita.cc:33</a></div></div>
-<div class="ttc" id="class_cita_html_afc6ab2be226a17fc06ddc64213b4b63d"><div class="ttname"><a href="class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d">Cita::_eliminada</a></div><div class="ttdeci">bool _eliminada</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00025">Cita.hh:25</a></div></div>
-<div class="ttc" id="class_cita_html_a2c8a323523e1b5967de137d3d307c4a8"><div class="ttname"><a href="class_cita.html#a2c8a323523e1b5967de137d3d307c4a8">Cita::n_ultima</a></div><div class="ttdeci">int n_ultima()</div><div class="ttdoc">Retorna el número de la frase final del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00051">Cita.cc:51</a></div></div>
-<div class="ttc" id="class_cita_html_aba2721c0e7a820243c82e9b707cfa108"><div class="ttname"><a href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">Cita::_frases</a></div><div class="ttdeci">vector&lt; Frase &gt; _frases</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00028">Cita.hh:28</a></div></div>
-<div class="ttc" id="class_cita_html_a2c638c6fc9fc76b2f991ae7e5a5705c0"><div class="ttname"><a href="class_cita.html#a2c638c6fc9fc76b2f991ae7e5a5705c0">Cita::escriure_contingut</a></div><div class="ttdeci">void escriure_contingut()</div><div class="ttdoc">S&#39;escriu el contingut del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00056">Cita.cc:56</a></div></div>
+<div class="ttc" id="class_cita_html_a14877863678ea873ebfe55b1b410c740"><div class="ttname"><a href="class_cita.html#a14877863678ea873ebfe55b1b410c740">Cita::eliminar</a></div><div class="ttdeci">void eliminar()</div><div class="ttdoc">S&#39;elimina el paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00036">Cita.cc:36</a></div></div>
+<div class="ttc" id="class_cita_html_afc6ab2be226a17fc06ddc64213b4b63d"><div class="ttname"><a href="class_cita.html#afc6ab2be226a17fc06ddc64213b4b63d">Cita::_eliminada</a></div><div class="ttdeci">bool _eliminada</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00024">Cita.hh:24</a></div></div>
+<div class="ttc" id="class_cita_html_a2c8a323523e1b5967de137d3d307c4a8"><div class="ttname"><a href="class_cita.html#a2c8a323523e1b5967de137d3d307c4a8">Cita::n_ultima</a></div><div class="ttdeci">int n_ultima()</div><div class="ttdoc">Retorna el número de la frase final del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00060">Cita.cc:60</a></div></div>
+<div class="ttc" id="class_cita_html_aba2721c0e7a820243c82e9b707cfa108"><div class="ttname"><a href="class_cita.html#aba2721c0e7a820243c82e9b707cfa108">Cita::_frases</a></div><div class="ttdeci">vector&lt; Frase &gt; _frases</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00027">Cita.hh:27</a></div></div>
+<div class="ttc" id="class_cita_html_a2c638c6fc9fc76b2f991ae7e5a5705c0"><div class="ttname"><a href="class_cita.html#a2c638c6fc9fc76b2f991ae7e5a5705c0">Cita::escriure_contingut</a></div><div class="ttdeci">void escriure_contingut()</div><div class="ttdoc">S&#39;escriu el contingut del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00065">Cita.cc:65</a></div></div>
 <div class="ttc" id="class_cita_html_adfee9096fa1c70127f8bd7523356c85b"><div class="ttname"><a href="class_cita.html#adfee9096fa1c70127f8bd7523356c85b">Cita::~Cita</a></div><div class="ttdeci">~Cita()</div><div class="ttdoc">Destructora per defecte. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00012">Cita.cc:12</a></div></div>
-<div class="ttc" id="class_cita_html_a51ddef0aa663512336f272584acbbc8d"><div class="ttname"><a href="class_cita.html#a51ddef0aa663512336f272584acbbc8d">Cita::afegir_autor</a></div><div class="ttdeci">void afegir_autor(const string &amp;autor)</div><div class="ttdoc">L&#39;autor del paràmetre implícit passa a ser autor. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00023">Cita.cc:23</a></div></div>
+<div class="ttc" id="class_cita_html_a51ddef0aa663512336f272584acbbc8d"><div class="ttname"><a href="class_cita.html#a51ddef0aa663512336f272584acbbc8d">Cita::afegir_autor</a></div><div class="ttdeci">void afegir_autor(const string &amp;autor)</div><div class="ttdoc">L&#39;autor del paràmetre implícit passa a ser autor. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00026">Cita.cc:26</a></div></div>
 <div class="ttc" id="class_cita_html_a955605bed9ac6973e638735448534724"><div class="ttname"><a href="class_cita.html#a955605bed9ac6973e638735448534724">Cita::afegir_contingut</a></div><div class="ttdeci">void afegir_contingut(const vector&lt; Frase &gt; &amp;contingut, int x, int y)</div><div class="ttdoc">El contingut del paràmetre implícit passa a ser les frases de la x-éssima a la y-éssima de contin...</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00014">Cita.cc:14</a></div></div>
-<div class="ttc" id="class_cita_html_a2b8b19a5d6a3839eb7a8ff7df3905b0e"><div class="ttname"><a href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">Cita::autor</a></div><div class="ttdeci">string autor()</div><div class="ttdoc">Retorna l&#39;autor del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00037">Cita.cc:37</a></div></div>
-<div class="ttc" id="class_cita_html_ade9c9ea8468153d73553632cc8dae736"><div class="ttname"><a href="class_cita.html#ade9c9ea8468153d73553632cc8dae736">Cita::afegir_titol</a></div><div class="ttdeci">void afegir_titol(const string &amp;titol)</div><div class="ttdoc">El contingut del paràmetre implícit passa a ser titol. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00028">Cita.cc:28</a></div></div>
-<div class="ttc" id="class_cita_html_aa726018fdbf04c25c662198ffdf4f9ba"><div class="ttname"><a href="class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba">Cita::_autor</a></div><div class="ttdeci">string _autor</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00026">Cita.hh:26</a></div></div>
-<div class="ttc" id="class_cita_html_a5bca52bc052a925dd3defbee18b53d2f"><div class="ttname"><a href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">Cita::titol</a></div><div class="ttdeci">string titol()</div><div class="ttdoc">Retorna el títol del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00042">Cita.cc:42</a></div></div>
-<div class="ttc" id="class_cita_html_a1ecea5696aba54f2c21bc9a501b1b2d5"><div class="ttname"><a href="class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5">Cita::_titol</a></div><div class="ttdeci">string _titol</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00027">Cita.hh:27</a></div></div>
-<div class="ttc" id="class_cita_html_ae97763fca834e407f9a5060e6244e030"><div class="ttname"><a href="class_cita.html#ae97763fca834e407f9a5060e6244e030">Cita::_n_primera</a></div><div class="ttdeci">int _n_primera</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00029">Cita.hh:29</a></div></div>
+<div class="ttc" id="class_cita_html_a2b8b19a5d6a3839eb7a8ff7df3905b0e"><div class="ttname"><a href="class_cita.html#a2b8b19a5d6a3839eb7a8ff7df3905b0e">Cita::autor</a></div><div class="ttdeci">string autor()</div><div class="ttdoc">Retorna l&#39;autor del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00045">Cita.cc:45</a></div></div>
+<div class="ttc" id="class_cita_html_a1857fa5a5321857a645589796ad71b9c"><div class="ttname"><a href="class_cita.html#a1857fa5a5321857a645589796ad71b9c">Cita::es_cita</a></div><div class="ttdeci">bool es_cita()</div><div class="ttdoc">Retorna si el paràmetre implícit ha estat eliminat. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00040">Cita.cc:40</a></div></div>
+<div class="ttc" id="class_cita_html_ade9c9ea8468153d73553632cc8dae736"><div class="ttname"><a href="class_cita.html#ade9c9ea8468153d73553632cc8dae736">Cita::afegir_titol</a></div><div class="ttdeci">void afegir_titol(const string &amp;titol)</div><div class="ttdoc">El contingut del paràmetre implícit passa a ser titol. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00031">Cita.cc:31</a></div></div>
+<div class="ttc" id="class_cita_html_aa726018fdbf04c25c662198ffdf4f9ba"><div class="ttname"><a href="class_cita.html#aa726018fdbf04c25c662198ffdf4f9ba">Cita::_autor</a></div><div class="ttdeci">string _autor</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00025">Cita.hh:25</a></div></div>
+<div class="ttc" id="class_cita_html_a5bca52bc052a925dd3defbee18b53d2f"><div class="ttname"><a href="class_cita.html#a5bca52bc052a925dd3defbee18b53d2f">Cita::titol</a></div><div class="ttdeci">string titol()</div><div class="ttdoc">Retorna el títol del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cita_8cc_source.html#l00050">Cita.cc:50</a></div></div>
+<div class="ttc" id="class_cita_html_a1ecea5696aba54f2c21bc9a501b1b2d5"><div class="ttname"><a href="class_cita.html#a1ecea5696aba54f2c21bc9a501b1b2d5">Cita::_titol</a></div><div class="ttdeci">string _titol</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00026">Cita.hh:26</a></div></div>
+<div class="ttc" id="class_cita_html_ae97763fca834e407f9a5060e6244e030"><div class="ttname"><a href="class_cita.html#ae97763fca834e407f9a5060e6244e030">Cita::_n_primera</a></div><div class="ttdeci">int _n_primera</div><div class="ttdef"><b>Definition:</b> <a href="_cita_8hh_source.html#l00028">Cita.hh:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat a Dj Mai 12 2016 12:28:59 per a Laboratorio de PRO2. Caso de estudio: experimentos inmunologicos. per &#160;<a href="http://www.doxygen.org/index.html">
+Generat a Dl Mai 30 2016 12:02:25 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

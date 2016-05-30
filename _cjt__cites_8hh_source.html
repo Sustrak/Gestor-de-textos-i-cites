@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratori de PRO2. Gestor de textos i cites
-   &#160;<span id="projectnumber">v5.0 13-11-2014</span>
+   &#160;<span id="projectnumber">31 de maig del 2016</span>
    </div>
   </td>
  </tr>
@@ -94,61 +94,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cita_8hh.html">Cita.hh</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_biblioteca_8hh.html">Biblioteca.hh</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_func__auxiliars_8hh.html">Func_auxiliars.hh</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cita_8hh.html">Cita.hh</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_biblioteca_8hh.html">Biblioteca.hh</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt__cites.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__cites.html">Cjt_cites</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b">   25</a></span>&#160;    map&lt;string, Cita&gt; <a class="code" href="class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b">_cites</a>;     <span class="comment">//L&#39;string es la referència.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> fer_referencia(<span class="keywordtype">string</span>&amp; ref, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; autor);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> incrementa_ref(<span class="keywordtype">string</span>&amp; ref);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//Constructora</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_cjt__cites.html">Cjt_cites</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//Destructora</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ~<a class="code" href="class_cjt__cites.html">Cjt_cites</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//Modificadores</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> afegir_cita(<a class="code" href="class_biblioteca.html">Biblioteca</a>&amp; b, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> eliminar_cita(<span class="keywordtype">string</span> ref);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//Consultora</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> te_cita(<span class="keywordtype">string</span> ref);    </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//Escriptura</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> info_cita(<span class="keywordtype">string</span> ref);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> cites_autor(<span class="keywordtype">string</span> autor);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> cites_text(<a class="code" href="class_biblioteca.html">Biblioteca</a>&amp; b);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> totes_cites();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Cjt_cites_hh */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_cjt__cites.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__cites.html">Cjt_cites</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b">   26</a></span>&#160;    map&lt;string, Cita&gt; <a class="code" href="class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b">_cites</a>;     <span class="comment">//L&#39;string es la referència.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#a602dd3b7ad5f99510cd1e0393f71bd1b">fer_ini</a>(<span class="keywordtype">string</span>&amp; ini, <span class="keywordtype">string</span> autor);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#af3d79f0877fa4b550c600f7ec71ec2bc">fer_ref</a>(<span class="keywordtype">string</span>&amp; ini, <span class="keywordtype">int</span>&amp; i, <span class="keywordtype">string</span>&amp; ref);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Constructora</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_cjt__cites.html#a7d7168fec29d5ee09ed67c6a0d837b53">Cjt_cites</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_cjt__cites.html#a2df89f0c6cccce08f1c7e208d520c146">~Cjt_cites</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//Modificadores</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#a020759cc6500a1993239d77cf46b826e">afegir_cita</a>(<a class="code" href="class_biblioteca.html">Biblioteca</a>&amp; b, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#acae4c69e6e43cc9a72e3d89b966f7ffa">eliminar_cita</a>(<span class="keywordtype">string</span> ref);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//Consultora</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cjt__cites.html#a15d9e9c6ffcac3416268da5c47700826">te_cita</a>(<span class="keywordtype">string</span> ref);    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//Escriptura</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#a9c73d2d416fd84babd8736618276c495">info_cita</a>(<span class="keywordtype">string</span> ref);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#a040152f3c5abd446a47081660def2a57">cites_autor</a>(<span class="keywordtype">string</span> autor);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cjt__cites.html#ac3bd0eb033392c09e187cbb20f09f530">cites_text</a>(<a class="code" href="class_biblioteca.html">Biblioteca</a>&amp; b);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cjt__cites.html#a4366a1c3bc58c4893a7f3ee46ff7ed23">totes_cites</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Cjt_cites_hh */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="_cita_8hh_html"><div class="ttname"><a href="_cita_8hh.html">Cita.hh</a></div><div class="ttdoc">Especificació de la classe Cita. </div></div>
-<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_ac3bd0eb033392c09e187cbb20f09f530"><div class="ttname"><a href="class_cjt__cites.html#ac3bd0eb033392c09e187cbb20f09f530">Cjt_cites::cites_text</a></div><div class="ttdeci">bool cites_text(Biblioteca &amp;b)</div><div class="ttdoc">Retorna si hi ha cites associades al text triat a b, en aquest cas n&#39;escriu la informació d&#39;aquestes...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00104">Cjt_cites.cc:104</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a020759cc6500a1993239d77cf46b826e"><div class="ttname"><a href="class_cjt__cites.html#a020759cc6500a1993239d77cf46b826e">Cjt_cites::afegir_cita</a></div><div class="ttdeci">void afegir_cita(Biblioteca &amp;b, int x, int y)</div><div class="ttdoc">Afegeix al paràmetre implícit una cita del text triat a b. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00027">Cjt_cites.cc:27</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a15d9e9c6ffcac3416268da5c47700826"><div class="ttname"><a href="class_cjt__cites.html#a15d9e9c6ffcac3416268da5c47700826">Cjt_cites::te_cita</a></div><div class="ttdeci">bool te_cita(string ref)</div><div class="ttdoc">Retorna si el paràmetre implícit conté una cita amb la referència ref. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00064">Cjt_cites.cc:64</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a9c73d2d416fd84babd8736618276c495"><div class="ttname"><a href="class_cjt__cites.html#a9c73d2d416fd84babd8736618276c495">Cjt_cites::info_cita</a></div><div class="ttdeci">void info_cita(string ref)</div><div class="ttdoc">S&#39;escriu informació de la cita amb referència ref.. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00070">Cjt_cites.cc:70</a></div></div>
+<div class="ttc" id="_func__auxiliars_8hh_html"><div class="ttname"><a href="_func__auxiliars_8hh.html">Func_auxiliars.hh</a></div><div class="ttdoc">Especificació de les funcions auxiliars. </div></div>
+<div class="ttc" id="class_cjt__cites_html_a2df89f0c6cccce08f1c7e208d520c146"><div class="ttname"><a href="class_cjt__cites.html#a2df89f0c6cccce08f1c7e208d520c146">Cjt_cites::~Cjt_cites</a></div><div class="ttdeci">~Cjt_cites()</div><div class="ttdoc">Destructora per defecte. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00025">Cjt_cites.cc:25</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a4366a1c3bc58c4893a7f3ee46ff7ed23"><div class="ttname"><a href="class_cjt__cites.html#a4366a1c3bc58c4893a7f3ee46ff7ed23">Cjt_cites::totes_cites</a></div><div class="ttdeci">void totes_cites()</div><div class="ttdoc">S&#39;escriu informació de totes les cites del paràmetre implícit. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00128">Cjt_cites.cc:128</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_af3d79f0877fa4b550c600f7ec71ec2bc"><div class="ttname"><a href="class_cjt__cites.html#af3d79f0877fa4b550c600f7ec71ec2bc">Cjt_cites::fer_ref</a></div><div class="ttdeci">static void fer_ref(string &amp;ini, int &amp;i, string &amp;ref)</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00014">Cjt_cites.cc:14</a></div></div>
 <div class="ttc" id="_biblioteca_8hh_html"><div class="ttname"><a href="_biblioteca_8hh.html">Biblioteca.hh</a></div><div class="ttdoc">Especificació de la classe Biblioteca. </div></div>
-<div class="ttc" id="class_biblioteca_html"><div class="ttname"><a href="class_biblioteca.html">Biblioteca</a></div><div class="ttdoc">Guarda i ordena el conjunt dels textos per autor. </div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00025">Biblioteca.hh:25</a></div></div>
-<div class="ttc" id="class_cjt__cites_html_af844e42f146cd4e0f75e354147c1438b"><div class="ttname"><a href="class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b">Cjt_cites::_cites</a></div><div class="ttdeci">map&lt; string, Cita &gt; _cites</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8hh_source.html#l00025">Cjt_cites.hh:25</a></div></div>
-<div class="ttc" id="class_cjt__cites_html"><div class="ttname"><a href="class_cjt__cites.html">Cjt_cites</a></div><div class="ttdoc">Guarda i ordena el conjunt de cites per referència. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8hh_source.html#l00018">Cjt_cites.hh:18</a></div></div>
+<div class="ttc" id="class_biblioteca_html"><div class="ttname"><a href="class_biblioteca.html">Biblioteca</a></div><div class="ttdoc">Guarda i ordena el conjunt dels textos per autor. </div><div class="ttdef"><b>Definition:</b> <a href="_biblioteca_8hh_source.html#l00020">Biblioteca.hh:20</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_af844e42f146cd4e0f75e354147c1438b"><div class="ttname"><a href="class_cjt__cites.html#af844e42f146cd4e0f75e354147c1438b">Cjt_cites::_cites</a></div><div class="ttdeci">map&lt; string, Cita &gt; _cites</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8hh_source.html#l00026">Cjt_cites.hh:26</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a7d7168fec29d5ee09ed67c6a0d837b53"><div class="ttname"><a href="class_cjt__cites.html#a7d7168fec29d5ee09ed67c6a0d837b53">Cjt_cites::Cjt_cites</a></div><div class="ttdeci">Cjt_cites()</div><div class="ttdoc">Creadora per defecte. S&#39;executa automaticament al declarar un conjunt de cites. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00023">Cjt_cites.cc:23</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_acae4c69e6e43cc9a72e3d89b966f7ffa"><div class="ttname"><a href="class_cjt__cites.html#acae4c69e6e43cc9a72e3d89b966f7ffa">Cjt_cites::eliminar_cita</a></div><div class="ttdeci">void eliminar_cita(string ref)</div><div class="ttdoc">Elimina del paràmetre implícit la cita de referència ref. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00056">Cjt_cites.cc:56</a></div></div>
+<div class="ttc" id="class_cjt__cites_html"><div class="ttname"><a href="class_cjt__cites.html">Cjt_cites</a></div><div class="ttdoc">Guarda i ordena el conjunt de cites per referència. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8hh_source.html#l00019">Cjt_cites.hh:19</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a602dd3b7ad5f99510cd1e0393f71bd1b"><div class="ttname"><a href="class_cjt__cites.html#a602dd3b7ad5f99510cd1e0393f71bd1b">Cjt_cites::fer_ini</a></div><div class="ttdeci">static void fer_ini(string &amp;ini, string autor)</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00007">Cjt_cites.cc:7</a></div></div>
+<div class="ttc" id="class_cjt__cites_html_a040152f3c5abd446a47081660def2a57"><div class="ttname"><a href="class_cjt__cites.html#a040152f3c5abd446a47081660def2a57">Cjt_cites::cites_autor</a></div><div class="ttdeci">void cites_autor(string autor)</div><div class="ttdoc">S&#39;escriu informació de totes les cites al paràmetre implícit amb autor autor. </div><div class="ttdef"><b>Definition:</b> <a href="_cjt__cites_8cc_source.html#l00082">Cjt_cites.cc:82</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat a Dj Mai 12 2016 12:40:37 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
+Generat a Dl Mai 30 2016 12:02:25 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

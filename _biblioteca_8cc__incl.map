@@ -1,8 +1,9 @@
 <map id="Biblioteca.cc" name="Biblioteca.cc">
-<area shape="rect" id="node2" href="$_biblioteca_8hh.html" title="Especificació de la classe Biblioteca. " alt="" coords="62,80,166,107"/>
-<area shape="rect" id="node7" href="$_func__auxiliars_8hh.html" title="Func_auxiliars.hh" alt="" coords="265,80,395,107"/>
-<area shape="rect" id="node3" href="$_cjt__textos_8hh.html" title="Especificació de la classe Cjt_textos. " alt="" coords="61,155,167,181"/>
-<area shape="rect" id="node4" href="$_text_8hh.html" title="Especificació de la classe Text. " alt="" coords="10,229,77,256"/>
-<area shape="rect" id="node6" href="$_cita_8hh.html" title="Especificació de la classe Cita. " alt="" coords="46,304,113,331"/>
-<area shape="rect" id="node5" href="$_frase_8hh.html" title="Especificació de la classe Frase. " alt="" coords="5,379,81,405"/>
+<area shape="rect" id="node2" href="$_biblioteca_8hh.html" title="Especificació de la classe Biblioteca. " alt="" coords="123,80,227,107"/>
+<area shape="rect" id="node3" href="$_cjt__textos_8hh.html" title="Especificació de la classe Cjt_textos. " alt="" coords="76,155,183,181"/>
+<area shape="rect" id="node4" href="$_text_8hh.html" title="Especificació de la classe Text. " alt="" coords="5,229,72,256"/>
+<area shape="rect" id="node6" href="$_taula__freq_8hh.html" title="Especificació de la classe Taula_freq. " alt="" coords="77,453,184,480"/>
+<area shape="rect" id="node8" href="$_func__auxiliars_8hh.html" title="Especificació de les funcions auxiliars. " alt="" coords="257,155,388,181"/>
+<area shape="rect" id="node7" href="$_cita_8hh.html" title="Especificació de la classe Cita. " alt="" coords="65,304,132,331"/>
+<area shape="rect" id="node5" href="$_frase_8hh.html" title="Especificació de la classe Frase. " alt="" coords="55,379,131,405"/>
 </map>

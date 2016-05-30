@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratori de PRO2. Gestor de textos i cites
-   &#160;<span id="projectnumber">v5.0 13-11-2014</span>
+   &#160;<span id="projectnumber">31 de maig del 2016</span>
    </div>
   </td>
  </tr>
@@ -96,52 +96,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_func__auxiliars_8hh.html">Func_auxiliars.hh</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_taula__freq_8hh.html">Taula_freq.hh</a>&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_frase.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_frase.html">Frase</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080">   25</a></span>&#160;    vector&lt;string&gt; <a class="code" href="class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080">_frase</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_frase.html#af181dd7f55db33d164b974ccddb9b46f">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_frase.html#af181dd7f55db33d164b974ccddb9b46f">_n_paraules</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_frase.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_frase.html">Frase</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080">   27</a></span>&#160;    vector&lt;string&gt; <a class="code" href="class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080">_frase</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_frase.html#af181dd7f55db33d164b974ccddb9b46f">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_frase.html#af181dd7f55db33d164b974ccddb9b46f">_n_paraules</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//Constructora</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_frase.html">Frase</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//Constructora</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_frase.html">Frase</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ~<a class="code" href="class_frase.html">Frase</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">//Modificadora</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//Destructora</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ~<a class="code" href="class_frase.html">Frase</a>();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> llegir(<span class="keywordtype">string</span>&amp; linia);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> substitueix (<span class="keywordtype">string</span> par1, <span class="keywordtype">string</span> par2);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">//Consultora</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">//Modificadora</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> llegir(<span class="keywordtype">string</span>&amp; linia);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> substitueix (<span class="keywordtype">string</span> par1, <span class="keywordtype">string</span> par2);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> n_paraules();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> buscar_paraules(<span class="keyword">const</span> vector&lt;string&gt;&amp; paraules);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">//Escriptura</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> escriure();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Frase_hh */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">//Consultora</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> n_paraules();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span> buscar_paraules(vector&lt;string&gt;&amp; paraules);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">bool</span> buscar_consecutives(vector&lt;string&gt;&amp; paraules);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> actualitzar_taula(<a class="code" href="class_taula__freq.html">Taula_freq</a>&amp; t);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> compleix_expressio(<span class="keywordtype">string</span> expressio);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">//Escriptura</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> escriure();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Frase_hh */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="_taula__freq_8hh_html"><div class="ttname"><a href="_taula__freq_8hh.html">Taula_freq.hh</a></div><div class="ttdoc">Especificació de la classe Taula_freq. </div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="_func__auxiliars_8hh_html"><div class="ttname"><a href="_func__auxiliars_8hh.html">Func_auxiliars.hh</a></div></div>
-<div class="ttc" id="class_frase_html"><div class="ttname"><a href="class_frase.html">Frase</a></div><div class="ttdoc">Representa una frase. </div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00018">Frase.hh:18</a></div></div>
-<div class="ttc" id="class_frase_html_a7b6bc994f0e7818e4e92abc499ba2080"><div class="ttname"><a href="class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080">Frase::_frase</a></div><div class="ttdeci">vector&lt; string &gt; _frase</div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00025">Frase.hh:25</a></div></div>
-<div class="ttc" id="class_frase_html_af181dd7f55db33d164b974ccddb9b46f"><div class="ttname"><a href="class_frase.html#af181dd7f55db33d164b974ccddb9b46f">Frase::_n_paraules</a></div><div class="ttdeci">int _n_paraules</div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00026">Frase.hh:26</a></div></div>
+<div class="ttc" id="_func__auxiliars_8hh_html"><div class="ttname"><a href="_func__auxiliars_8hh.html">Func_auxiliars.hh</a></div><div class="ttdoc">Especificació de les funcions auxiliars. </div></div>
+<div class="ttc" id="class_frase_html"><div class="ttname"><a href="class_frase.html">Frase</a></div><div class="ttdoc">Representa una frase. </div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00020">Frase.hh:20</a></div></div>
+<div class="ttc" id="class_taula__freq_html"><div class="ttname"><a href="class_taula__freq.html">Taula_freq</a></div><div class="ttdoc">Representa una taula amb la freqüencia d&#39;aparició de les paraules d&#39;un text. </div><div class="ttdef"><b>Definition:</b> <a href="_taula__freq_8hh_source.html#l00028">Taula_freq.hh:28</a></div></div>
+<div class="ttc" id="class_frase_html_a7b6bc994f0e7818e4e92abc499ba2080"><div class="ttname"><a href="class_frase.html#a7b6bc994f0e7818e4e92abc499ba2080">Frase::_frase</a></div><div class="ttdeci">vector&lt; string &gt; _frase</div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00027">Frase.hh:27</a></div></div>
+<div class="ttc" id="class_frase_html_af181dd7f55db33d164b974ccddb9b46f"><div class="ttname"><a href="class_frase.html#af181dd7f55db33d164b974ccddb9b46f">Frase::_n_paraules</a></div><div class="ttdeci">int _n_paraules</div><div class="ttdef"><b>Definition:</b> <a href="_frase_8hh_source.html#l00028">Frase.hh:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat a Dj Mai 12 2016 12:40:37 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
+Generat a Dl Mai 30 2016 12:02:25 per a Laboratori de PRO2. Gestor de textos i cites per &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

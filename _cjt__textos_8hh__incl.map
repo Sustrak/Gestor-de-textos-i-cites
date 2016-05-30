@@ -1,5 +1,6 @@
 <map id="Cjt_textos.hh" name="Cjt_textos.hh">
-<area shape="rect" id="node2" href="$_text_8hh.html" title="Especificació de la classe Text. " alt="" coords="10,80,77,107"/>
-<area shape="rect" id="node4" href="$_cita_8hh.html" title="Especificació de la classe Cita. " alt="" coords="46,155,113,181"/>
-<area shape="rect" id="node3" href="$_frase_8hh.html" title="Especificació de la classe Frase. " alt="" coords="5,229,81,256"/>
+<area shape="rect" id="node2" href="$_text_8hh.html" title="Especificació de la classe Text. " alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node4" href="$_taula__freq_8hh.html" title="Especificació de la classe Taula_freq. " alt="" coords="31,304,137,331"/>
+<area shape="rect" id="node5" href="$_cita_8hh.html" title="Especificació de la classe Cita. " alt="" coords="76,155,143,181"/>
+<area shape="rect" id="node3" href="$_frase_8hh.html" title="Especificació de la classe Frase. " alt="" coords="46,229,122,256"/>
 </map>
