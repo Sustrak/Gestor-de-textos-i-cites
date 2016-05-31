@@ -23,7 +23,7 @@ using namespace std;
         \pre El vector <em>v</em> inicialment està buit.
         \post El vector <em>v</em> passa a contenir cada una de les paraules que conté <em>paraules</em> com a elements.
     */
-    void par_buscar(string paraules, vector<string>& v);
+    void par_buscar(const string& paraules, vector<string>& v);
 
     /** @brief Retorna si el caràcter <em>c</em> és una lletra o un dígit.
         \pre <em>Cert</em>.
@@ -35,6 +35,6 @@ using namespace std;
         \pre L'string <em>s</em> és una cadena de dígits.
         \post Retorna l'enter que representa l'string <em>s</em>.
     */
-    int fer_num(string& s);
+    int fer_num(const string& s);
 
 #endif

@@ -21,11 +21,20 @@ class Cita {
     */
 
 private:
+	/** @brief Indica si la cita ha estat eliminada.
+	  
+	 Es fa per mantenir les referències quan s'eliminen les cites.  */  
 	bool _eliminada;
+	/** @brief Indica l'autor del text corresponent a la cita.  */  
     string _autor;
+	/** @brief Indica el títol del text corresponent a la cita.  */  
     string _titol;
+	/** @brief Vector que té per elements les frases que composen la cita.
+	 
+	 Les frases estan ordenades per l'ordre en que estan en el text original. */
     vector<Frase> _frases;
-    int _n_primera; 		//Número de la primera frase de la cita en el text original.
+	/** @brief Indica el número de la primera frase de la cita en el text original.  */  
+    int _n_primera;
 
 public:
 
@@ -76,31 +85,31 @@ public:
         \pre <em>Cert</em>.
         \post Retorna si el p.i. ha estat eliminat.
     */
-    bool es_cita();
+    bool es_cita() const;
 
     /** @brief Retorna l'autor del paràmetre implícit.
         \pre <em>Cert</em>.
         \post Retorna l'autor del p.i.
     */
-    string autor();
+    string autor() const;
 
     /** @brief Retorna el títol del paràmetre implícit.
         \pre <em>Cert</em>.
         \post Retorna el títol del p.i.
     */
-    string titol();
+    string titol() const;
 
     /** @brief Retorna el número de la frase inicial del paràmetre implícit.
         \pre <em>Cert</em>.
         \post Retorna el número de la frase inicial del p.i.
     */
-    int n_primera();
+    int n_primera() const;
 
     /** @brief Retorna el número de la frase final del paràmetre implícit.
         \pre <em>Cert</em>.
         \post Retorna el número de la frase final del p.i.
     */
-    int n_ultima();
+    int n_ultima() const;
 
   //Escriptura
 
@@ -108,7 +117,7 @@ public:
         \pre <em>Cert</em>.
         \post S'escriu el contingut del p.i. amb les frases numerades.
     */
-    void escriure_contingut();
+    void escriure_contingut() const;
 
 };
 

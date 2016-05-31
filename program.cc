@@ -196,8 +196,8 @@ void operar (Biblioteca& b, Cjt_cites& c, string& linia)
 		else if (op == "?") {
 			//Acció "cites ?"
 			
-			if (not b.triat()) cout << "error" << endl;
-			if(c.cites_text(b)) b.autor_titol();
+			if (not b.triat()) cout << "error" << endl;		//Si no hi ha un text triat, s'escriu error.
+			if(c.cites_text(b)) b.autor_titol();			//Si el text té cites, s'escriuen seguides de l'autor i el títol.
 		}
 	}
 	else if (linia == "totes cites ?") {

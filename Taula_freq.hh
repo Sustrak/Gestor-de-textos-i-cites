@@ -15,6 +15,9 @@
 using namespace std;
 
 #ifndef NO_DIAGRAM
+	/** @brief Estructura que ens permet ordenar els elements d'un set de strings.
+	 
+	 Ordena els elements primer per llargada i després alfabèticament. */
 struct ordenar
 {
     bool operator() (const string& s, const string& t){
@@ -32,6 +35,10 @@ class Taula_freq {
     */
 
 private:
+	/** @brief Map que representa la taula de freqüències d'un text.
+
+      La clau són les freqüències de les paraules dels text i els valor és el conjunt de paraules que té la freqüencia que indica la clau.
+      El map s'ordena creixentment per freqüència. Cada conjunt ordena els elements primer per llargada i després alfabèticament. */
 	map<int, set <string, ordenar>> _taula;
 
 public:
@@ -57,13 +64,13 @@ public:
         \pre <em>Cert</em>.
         \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el p.i.
     */
-    void substitueix (string par1, string par2);
+    void substitueix (const string& par1, const string& par2);
     
         /** @brief Incrementa una unitat la freqüència de <em>s</em>.
         \pre <em>Cert</em>.
         \post Incrementa una unitat la freqüència de <em>s</em>.
     */
-    void incrementa_freq (string s);
+    void incrementa_freq (const string& s);
 
     /** @brief El paràmetre implícit queda buit.
         \pre <em>Cert</em>.
@@ -71,21 +78,13 @@ public:
     */
     void clear();
 
-  //Consultora
-
-    /** @brief Retorna la freqüència de <em>s</em>.
-        \pre <em>Cert</em>.
-        \post Retorna la freqüència de <em>s</em>.
-    */
-    int freq(string& s);
-
   //Escriptura
 
     /** @brief S'escriu el paràmetre implícit.
         \pre <em>Cert</em>.
         \post S'escriu el contingut del p.i.
     */
-    void escriure();
+    void escriure() const;
 
 };
 

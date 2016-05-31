@@ -10,7 +10,7 @@ void normalitzar(string& linia)
   linia.erase(linia.end()-1);
 }
 
-void par_buscar(string paraules, vector<string>& v)
+void par_buscar(const string& paraules, vector<string>& v)
 {
     istringstream iss(paraules);
     string aux;
@@ -23,7 +23,7 @@ bool es_lletra(char c)
     else return false;
 }
 
-int fer_num(string& s)
+int fer_num(const string& s)
 {
 	int n;
 	istringstream iss(s);

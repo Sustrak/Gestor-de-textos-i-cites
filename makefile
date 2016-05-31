@@ -30,9 +30,17 @@ Func_auxiliars.o: Func_auxiliars.cc Func_auxiliars.hh
 Taula_freq.o: Taula_freq.cc Taula_freq.hh
 	g++ -c Taula_freq.cc $(OPCIONS)
 
-practica.tar:
-	tar -cvf *.hh *.cc makefile
+practica.tar: html.zip
+	tar -cvf practica.tar *.hh *.cc makefile *.pdf *.txt html.zip
+
+html.zip: DOXY
+	zip html.zip html/*
+
+DOXY:
+	doxygen Doxyfile.txt
 
 clean:
 	rm *.o
 	rm *.exe
+	rm *.tar
+	rm *.zip

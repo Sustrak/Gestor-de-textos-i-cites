@@ -8,7 +8,7 @@ Taula_freq::Taula_freq(){}
 
 Taula_freq::~Taula_freq(){}
 
-void Taula_freq::substitueix(string par1, string par2)
+void Taula_freq::substitueix(const string& par1, const string& par2)
 {
 	bool trobat = false;												//trobat indica si hem trobat par1.
 	map<int, set<string, ordenar>>::iterator it1 = _taula.begin();
@@ -57,7 +57,7 @@ void Taula_freq::substitueix(string par1, string par2)
 	}
 }
 
-void Taula_freq::incrementa_freq (string s)
+void Taula_freq::incrementa_freq (const string& s)
 {
 	bool trobat = false;												//Indica si s ja es troba a la taula.
 	map<int, set<string, ordenar>>::iterator it1 = _taula.begin();
@@ -106,25 +106,10 @@ void Taula_freq::clear()
 	_taula.clear();
 }
 
-int Taula_freq::freq(string& s)
+void Taula_freq::escriure() const
 {
-	bool trobat = false;
-	map<int, set<string, ordenar>>::iterator it1 = _taula.begin();
-	set<string, ordenar>::iterator it2;
-	int f = 0;
-	while (not trobat and it1 != _taula.end()) {
-		it2 = it1->second.find(s);
-		trobat = it2 != it1->second.end();
-		if (trobat) f = it1->first;
-		++it1;
-	}
-	return f;
-}
-
-void Taula_freq::escriure()
-{
-	map<int, set<string, ordenar>>::iterator it1 = _taula.end();
-	set<string, ordenar>::iterator it2;
+	map<int, set<string, ordenar>>::const_iterator it1 = _taula.end();
+	set<string, ordenar>::const_iterator it2;
 	while (it1 != _taula.begin()) {
         --it1;
 		for (it2 = it1->second.begin(); it2 != it1->second.end(); ++it2) cout << *it2 << " " << it1->first << endl;

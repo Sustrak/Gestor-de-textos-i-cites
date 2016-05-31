@@ -25,7 +25,11 @@ class Text {
     */
 
 private:
+	/** @brief Vector que té per elements les frases del contingut del text.
+	 
+	 Les frases estan ordenades per l'ordre en que estan en el text. */
     vector<Frase> _contingut;
+	/** @brief Indica el nombre de paraules que té el text.  */  
     int _n_paraules;
 
 public:
@@ -51,19 +55,31 @@ public:
         \pre <em>Cert</em>.
         \post Retorna el nombre de frases del p.i.
     */
-    int n_frases();
+    int n_frases() const;
 
     /** @brief Retorna el nombre de paraules del parametre implícit.
         \pre <em>Cert</em>.
         \post Retorna el nombre de paraules del p.i.
     */
-    int n_paraules();
+    int n_paraules() const;
 
     /** @brief Retorna si el parametre implícit conté totes les paraules de <em>paraules</em>.
         \pre <em>Cert</em>.
         \post Retorna si el p.i. conté totes les paraules de <em>paraules</em>.
     */
-    bool conte_paraules(vector<string> paraules, string& autor, string& titol);
+    bool conte_paraules(vector<string> paraules, string& autor, string& titol) const;
+    
+    /** @brief Afegeix a una cita el contingut amb les frases de la x-éssima a la y-éssima del paràmetre implicit.
+     \pre <em>cita</em> ja té títol i és el matéix que el del p.i., x <= y.
+     \post <em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i.
+    */
+    void afegir_contingut(Cita& cita, int x, int y) const;
+    
+    /** @brief Retorna per referencia la taula de freqüències del paràmetre implícit.
+     \pre <em>Cert</em>.
+     \post Retorna per referencia la taula de freqüències del p.i.
+     */
+    void fer_taula(Taula_freq& t) const;   
     
     //Modificadores
     
@@ -77,19 +93,7 @@ public:
         \pre <em>Cert</em>.
         \post Canvia totes les aparicions de <b>par1</b> per <b>par2</b> en el p.i.
     */
-    void substitueix (string par1, string par2);
-    
-    /** @brief Afegeix a una cita el contingut amb les frases de la x-éssima a la y-éssima del paràmetre implicit.
-     \pre <em>cita</em> ja té títol i és el matéix que el del p.i., x <= y.
-     \post <em>cita</em> té l'autor i el títol del p.i. i com a contingut les frases de la x-éssima a la y-éssima del p.i.
-    */
-    void afegir_contingut(Cita& cita, int x, int y);
-    
-    /** @brief Retorna per referencia la taula de freqüències del paràmetre implícit.
-     \pre <em>Cert</em>.
-     \post Retorna per referencia la taula de freqüències del p.i.
-     */
-    void fer_taula(Taula_freq& t);    
+    void substitueix (const string& par1, const string& par2);   
     
     //Escriptura
     
@@ -97,19 +101,19 @@ public:
      \pre <em>Cert</em>.
      \post Escriu les frases del p.i. que contenen totes les paraules cosecutivament de <em>paraules</em>.
      */
-    void conte_consecutives(vector<string>& paraules);
+    void conte_consecutives(const vector<string>& paraules) const;
     
     /** @brief S'escriu el contingut de la frase x a la y del paràmetre implícit
         \pre <em>Cert</em>.
         \post S'escriu el contingut del p.i. amb les frases numerades de la x a la y.
     */
-    void escriure_contingut(int x, int y);
+    void escriure_contingut(int x, int y) const;
    
     /** @brief S'escriuen les frases del contingut del paràmetre implícit que compleixen l'expressió.
      \pre <em>Cert</em>
      \post S'escriuen les frases del contingut del p.i. que compleixen l'expressió pel canal estàndard de sortida.
      */
-    void frases_expressio(string& expressio);
+    void frases_expressio(const string& expressio) const;
     
 };
 #endif /* Text_hh */
